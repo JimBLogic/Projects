@@ -166,23 +166,32 @@ def main():
 
         try:
             if opcion == "1":
-                numero = int(input("Número del asiento (1-20): "))
-                fila = int(input("Fila del asiento (1-10): "))
-                asiento = Asiento(numero, fila)
-                sala.agregar_asiento(asiento)
-                print(f"Asiento {numero} en fila {fila} agregado correctamente.")
+                try:
+                    numero = int(input("Número del asiento (1-20): "))
+                    fila = int(input("Fila del asiento (1-10): "))
+                    asiento = Asiento(numero, fila)
+                    sala.agregar_asiento(asiento)
+                    print(f"Asiento {numero} en fila {fila} agregado correctamente.")
+                except ValueError:
+                    print("Error: Entrada inválida. Asegúrese de ingresar números válidos para el asiento y la fila.")
 
             elif opcion == "2":
-                numero = int(input("Número del asiento (1-20): "))
-                fila = int(input("Fila del asiento (1-10): "))
-                dia_semana = input("Día de la semana (lunes, martes, miércoles, jueves, viernes, sábado, domingo): ").strip()
-                edad = int(input("Edad del espectador: "))
-                sala.reservar_asiento(numero, fila, dia_semana, edad)
+                try:
+                    numero = int(input("Número del asiento (1-20): "))
+                    fila = int(input("Fila del asiento (1-10): "))
+                    dia_semana = input("Día de la semana (lunes, martes, miércoles, jueves, viernes, sábado, domingo): ").strip()
+                    edad = int(input("Edad del espectador: "))
+                    sala.reservar_asiento(numero, fila, dia_semana, edad)
+                except ValueError:
+                    print("Error: Entrada inválida. Asegúrese de ingresar datos correctos.")
 
             elif opcion == "3":
-                numero = int(input("Número del asiento (1-20): "))
-                fila = int(input("Fila del asiento (1-10): "))
-                sala.cancelar_reserva(numero, fila)
+                try:
+                    numero = int(input("Número del asiento (1-20): "))
+                    fila = int(input("Fila del asiento (1-10): "))
+                    sala.cancelar_reserva(numero, fila)
+                except ValueError:
+                    print("Error: Entrada inválida. Asegúrese de ingresar números válidos para el asiento y la fila.")
 
             elif opcion == "4":
                 print("\n--- Estado de los asientos ---")
