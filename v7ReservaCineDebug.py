@@ -1,5 +1,10 @@
 import json
-#En el caso de haber guardado al salir utilizando el interfaz, se creará un .json en la carpeta donde se encuentre el archivo .py
+import logging
+
+# Configuración del registro de depuración
+logging.basicConfig(filename='debug.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# El estado de la sala de cine se guardará en un archivo .json solo si se selecciona la opción de guardar al salir.
 
 # Sistema de Reservas para un Cine con Tarifas Especiales
 
@@ -9,6 +14,7 @@ class Asiento:
     """
 
     def __init__(self, numero, fila):
+        # Inicialización de los atributos del asiento
         self.__numero = numero
         self.__fila = fila
         self.__reservado = False
@@ -17,6 +23,7 @@ class Asiento:
         self.__edad = 0
         self.__descuentos = []
 
+    # Getters para acceder a los atributos privados
     def get_numero(self):
         return self.__numero
 
@@ -38,6 +45,7 @@ class Asiento:
     def get_descuentos(self):
         return self.__descuentos
 
+    # Setters para modificar los atributos privados
     def set_precio(self, precio):
         self.__precio = precio
 
@@ -50,25 +58,29 @@ class Asiento:
     def set_descuentos(self, descuentos):
         self.__descuentos = descuentos
 
+    # Método para reservar un asiento
     def reservar(self):
         if not self.__reservado:
             self.__reservado = True
-            print(f"Asiento {self.__numero} en fila {self.__fila} reservado.")
+            logging.info(f"Asiento {self.__numero} en fila {self.__fila} reservado.")
         else:
             raise ValueError(f"Asiento {self.__numero} en fila {self.__fila} ya está reservado.")
 
+    # Método para cancelar la reserva de un asiento
     def cancelar_reserva(self):
         if self.__reservado:
             self.__reservado = False
-            print(f"Asiento {self.__numero} en fila {self.__fila} ahora está disponible.")
+            logging.info(f"Asiento {self.__numero} en fila {self.__fila} ahora está disponible.")
         else:
             raise ValueError(f"Asiento {self.__numero} en fila {self.__fila} no está reservado.")
 
+    # Método para representar el estado del asiento como cadena
     def __str__(self):
         estado = "Reservado" if self.__reservado else "Disponible"
         descuentos = ", ".join(self.__descuentos) if self.__descuentos else "Sin descuentos"
         return f"Asiento {self.__numero}, Fila {self.__fila}, Precio: ${self.__precio:.2f}, Estado: {estado}, Día: {self.__dia_semana}, Edad: {self.__edad}, Descuentos: {descuentos}"
 
+    # Método para convertir el estado del asiento a un diccionario
     def to_dict(self):
         return {
             "numero": self.__numero,
@@ -89,110 +101,108 @@ class SalaCine:
     MAX_ASIENTO = 20
 
     def __init__(self):
+        # Inicialización de la lista de asientos
         self.__asientos = []
 
-    def agregar_asiento(self, numero, fila, dia_semana, edad):
-        dia_semana = dia_semana.lower()
-        dias_validos = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
-        if dia_semana not in dias_validos:
-            raise ValueError("Error: El día de la semana debe ser uno de los siguientes: (lunes, martes, miércoles, jueves, viernes, sábado, domingo).")
-
+    # Método para agregar un asiento a la sala
+    def agregar_asiento(self, numero, fila):
+        # Reflexión: Es importante validar que el número de fila y asiento estén dentro de los límites permitidos.
         if fila > self.MAX_FILA or fila < 1:
             raise ValueError(f"Error: La fila debe estar entre 1 y {self.MAX_FILA}.")
         if numero > self.MAX_ASIENTO or numero < 1:
             raise ValueError(f"Error: El número de asiento debe estar entre 1 y {self.MAX_ASIENTO}.")
 
+        # Reflexión: Verificar si el asiento ya ha sido agregado para evitar duplicaciones.
         for a in self.__asientos:
-            if a.get_numero() == numero and a.get_fila() == fila and a.get_dia_semana() == dia_semana:
-                print(f"Asiento {numero} en fila {fila} ya está agregado para el día {dia_semana}.")
+            if a.get_numero() == numero and a.get_fila() == fila:
+                logging.warning(f"Asiento {numero} en fila {fila} ya está agregado.")
                 confirmar = input("¿Desea reemplazarlo? (si/no): ").strip().lower()
                 if confirmar == "si":
                     self.__asientos.remove(a)
                     break
                 else:
-                    print("Asignación cancelada. Puede agregar otro asiento.")
+                    logging.info("Asignación cancelada. Puede agregar otro asiento.")
                     return
 
-        precio_base = 10.0
-        descuento = 0.0
-        descuentos_aplicados = []
-
-        if edad >= 65:
-            descuento += 0.3
-            descuentos_aplicados.append("30% de descuento para mayores de 65 años")
-        if dia_semana == "miércoles":
-            descuento += 0.2
-            descuentos_aplicados.append("20% de descuento los miércoles")
-
-        precio_final = precio_base * (1 - descuento)
         asiento = Asiento(numero, fila)
-        asiento.set_precio(precio_final)
-        asiento.set_dia_semana(dia_semana)
-        asiento.set_edad(edad)
-        asiento.set_descuentos(descuentos_aplicados)
         self.__asientos.append(asiento)
-        print(f"Asiento {numero} en fila {fila} agregado correctamente para el día {dia_semana}.")
+        logging.info(f"Asiento {numero} en fila {fila} agregado correctamente.")
 
+    # Método para reservar un asiento en la sala
     def reservar_asiento(self, numero, fila, dia_semana, edad):
         dia_semana = dia_semana.lower()
         dias_validos = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
+        # Reflexión: Validar que el día de la semana sea correcto.
         if dia_semana not in dias_validos:
             raise ValueError("Error: El día de la semana debe ser uno de los siguientes: (lunes, martes, miércoles, jueves, viernes, sábado, domingo).")
 
-        asiento = self.buscar_asiento(numero, fila, dia_semana)
+        asiento = self.buscar_asiento(numero, fila)
+        # Reflexión: No se puede reservar un asiento que no ha sido agregado.
         if asiento is None:
-            raise ValueError(f"Asiento {numero} en fila {fila} no está agregado para el día {dia_semana}.")
+            raise ValueError(f"Asiento {numero} en fila {fila} no está agregado.")
 
+        # Reflexión: No se puede reservar un asiento que ya está reservado.
         if asiento.get_reservado():
-            raise ValueError(f"Asiento {numero} en fila {fila} ya está reservado para el día {dia_semana}.")
+            raise ValueError(f"Asiento {numero} en fila {fila} ya está reservado.")
 
         precio_base = 10.0
         descuento = 0.0
         descuentos_aplicados = []
 
-        if edad >= 65:
-            descuento += 0.3
-            descuentos_aplicados.append("30% de descuento para mayores de 65 años")
+        # Reflexión: Aplicar descuento del 20% los miércoles a todos los espectadores.
         if dia_semana == "miércoles":
             descuento += 0.2
             descuentos_aplicados.append("20% de descuento los miércoles")
 
-        precio_final = precio_base * (1 - descuento)
+        # Reflexión: Aplicar descuento adicional del 30% a personas mayores de 65 años (edad mayor a 65).
+        if edad > 65:
+            descuento += 0.3
+            descuentos_aplicados.append("30% de descuento para mayores de 65 años")
+
+        # Aplicar los descuentos en el orden correcto
+        precio_final = precio_base * (1 - 0.3) if edad > 65 else precio_base
+        precio_final *= (1 - 0.2) if dia_semana == "miércoles" else 1
+
         asiento.set_precio(precio_final)
         asiento.set_dia_semana(dia_semana)
         asiento.set_edad(edad)
         asiento.set_descuentos(descuentos_aplicados)
         asiento.reservar()
 
-        print(f"Descuentos aplicados: {', '.join(descuentos_aplicados)}")
-        print(f"Precio final: ${precio_final:.2f}")
+        logging.info(f"Descuentos aplicados: {', '.join(descuentos_aplicados)}")
+        logging.info(f"Precio final: ${precio_final:.2f}")
 
-    def cancelar_reserva(self, numero, fila, dia_semana):
-        dia_semana = dia_semana.lower()
-        asiento = self.buscar_asiento(numero, fila, dia_semana)
+    # Método para cancelar la reserva de un asiento
+    def cancelar_reserva(self, numero, fila):
+        asiento = self.buscar_asiento(numero, fila)
+        # Reflexión: Solo se puede cancelar la reserva de un asiento que está reservado.
         if asiento:
             if not asiento.get_reservado():
                 raise ValueError(f"Asiento {numero} en fila {fila} no está reservado.")
             asiento.cancelar_reserva()
+            logging.info(f"Reserva del asiento {numero} en fila {fila} cancelada correctamente.")
         else:
-            raise ValueError(f"Asiento {numero} en fila {fila} no encontrado para el día {dia_semana}.")
+            raise ValueError(f"Asiento {numero} en fila {fila} no encontrado.")
 
+    # Método para mostrar todos los asientos en la sala
     def mostrar_asientos(self):
         if len(self.__asientos) == 0:
-            print("No hay asientos disponibles aún.")
+            logging.info("No hay asientos disponibles aún.")
         for asiento in self.__asientos:
-            print(asiento)
+            logging.info(asiento)
 
-    def buscar_asiento(self, numero, fila, dia_semana=None):
+    # Método para buscar un asiento en la sala
+    def buscar_asiento(self, numero, fila):
         for asiento in self.__asientos:
             if asiento.get_numero() == numero and asiento.get_fila() == fila:
-                if dia_semana is None or asiento.get_dia_semana() == dia_semana:
-                    return asiento
+                return asiento
         return None
 
+    # Método para convertir el estado de la sala a un diccionario
     def to_dict(self):
         return [asiento.to_dict() for asiento in self.__asientos]
 
+    # Método para restaurar el estado de la sala desde un diccionario
     def from_dict(self, data):
         self.__asientos = [Asiento(a["numero"], a["fila"]) for a in data]
         for asiento, a in zip(self.__asientos, data):
@@ -203,32 +213,39 @@ class SalaCine:
             asiento.set_edad(a["edad"])
             asiento.set_descuentos(a["descuentos"])
 
+# Función para guardar el estado de la sala en un archivo JSON
 def guardar_estado(sala):
     with open("estado_sala.json", "w") as file:
         json.dump(sala.to_dict(), file)
-    print("Estado guardado correctamente.")
+    logging.info("Estado guardado correctamente.")
 
+# Función para cargar el estado de la sala desde un archivo JSON
 def cargar_estado():
     try:
         with open("estado_sala.json", "r") as file:
             data = json.load(file)
             sala = SalaCine()
             sala.from_dict(data)
-            print("Estado cargado correctamente.")
+            logging.info("Estado cargado correctamente.")
             return sala
     except FileNotFoundError:
-        print("No se encontró un estado guardado previamente.")
+        logging.warning("No se encontró un estado guardado previamente.")
         return SalaCine()
 
+# Función para resetear el estado de la sala
 def reset_estado():
+    logging.info("Estado reseteado correctamente.")
     return SalaCine()
 
+# Interfaz de usuario para interactuar con el sistema de reservas
 def main():
     sala = cargar_estado()
     print("¡Bienvenido al Sistema de Reservas para un Cine!")
     print("Las filas van del 1 al 10 y los asientos de cada fila van del 1 al 20.")
     print("Recuerda que los miércoles hay un 20% de descuento y los mayores de 65 años tienen un 30% de descuento adicional.")
-    print("Por favor, escriba los días de la semana en minúsculas y sin errores gramaticales.")
+    print("Por favor, seleccione el día de la semana utilizando los números del 1 al 7.")
+
+    dias_semana = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
 
     while True:
         print("\nOpciones:")
@@ -245,37 +262,19 @@ def main():
             if opcion == "1" or opcion == "2":
                 while True:
                     try:
-                        dia_semana = input("Día de la semana (lunes, martes, miércoles, jueves, viernes, sábado, domingo): ").strip().lower()
-                        dias_validos = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
-                        if dia_semana not in dias_validos:
-                            raise ValueError("Error: El día de la semana debe ser uno de los siguientes: (lunes, martes, miércoles, jueves, viernes, sábado, domingo).")
+                        print("\nSeleccione el día de la semana:")
+                        for i, dia in enumerate(dias_semana, 1):
+                            print(f"{i}. {dia.capitalize()}")
+                        dia_opcion = int(input("Ingrese el número del día de la semana (1-7): "))
+                        if dia_opcion < 1 or dia_opcion > 7:
+                            raise ValueError("Error: Selección inválida. Debe ser un número entre 1 y 7.")
+                        dia_semana = dias_semana[dia_opcion - 1]
                         break
                     except ValueError as e:
                         print(f"Error: {e}. Por favor, intente nuevamente.")
 
-                filas_disponibles = [f"Fila {j}" for j in range(1, 11) if any(not sala.buscar_asiento(i, j, dia_semana) for i in range(1, 21))]
-                if not filas_disponibles:
-                    print(f"No hay filas disponibles para el día {dia_semana}. Volviendo al menú principal.")
-                    continue
-
-                print(f"Filas disponibles para el día {dia_semana}: {', '.join(filas_disponibles)}")
-
                 while True:
                     try:
-                        fila = int(input("Fila del asiento (1-10): "))
-                        if fila < 1 or fila > 10:
-                            raise ValueError(f"Error: La fila debe estar entre 1 y 10.")
-                        asientos_disponibles = [f"Asiento {i}" for i in range(1, 21) if not sala.buscar_asiento(i, fila, dia_semana)]
-                        if not asientos_disponibles:
-                            print(f"No hay asientos disponibles en la fila {fila} para el día {dia_semana}.")
-                            continue
-                        print(f"Asientos disponibles en la fila {fila} para el día {dia_semana}: {', '.join(asientos_disponibles)}")
-                        numero = int(input("Número del asiento (1-20): "))
-                        if numero < 1 or numero > 20:
-                            raise ValueError(f"Error: El número de asiento debe estar entre 1 y 20.")
-                        if sala.buscar_asiento(numero, fila, dia_semana):
-                            print(f"Error: Asiento {numero} en fila {fila} ya está ocupado para el día {dia_semana}.")
-                            continue
                         edad = int(input("Edad del espectador (1-100): "))
                         if edad < 1 or edad > 100:
                             raise ValueError("Error: La edad debe estar entre 1 y 100.")
@@ -283,9 +282,35 @@ def main():
                     except ValueError as e:
                         print(f"Error: {e}. Por favor, intente nuevamente.")
 
+                while True:
+                    try:
+                        filas_disponibles = [f"Fila {j}" for j in range(1, 11) if any(not sala.buscar_asiento(i, j) for i in range(1, 21))]
+                        if not filas_disponibles:
+                            print(f"No hay filas disponibles para el día {dia_semana}. Volviendo al menú principal.")
+                            break
+
+                        print(f"Filas disponibles para el día {dia_semana}: {', '.join(filas_disponibles)}")
+                        fila = int(input("Fila del asiento (1-10): "))
+                        if fila < 1 or fila > 10:
+                            raise ValueError(f"Error: La fila debe estar entre 1 y 10.")
+                        asientos_disponibles = [f"Asiento {i}" for i in range(1, 21) if not sala.buscar_asiento(i, fila)]
+                        if not asientos_disponibles:
+                            print(f"No hay asientos disponibles en la fila {fila} para el día {dia_semana}.")
+                            continue
+                        print(f"Asientos disponibles en la fila {fila} para el día {dia_semana}: {', '.join(asientos_disponibles)}")
+                        numero = int(input("Número del asiento (1-20): "))
+                        if numero < 1 or numero > 20:
+                            raise ValueError(f"Error: El número de asiento debe estar entre 1 y 20.")
+                        if sala.buscar_asiento(numero, fila):
+                            print(f"Error: Asiento {numero} en fila {fila} ya está ocupado.")
+                            continue
+                        break
+                    except ValueError as e:
+                        print(f"Error: {e}. Por favor, intente nuevamente.")
+
                 try:
                     if opcion == "1":
-                        sala.agregar_asiento(numero, fila, dia_semana, edad)
+                        sala.agregar_asiento(numero, fila)
                     elif opcion == "2":
                         sala.reservar_asiento(numero, fila, dia_semana, edad)
                     print(f"Operación realizada correctamente.")
@@ -298,10 +323,13 @@ def main():
                     continue
                 while True:
                     try:
-                        dia_semana = input("Día de la semana (lunes, martes, miércoles, jueves, viernes, sábado, domingo): ").strip().lower()
-                        dias_validos = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
-                        if dia_semana not in dias_validos:
-                            raise ValueError("Error: El día de la semana debe ser uno de los siguientes: (lunes, martes, miércoles, jueves, viernes, sábado, domingo).")
+                        print("\nSeleccione el día de la semana:")
+                        for i, dia in enumerate(dias_semana, 1):
+                            print(f"{i}. {dia.capitalize()}")
+                        dia_opcion = int(input("Ingrese el número del día de la semana (1-7): "))
+                        if dia_opcion < 1 or dia_opcion > 7:
+                            raise ValueError("Error: Selección inválida. Debe ser un número entre 1 y 7.")
+                        dia_semana = dias_semana[dia_opcion - 1]
                         break
                     except ValueError as e:
                         print(f"Error: {e}. Por favor, intente nuevamente.")
@@ -314,8 +342,8 @@ def main():
                         fila = int(input("Fila del asiento (1-10): "))
                         if fila < 1 or fila > 10:
                             raise ValueError(f"Error: La fila debe estar entre 1 y 10.")
-                        sala.cancelar_reserva(numero, fila, dia_semana)
-                        print(f"Reserva del asiento {numero} en fila {fila} para el día {dia_semana} cancelada correctamente.")
+                        sala.cancelar_reserva(numero, fila)
+                        print(f"Reserva del asiento {numero} en fila {fila} cancelada correctamente.")
                         break
                     except ValueError as e:
                         print(f"Error: {e}. Por favor, intente nuevamente.")
@@ -349,6 +377,7 @@ def main():
 
         except ValueError as e:
             print(f"Error: {e}")
+            logging.error(f"Error: {e}")
 
 if __name__ == "__main__":
     main()
