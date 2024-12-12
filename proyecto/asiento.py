@@ -195,3 +195,21 @@ class Asiento:
             "edad": self.__edad,
             "descuentos": self.__descuentos
         }
+
+    @classmethod
+    def from_dict(cls, data):
+        """
+        Crea un objeto Asiento a partir de un diccionario.
+
+        Args:
+            data (dict): Un diccionario que representa el asiento.
+
+        Returns:
+            Asiento: Un objeto Asiento.
+        """
+        asiento = cls(data["numero"], data["fila"], data["dia_semana"])
+        asiento.__reservado = data["reservado"]
+        asiento.__precio = data["precio"]
+        asiento.__edad = data["edad"]
+        asiento.__descuentos = data["descuentos"]
+        return asiento

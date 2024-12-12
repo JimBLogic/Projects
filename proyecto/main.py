@@ -1,5 +1,5 @@
 from sala_cine import SalaCine, guardar_estado, cargar_estado, reset_estado
-from utilidades import validar_entrada, validar_opcion, agregar_asientos_en_rango, simulador_precios, reporte_disponibilidad
+from utilidades import validar_entrada, validar_opcion, agregar_asientos_en_rango, reporte_disponibilidad
 from mensajes import mostrar_menu, solicitar_datos_asiento, solicitar_datos_reserva, mostrar_mensaje, mostrar_error
 
 def main():
@@ -16,13 +16,15 @@ def main():
 
     while True:
         mostrar_menu()
-        opcion = validar_entrada("Seleccione una opción (1-8): ", int, (1, 8))
+        opcion = validar_entrada("Seleccione una opción (1-7): ", int, (1, 7))
 
         try:
             if opcion == 1:
-                numero, fila = solicitar_datos_asiento()
-                dia = validar_entrada("Seleccione el día de la semana (1-7): ", int, (1, 7))
+                dia = validar_entrada("Seleccione el día de la semana (1. Lunes, 2. Martes, 3. Miércoles, 4. Jueves, 5. Viernes, 6. Sábado, 7. Domingo): ", int, (1, 7))
                 dia_semana = dias_semana[dia - 1]
+
+                fila = validar_entrada("Seleccione la fila (1-10): ", int, (1, 10))
+                numero = validar_entrada("Seleccione el número del asiento (1-20): ", int, (1, 20))
                 try:
                     sala.agregar_asiento(numero, fila, dia_semana)
                     mostrar_mensaje("Asiento agregado correctamente.")
@@ -30,8 +32,12 @@ def main():
                     mostrar_error(e)
 
             elif opcion == 2:
-                numero, fila, edad, dia = solicitar_datos_reserva()
+                dia = validar_entrada("Seleccione el día de la semana (1. Lunes, 2. Martes, 3. Miércoles, 4. Jueves, 5. Viernes, 6. Sábado, 7. Domingo): ", int, (1, 7))
                 dia_semana = dias_semana[dia - 1]
+
+                fila = validar_entrada("Seleccione la fila (1-10): ", int, (1, 10))
+                numero = validar_entrada("Seleccione el número del asiento (1-20): ", int, (1, 20))
+                edad = validar_entrada("Ingrese la edad del cliente (1-120): ", int, (1, 120))
                 try:
                     sala.reservar_asiento(numero, fila, dia_semana, edad)
                     mostrar_mensaje("Asiento reservado correctamente.")
@@ -39,9 +45,11 @@ def main():
                     mostrar_error(e)
 
             elif opcion == 3:
-                numero, fila = solicitar_datos_asiento()
-                dia = validar_entrada("Seleccione el día de la semana (1-7): ", int, (1, 7))
+                dia = validar_entrada("Seleccione el día de la semana (1. Lunes, 2. Martes, 3. Miércoles, 4. Jueves, 5. Viernes, 6. Sábado, 7. Domingo): ", int, (1, 7))
                 dia_semana = dias_semana[dia - 1]
+
+                fila = validar_entrada("Seleccione la fila (1-10): ", int, (1, 10))
+                numero = validar_entrada("Seleccione el número del asiento (1-20): ", int, (1, 20))
                 try:
                     sala.cancelar_reserva(numero, fila, dia_semana, "si")
                     mostrar_mensaje("Reserva cancelada correctamente.")
@@ -49,30 +57,28 @@ def main():
                     mostrar_error(e)
 
             elif opcion == 4:
-                sala.mostrar_asientos()
+                while True:
+                    dia = validar_entrada("Seleccione el día de la semana para mostrar asientos (1. Lunes, 2. Martes, 3. Miércoles, 4. Jueves, 5. Viernes, 6. Sábado, 7. Domingo, 8. Volver al menú): ", int, (1, 8))
+                    if dia == 8:
+                        break
+                    dia_semana = dias_semana[dia - 1]
+                    sala.mostrar_asientos(dia_semana)
 
             elif opcion == 5:
-                mostrar_mensaje("Saliendo del sistema...")
-                guardar_estado(sala)
-                break
-
-            elif opcion == 6:
-                precio_base = 10.0
-                dia = validar_entrada("Seleccione el día de la semana (1-7): ", int, (1, 7))
-                dia_semana = dias_semana[dia - 1]
-                edad = validar_entrada("Ingrese la edad del cliente (1-120): ", int, (1, 120))
-                precio_final, descuentos_aplicados = simulador_precios(precio_base, dia_semana, edad)
-                mostrar_mensaje(f"Precio final: €{precio_final:.2f}")
-                if descuentos_aplicados:
-                    mostrar_mensaje(f"Descuentos aplicados: {', '.join(descuentos_aplicados)}")
-
-            elif opcion == 7:
                 reporte_disponibilidad(sala)
 
-            elif opcion == 8:
+            elif opcion == 6:
                 reset_estado()
                 sala = SalaCine()
-                mostrar_mensaje("Estado reseteado correctamente.")
+                mostrar_mensaje("Estado reseteado correctamente. Todos los asientos han sido eliminados.")
+
+            elif opcion == 7:
+                mostrar_mensaje("Saliendo del sistema...")
+                guardar = validar_opcion("¿Desea guardar el estado antes de salir? (si/no): ", ["si", "no"])
+                if guardar == "si":
+                    guardar_estado(sala)
+                    mostrar_mensaje("Estado guardado correctamente.")
+                break
 
             else:
                 mostrar_error("Opción no válida. Por favor, intente de nuevo.")

@@ -2,6 +2,9 @@ import os
 import json
 
 def reset_estado_sala():
+    """
+    Resetea el estado de la sala de cine a su estado inicial.
+    """
     estado_inicial = {
         "lunes": [],
         "martes": [],

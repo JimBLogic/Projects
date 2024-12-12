@@ -1,20 +1,33 @@
 import unittest
 from sala_cine import SalaCine
 from tests.test_setup import reset_estado_sala
+import logging
+
+# Configurar el logger
+logging.basicConfig(filename='debug.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class TestSalaCine(unittest.TestCase):
 
     def setUp(self):
+        """
+        Configuración inicial para los tests.
+        """
         reset_estado_sala()
         self.sala = SalaCine()
 
     def test_agregar_asiento(self):
+        """
+        Prueba la función agregar_asiento.
+        """
         mensaje = self.sala.agregar_asiento(1, 1, "lunes")
-        self.assertEqual(mensaje, "Asiento 1 en fila 1 para el día lunes agregado.")
+        self.assertEqual(mensaje, "Asiento 1 en fila 1 para el día lunes agregado correctamente.")
         with self.assertRaises(ValueError):
             self.sala.agregar_asiento(1, 1, "lunes")
 
     def test_reservar_asiento(self):
+        """
+        Prueba la función reservar_asiento.
+        """
         self.sala.agregar_asiento(1, 1, "lunes")
         mensaje = self.sala.reservar_asiento(1, 1, "lunes", 70)
         self.assertEqual(mensaje, "Asiento 1 en fila 1 reservado.")
@@ -22,6 +35,9 @@ class TestSalaCine(unittest.TestCase):
             self.sala.reservar_asiento(1, 1, "lunes", 70)
 
     def test_cancelar_reserva(self):
+        """
+        Prueba la función cancelar_reserva.
+        """
         self.sala.agregar_asiento(1, 1, "lunes")
         self.sala.reservar_asiento(1, 1, "lunes", 70)
         mensaje = self.sala.cancelar_reserva(1, 1, "lunes", "si")
@@ -30,10 +46,16 @@ class TestSalaCine(unittest.TestCase):
             self.sala.cancelar_reserva(1, 1, "lunes", "si")
 
     def test_mostrar_asientos(self):
+        """
+        Prueba la función mostrar_asientos.
+        """
         self.sala.agregar_asiento(1, 1, "lunes")
         self.sala.mostrar_asientos()
 
     def test_buscar_asiento(self):
+        """
+        Prueba la función buscar_asiento.
+        """
         self.sala.agregar_asiento(1, 1, "lunes")
         asiento = self.sala.buscar_asiento(1, 1, "lunes")
         self.assertIsNotNone(asiento)
@@ -41,16 +63,25 @@ class TestSalaCine(unittest.TestCase):
         self.assertIsNone(asiento)
 
     def test_hay_asientos_en_dia(self):
+        """
+        Prueba la función hay_asientos_en_dia.
+        """
         self.sala.agregar_asiento(1, 1, "lunes")
         self.assertTrue(self.sala.hay_asientos_en_dia("lunes"))
         self.assertFalse(self.sala.hay_asientos_en_dia("martes"))
 
     def test_to_dict(self):
+        """
+        Prueba la función to_dict.
+        """
         self.sala.agregar_asiento(1, 1, "lunes")
         asientos_dict = self.sala.to_dict()
         self.assertEqual(len(asientos_dict["lunes"]), 1)
 
     def test_from_dict(self):
+        """
+        Prueba la función from_dict.
+        """
         data = {
             "lunes": [{"numero": 1, "fila": 1, "dia_semana": "lunes", "reservado": False, "precio": 0.0, "edad": 0, "descuentos": []}]
         }

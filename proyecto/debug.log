@@ -1,4 +1,383 @@
-2024-12-11 10:16:49,275 - DEBUG - Entrada invÃ¡lida. Por favor, ingrese un int vÃ¡lido.
-2024-12-11 10:16:49,276 - DEBUG - Entrada invÃ¡lida. Por favor, ingrese un int vÃ¡lido.
-2024-12-11 10:16:49,282 - DEBUG - Entrada invÃ¡lida. Por favor, ingrese un int vÃ¡lido.
-2024-12-11 10:16:49,289 - DEBUG - Entrada invÃ¡lida. Por favor, ingrese un int vÃ¡lido.
+2024-12-12 22:50:46,383 - INFO - Ejecutando tests...
+2024-12-12 22:50:46,433 - DEBUG - Error en test_reporte_disponibilidad: print('Lunes: 1 asientos sin agregar, 1 asientos disponibles para reservar') call not found
+2024-12-12 22:50:46,439 - DEBUG - Entrada inválida. Por favor, ingrese un int válido.
+2024-12-12 22:50:46,440 - DEBUG - Entrada inválida. Por favor, ingrese un int válido.
+2024-12-12 22:50:46,440 - DEBUG - Entrada inválida. Por favor, ingrese un int válido.
+2024-12-12 22:50:46,440 - DEBUG - Error en test_validar_entrada_fuera_de_rango: Número máximo de intentos alcanzado. Por favor, intente de nuevo más tarde.
+2024-12-12 22:50:46,443 - DEBUG - Opción inválida. Las opciones válidas son: si, no.
+2024-12-12 22:50:46,443 - DEBUG - Opción inválida. Las opciones válidas son: si, no.
+2024-12-12 22:50:46,444 - DEBUG - Opción inválida. Las opciones válidas son: si, no.
+2024-12-12 22:50:46,444 - DEBUG - Error en test_validar_opcion_invalida: Número máximo de intentos alcanzado. Por favor, intente de nuevo más tarde.
+2024-12-12 22:50:46,457 - ERROR - Algunos tests fallaron.
+2024-12-12 22:50:46,457 - ERROR - Test fallido: test_reporte_disponibilidad (tests.test_utilidades.TestUtilidades.test_reporte_disponibilidad), Razón: Traceback (most recent call last):
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1423, in patched
+    return func(*newargs, **newkeywargs)
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\test_utilidades.py", line 105, in test_reporte_disponibilidad
+    mock_print.assert_any_call("Lunes: 1 asientos sin agregar, 1 asientos disponibles para reservar")
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1048, in assert_any_call
+    raise AssertionError(
+        '%s call not found' % expected_string
+    ) from cause
+AssertionError: print('Lunes: 1 asientos sin agregar, 1 asientos disponibles para reservar') call not found
+
+2024-12-12 22:50:46,458 - ERROR - Test fallido: test_agregar_asiento (tests.test_main.TestMain.test_agregar_asiento), Razón: Traceback (most recent call last):
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1423, in patched
+    return func(*newargs, **newkeywargs)
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\test_main.py", line 24, in test_agregar_asiento
+    main()
+    ~~~~^^
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\main.py", line 19, in main
+    opcion = validar_entrada("Seleccione una opción (1-7): ", int, (1, 7))
+             ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\utilidades.py", line 45, in validar_entrada
+    entrada = tipo(input(mensaje))
+                   ~~~~~^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1167, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1171, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    result = next(effect)
+StopIteration
+
+2024-12-12 22:50:46,460 - ERROR - Test fallido: test_cancelar_reserva (tests.test_main.TestMain.test_cancelar_reserva), Razón: Traceback (most recent call last):
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1423, in patched
+    return func(*newargs, **newkeywargs)
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\test_main.py", line 42, in test_cancelar_reserva
+    main()
+    ~~~~^^
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\main.py", line 19, in main
+    opcion = validar_entrada("Seleccione una opción (1-7): ", int, (1, 7))
+             ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\utilidades.py", line 45, in validar_entrada
+    entrada = tipo(input(mensaje))
+                   ~~~~~^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1167, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1171, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    result = next(effect)
+StopIteration
+
+2024-12-12 22:50:46,462 - ERROR - Test fallido: test_mostrar_asientos (tests.test_main.TestMain.test_mostrar_asientos), Razón: Traceback (most recent call last):
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1423, in patched
+    return func(*newargs, **newkeywargs)
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\test_main.py", line 51, in test_mostrar_asientos
+    main()
+    ~~~~^^
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\main.py", line 19, in main
+    opcion = validar_entrada("Seleccione una opción (1-7): ", int, (1, 7))
+             ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\utilidades.py", line 45, in validar_entrada
+    entrada = tipo(input(mensaje))
+                   ~~~~~^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1167, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1171, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    result = next(effect)
+StopIteration
+
+2024-12-12 22:50:46,464 - ERROR - Test fallido: test_reporte_disponibilidad (tests.test_main.TestMain.test_reporte_disponibilidad), Razón: Traceback (most recent call last):
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1423, in patched
+    return func(*newargs, **newkeywargs)
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\test_main.py", line 60, in test_reporte_disponibilidad
+    main()
+    ~~~~^^
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\main.py", line 19, in main
+    opcion = validar_entrada("Seleccione una opción (1-7): ", int, (1, 7))
+             ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\utilidades.py", line 45, in validar_entrada
+    entrada = tipo(input(mensaje))
+                   ~~~~~^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1167, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1171, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    result = next(effect)
+StopIteration
+
+2024-12-12 22:50:46,465 - ERROR - Test fallido: test_reservar_asiento (tests.test_main.TestMain.test_reservar_asiento), Razón: Traceback (most recent call last):
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1423, in patched
+    return func(*newargs, **newkeywargs)
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\test_main.py", line 33, in test_reservar_asiento
+    main()
+    ~~~~^^
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\main.py", line 19, in main
+    opcion = validar_entrada("Seleccione una opción (1-7): ", int, (1, 7))
+             ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\utilidades.py", line 45, in validar_entrada
+    entrada = tipo(input(mensaje))
+                   ~~~~~^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1167, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1171, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    result = next(effect)
+StopIteration
+
+2024-12-12 22:50:46,467 - ERROR - Test fallido: test_reset_estado (tests.test_main.TestMain.test_reset_estado), Razón: Traceback (most recent call last):
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1423, in patched
+    return func(*newargs, **newkeywargs)
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\test_main.py", line 69, in test_reset_estado
+    main()
+    ~~~~^^
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\main.py", line 19, in main
+    opcion = validar_entrada("Seleccione una opción (1-7): ", int, (1, 7))
+             ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\utilidades.py", line 45, in validar_entrada
+    entrada = tipo(input(mensaje))
+                   ~~~~~^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1167, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1171, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    result = next(effect)
+StopIteration
+
+2024-12-12 22:50:47,470 - INFO - Revisando debug.log...
+2024-12-12 22:50:47,471 - ERROR - Se encontraron errores en debug.log:
+2024-12-12 22:50:46,383 - INFO - Ejecutando tests...
+2024-12-12 22:50:46,433 - DEBUG - Error en test_reporte_disponibilidad: print('Lunes: 1 asientos sin agregar, 1 asientos disponibles para reservar') call not found
+2024-12-12 22:50:46,439 - DEBUG - Entrada inválida. Por favor, ingrese un int válido.
+2024-12-12 22:50:46,440 - DEBUG - Entrada inválida. Por favor, ingrese un int válido.
+2024-12-12 22:50:46,440 - DEBUG - Entrada inválida. Por favor, ingrese un int válido.
+2024-12-12 22:50:46,440 - DEBUG - Error en test_validar_entrada_fuera_de_rango: Número máximo de intentos alcanzado. Por favor, intente de nuevo más tarde.
+2024-12-12 22:50:46,443 - DEBUG - Opción inválida. Las opciones válidas son: si, no.
+2024-12-12 22:50:46,443 - DEBUG - Opción inválida. Las opciones válidas son: si, no.
+2024-12-12 22:50:46,444 - DEBUG - Opción inválida. Las opciones válidas son: si, no.
+2024-12-12 22:50:46,444 - DEBUG - Error en test_validar_opcion_invalida: Número máximo de intentos alcanzado. Por favor, intente de nuevo más tarde.
+2024-12-12 22:50:46,457 - ERROR - Algunos tests fallaron.
+2024-12-12 22:50:46,457 - ERROR - Test fallido: test_reporte_disponibilidad (tests.test_utilidades.TestUtilidades.test_reporte_disponibilidad), Razón: Traceback (most recent call last):
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1423, in patched
+    return func(*newargs, **newkeywargs)
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\test_utilidades.py", line 105, in test_reporte_disponibilidad
+    mock_print.assert_any_call("Lunes: 1 asientos sin agregar, 1 asientos disponibles para reservar")
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1048, in assert_any_call
+    raise AssertionError(
+        '%s call not found' % expected_string
+    ) from cause
+AssertionError: print('Lunes: 1 asientos sin agregar, 1 asientos disponibles para reservar') call not found
+
+2024-12-12 22:50:46,458 - ERROR - Test fallido: test_agregar_asiento (tests.test_main.TestMain.test_agregar_asiento), Razón: Traceback (most recent call last):
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1423, in patched
+    return func(*newargs, **newkeywargs)
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\test_main.py", line 24, in test_agregar_asiento
+    main()
+    ~~~~^^
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\main.py", line 19, in main
+    opcion = validar_entrada("Seleccione una opción (1-7): ", int, (1, 7))
+             ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\utilidades.py", line 45, in validar_entrada
+    entrada = tipo(input(mensaje))
+                   ~~~~~^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1167, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1171, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    result = next(effect)
+StopIteration
+
+2024-12-12 22:50:46,460 - ERROR - Test fallido: test_cancelar_reserva (tests.test_main.TestMain.test_cancelar_reserva), Razón: Traceback (most recent call last):
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1423, in patched
+    return func(*newargs, **newkeywargs)
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\test_main.py", line 42, in test_cancelar_reserva
+    main()
+    ~~~~^^
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\main.py", line 19, in main
+    opcion = validar_entrada("Seleccione una opción (1-7): ", int, (1, 7))
+             ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\utilidades.py", line 45, in validar_entrada
+    entrada = tipo(input(mensaje))
+                   ~~~~~^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1167, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1171, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    result = next(effect)
+StopIteration
+
+2024-12-12 22:50:46,462 - ERROR - Test fallido: test_mostrar_asientos (tests.test_main.TestMain.test_mostrar_asientos), Razón: Traceback (most recent call last):
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1423, in patched
+    return func(*newargs, **newkeywargs)
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\test_main.py", line 51, in test_mostrar_asientos
+    main()
+    ~~~~^^
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\main.py", line 19, in main
+    opcion = validar_entrada("Seleccione una opción (1-7): ", int, (1, 7))
+             ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\utilidades.py", line 45, in validar_entrada
+    entrada = tipo(input(mensaje))
+                   ~~~~~^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1167, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1171, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    result = next(effect)
+StopIteration
+
+2024-12-12 22:50:46,464 - ERROR - Test fallido: test_reporte_disponibilidad (tests.test_main.TestMain.test_reporte_disponibilidad), Razón: Traceback (most recent call last):
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1423, in patched
+    return func(*newargs, **newkeywargs)
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\test_main.py", line 60, in test_reporte_disponibilidad
+    main()
+    ~~~~^^
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\main.py", line 19, in main
+    opcion = validar_entrada("Seleccione una opción (1-7): ", int, (1, 7))
+             ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\utilidades.py", line 45, in validar_entrada
+    entrada = tipo(input(mensaje))
+                   ~~~~~^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1167, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1171, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    result = next(effect)
+StopIteration
+
+2024-12-12 22:50:46,465 - ERROR - Test fallido: test_reservar_asiento (tests.test_main.TestMain.test_reservar_asiento), Razón: Traceback (most recent call last):
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1423, in patched
+    return func(*newargs, **newkeywargs)
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\test_main.py", line 33, in test_reservar_asiento
+    main()
+    ~~~~^^
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\main.py", line 19, in main
+    opcion = validar_entrada("Seleccione una opción (1-7): ", int, (1, 7))
+             ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\utilidades.py", line 45, in validar_entrada
+    entrada = tipo(input(mensaje))
+                   ~~~~~^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1167, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1171, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    result = next(effect)
+StopIteration
+
+2024-12-12 22:50:46,467 - ERROR - Test fallido: test_reset_estado (tests.test_main.TestMain.test_reset_estado), Razón: Traceback (most recent call last):
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1423, in patched
+    return func(*newargs, **newkeywargs)
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\test_main.py", line 69, in test_reset_estado
+    main()
+    ~~~~^^
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\main.py", line 19, in main
+    opcion = validar_entrada("Seleccione una opción (1-7): ", int, (1, 7))
+             ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\utilidades.py", line 45, in validar_entrada
+    entrada = tipo(input(mensaje))
+                   ~~~~~^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1167, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1171, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\JimBLogic\AppData\Local\Programs\Python\Python313-32\Lib\unittest\mock.py", line 1228, in _execute_mock_call
+    result = next(effect)
+StopIteration
+
+2024-12-12 22:50:47,470 - INFO - Revisando debug.log...
+
+2024-12-12 22:50:48,472 - INFO - Ejecutando el programa para pruebas manuales...
+2024-12-12 22:50:48,636 - INFO - Salida del programa:
+
+2024-12-12 22:50:48,636 - ERROR - El programa encontró errores:
+Traceback (most recent call last):
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\main.py", line 1, in <module>
+    from sala_cine import SalaCine, guardar_estado, cargar_estado, reset_estado
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\sala_cine.py", line 5, in <module>
+    from utilidades import calcular_descuento
+  File "D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\utilidades.py", line 6, in <module>
+    os.remove('debug.log')
+    ~~~~~~~~~^^^^^^^^^^^^^
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: 'debug.log'
+
+2024-12-12 22:50:49,637 - INFO - Verificación completa.
+2024-12-12 22:54:47,867 - DEBUG - Error en test_reporte_disponibilidad: print('Lunes: 1 asientos sin agregar, 1 asientos disponibles para reservar') call not found
+2024-12-12 22:54:47,872 - DEBUG - Entrada inválida. Por favor, ingrese un int válido.
+2024-12-12 22:54:47,873 - DEBUG - Entrada inválida. Por favor, ingrese un int válido.
+2024-12-12 22:54:47,873 - DEBUG - Entrada inválida. Por favor, ingrese un int válido.
+2024-12-12 22:54:47,873 - DEBUG - Error en test_validar_entrada_fuera_de_rango: Número máximo de intentos alcanzado. Por favor, intente de nuevo más tarde.
+2024-12-12 22:54:47,876 - DEBUG - Opción inválida. Las opciones válidas son: si, no.
+2024-12-12 22:54:47,876 - DEBUG - Opción inválida. Las opciones válidas son: si, no.
+2024-12-12 22:54:47,876 - DEBUG - Opción inválida. Las opciones válidas son: si, no.
+2024-12-12 22:54:47,876 - DEBUG - Error en test_validar_opcion_invalida: Número máximo de intentos alcanzado. Por favor, intente de nuevo más tarde.
+2024-12-12 22:54:50,655 - DEBUG - Error en test_reporte_disponibilidad: print('Lunes: 1 asientos sin agregar, 1 asientos disponibles para reservar') call not found
+2024-12-12 22:54:50,661 - DEBUG - Entrada inválida. Por favor, ingrese un int válido.
+2024-12-12 22:54:50,661 - DEBUG - Entrada inválida. Por favor, ingrese un int válido.
+2024-12-12 22:54:50,661 - DEBUG - Entrada inválida. Por favor, ingrese un int válido.
+2024-12-12 22:54:50,661 - DEBUG - Error en test_validar_entrada_fuera_de_rango: Número máximo de intentos alcanzado. Por favor, intente de nuevo más tarde.
+2024-12-12 22:54:50,664 - DEBUG - Opción inválida. Las opciones válidas son: si, no.
+2024-12-12 22:54:50,664 - DEBUG - Opción inválida. Las opciones válidas son: si, no.
+2024-12-12 22:54:50,665 - DEBUG - Opción inválida. Las opciones válidas son: si, no.
+2024-12-12 22:54:50,665 - DEBUG - Error en test_validar_opcion_invalida: Número máximo de intentos alcanzado. Por favor, intente de nuevo más tarde.
+2024-12-12 22:57:44,707 - DEBUG - Error en test_reporte_disponibilidad: print('Lunes: 1 asientos sin agregar, 1 asientos disponibles para reservar') call not found
+2024-12-12 22:57:44,713 - DEBUG - Entrada inválida. Por favor, ingrese un int válido.
+2024-12-12 22:57:44,714 - DEBUG - Entrada inválida. Por favor, ingrese un int válido.
+2024-12-12 22:57:44,714 - DEBUG - Entrada inválida. Por favor, ingrese un int válido.
+2024-12-12 22:57:44,714 - DEBUG - Error en test_validar_entrada_fuera_de_rango: Número máximo de intentos alcanzado. Por favor, intente de nuevo más tarde.
+2024-12-12 22:57:44,718 - DEBUG - Opción inválida. Las opciones válidas son: si, no.
+2024-12-12 22:57:44,718 - DEBUG - Opción inválida. Las opciones válidas son: si, no.
+2024-12-12 22:57:44,719 - DEBUG - Opción inválida. Las opciones válidas son: si, no.
+2024-12-12 22:57:44,719 - DEBUG - Error en test_validar_opcion_invalida: Número máximo de intentos alcanzado. Por favor, intente de nuevo más tarde.
+2024-12-12 22:57:47,843 - DEBUG - Error en test_reporte_disponibilidad: print('Lunes: 1 asientos sin agregar, 1 asientos disponibles para reservar') call not found
+2024-12-12 22:57:47,848 - DEBUG - Entrada inválida. Por favor, ingrese un int válido.
+2024-12-12 22:57:47,849 - DEBUG - Entrada inválida. Por favor, ingrese un int válido.
+2024-12-12 22:57:47,849 - DEBUG - Entrada inválida. Por favor, ingrese un int válido.
+2024-12-12 22:57:47,849 - DEBUG - Error en test_validar_entrada_fuera_de_rango: Número máximo de intentos alcanzado. Por favor, intente de nuevo más tarde.
+2024-12-12 22:57:47,852 - DEBUG - Opción inválida. Las opciones válidas son: si, no.
+2024-12-12 22:57:47,852 - DEBUG - Opción inválida. Las opciones válidas son: si, no.
+2024-12-12 22:57:47,852 - DEBUG - Opción inválida. Las opciones válidas son: si, no.
+2024-12-12 22:57:47,852 - DEBUG - Error en test_validar_opcion_invalida: Número máximo de intentos alcanzado. Por favor, intente de nuevo más tarde.
+2024-12-12 23:03:46,985 - DEBUG - Error en test_reporte_disponibilidad: print('Lunes: 1 asientos sin agregar, 1 asientos disponibles para reservar') call not found
+2024-12-12 23:03:46,992 - DEBUG - Entrada inválida. Por favor, ingrese un int válido.
+2024-12-12 23:03:46,992 - DEBUG - Entrada inválida. Por favor, ingrese un int válido.
+2024-12-12 23:03:46,992 - DEBUG - Entrada inválida. Por favor, ingrese un int válido.
+2024-12-12 23:03:46,993 - DEBUG - Error en test_validar_entrada_fuera_de_rango: Número máximo de intentos alcanzado. Por favor, intente de nuevo más tarde.
+2024-12-12 23:03:46,997 - DEBUG - Opción inválida. Las opciones válidas son: si, no.
+2024-12-12 23:03:46,998 - DEBUG - Opción inválida. Las opciones válidas son: si, no.
+2024-12-12 23:03:46,998 - DEBUG - Opción inválida. Las opciones válidas son: si, no.
+2024-12-12 23:03:46,999 - DEBUG - Error en test_validar_opcion_invalida: Número máximo de intentos alcanzado. Por favor, intente de nuevo más tarde.
+2024-12-12 23:03:50,456 - DEBUG - Error en test_reporte_disponibilidad: print('Lunes: 1 asientos sin agregar, 1 asientos disponibles para reservar') call not found
+2024-12-12 23:03:50,461 - DEBUG - Entrada inválida. Por favor, ingrese un int válido.
+2024-12-12 23:03:50,461 - DEBUG - Entrada inválida. Por favor, ingrese un int válido.
+2024-12-12 23:03:50,461 - DEBUG - Entrada inválida. Por favor, ingrese un int válido.
+2024-12-12 23:03:50,461 - DEBUG - Error en test_validar_entrada_fuera_de_rango: Número máximo de intentos alcanzado. Por favor, intente de nuevo más tarde.
+2024-12-12 23:03:50,464 - DEBUG - Opción inválida. Las opciones válidas son: si, no.
+2024-12-12 23:03:50,464 - DEBUG - Opción inválida. Las opciones válidas son: si, no.
+2024-12-12 23:03:50,464 - DEBUG - Opción inválida. Las opciones válidas son: si, no.
+2024-12-12 23:03:50,464 - DEBUG - Error en test_validar_opcion_invalida: Número máximo de intentos alcanzado. Por favor, intente de nuevo más tarde.

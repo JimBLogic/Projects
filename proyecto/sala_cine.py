@@ -199,32 +199,6 @@ class SalaCine:
                 if a["reservado"]:
                     asiento.reservar()
 
-    def calcular_precio(self, precio_base, dia_semana, edad):
-        """
-        Calcula el precio final de un asiento aplicando descuentos según el día de la semana y la edad del espectador.
-        Devuelve el precio final y una lista de descuentos aplicados.
-
-        Args:
-            precio_base (float): El precio base del asiento.
-            dia_semana (str): El día de la semana.
-            edad (int): La edad del espectador.
-
-        Returns:
-            tuple: El precio final y una lista de descuentos aplicados.
-        """
-        descuento = 0.0
-        descuentos_aplicados = []
-
-        if dia_semana == "miércoles":
-            descuento += 0.2
-            descuentos_aplicados.append("20% de descuento los miércoles")
-        if edad > 65:
-            descuento += 0.3
-            descuentos_aplicados.append("30% de descuento para mayores de 65 años")
-
-        precio_final = precio_base * (1 - descuento)
-        return precio_final, descuentos_aplicados
-
 def guardar_estado(sala):
     """
     Guarda el estado actual de la sala de cine en un archivo JSON.

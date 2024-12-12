@@ -5,7 +5,7 @@ class Mensajes:
 
     @staticmethod
     def asiento_agregado(numero, fila, dia_semana):
-        return f"Asiento {numero} en fila {fila} para el día {dia_semana} agregado."
+        return f"Asiento {numero} en fila {fila} para el día {dia_semana} agregado correctamente."
 
     @staticmethod
     def error_asiento_no_encontrado(numero, fila, dia_semana):
@@ -37,18 +37,20 @@ class Mensajes:
 
     @staticmethod
     def estado_reseteado():
-        return "Estado de la sala reseteado correctamente."
+        return "Estado de la sala reseteado correctamente. Todos los asientos han sido eliminados."
 
 def mostrar_menu():
     """
     Muestra el menú principal de opciones al usuario.
     """
-    print("Bienvenido al sistema de reservas de la sala de cine")
+    print("\nOpciones:")
     print("1. Agregar asiento")
     print("2. Reservar asiento")
     print("3. Cancelar reserva")
-    print("4. Mostrar asientos")
-    print("5. Salir")
+    print("4. Mostrar todos los asientos")
+    print("5. Generar reporte de disponibilidad")
+    print("6. Resetear estado")
+    print("7. Salir")
 
 def solicitar_datos_asiento():
     """
@@ -58,8 +60,8 @@ def solicitar_datos_asiento():
         tuple: Una tupla con el número y la fila del asiento.
     """
     try:
-        numero = int(input("Ingrese el número del asiento: "))
-        fila = int(input("Ingrese la fila del asiento: "))
+        numero = int(input("Ingrese el número del asiento (1-20): "))
+        fila = int(input("Ingrese la fila del asiento (1-10): "))
         return numero, fila
     except ValueError:
         mostrar_error("Entrada inválida. Por favor, ingrese números válidos.")
@@ -73,10 +75,10 @@ def solicitar_datos_reserva():
         tuple: Una tupla con el número, la fila, la edad del cliente y el día de la semana.
     """
     try:
-        numero = int(input("Ingrese el número del asiento: "))
-        fila = int(input("Ingrese la fila del asiento: "))
-        edad = int(input("Ingrese la edad del cliente: "))
-        dia = input("Ingrese el día de la semana: ")
+        numero = int(input("Ingrese el número del asiento (1-20): "))
+        fila = int(input("Ingrese la fila del asiento (1-10): "))
+        edad = int(input("Ingrese la edad del cliente (1-120): "))
+        dia = int(input("Ingrese el día de la semana (1-7): "))
         return numero, fila, edad, dia
     except ValueError:
         mostrar_error("Entrada inválida. Por favor, ingrese números válidos.")

@@ -1,10 +1,6 @@
 import logging
 import os
 
-# Reiniciar el archivo de depuración
-if os.path.exists('debug.log'):
-    os.remove('debug.log')
-
 # Configurar el logger
 logging.basicConfig(filename='debug.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -39,14 +35,20 @@ def validar_entrada(mensaje, tipo=int, rango=None):
     Returns:
         tipo: La entrada validada del usuario.
     """
-    while True:
+    intentos = 0
+    while intentos < 3:
         try:
             entrada = tipo(input(mensaje))
             if rango and (entrada < rango[0] or entrada > rango[1]):
                 raise ValueError
+            if tipo == int and (entrada < 0):
+                raise ValueError
             return entrada
         except ValueError:
+            intentos += 1
             logging.debug(f"Entrada inválida. Por favor, ingrese un {tipo.__name__} válido.")
+            print(f"Entrada inválida. Por favor, ingrese un {tipo.__name__} válido.")
+    raise ValueError("Número máximo de intentos alcanzado. Por favor, intente de nuevo más tarde.")
 
 def validar_opcion(mensaje, opciones_validas):
     """
@@ -59,11 +61,15 @@ def validar_opcion(mensaje, opciones_validas):
     Returns:
         str: La opción validada del usuario.
     """
-    while True:
+    intentos = 0
+    while intentos < 3:
         entrada = input(mensaje).strip().lower()
         if entrada in opciones_validas:
             return entrada
+        intentos += 1
         logging.debug(f"Opción inválida. Las opciones válidas son: {', '.join(opciones_validas)}.")
+        print(f"Opción inválida. Las opciones válidas son: {', '.join(opciones_validas)}.")
+    raise ValueError("Número máximo de intentos alcanzado. Por favor, intente de nuevo más tarde.")
 
 def agregar_asientos_en_rango(sala, dias, filas, numeros):
     """
@@ -83,31 +89,7 @@ def agregar_asientos_en_rango(sala, dias, filas, numeros):
                     print(mensaje)
                 except ValueError as e:
                     logging.debug(f"Error: {e}")
-
-def simulador_precios(precio_base, dia_semana, edad):
-    """
-    Simula el precio de un asiento aplicando descuentos según el día de la semana y la edad del espectador.
-
-    Args:
-        precio_base (float): El precio base del asiento.
-        dia_semana (str): El día de la semana.
-        edad (int): La edad del espectador.
-
-    Returns:
-        tuple: El precio final y una lista de descuentos aplicados.
-    """
-    descuento = 0.0
-    descuentos_aplicados = []
-
-    if dia_semana == "miércoles":
-        descuento += 0.2
-        descuentos_aplicados.append("20% de descuento los miércoles")
-    if edad > 65:
-        descuento += 0.3
-        descuentos_aplicados.append("30% de descuento para mayores de 65 años")
-
-    precio_final = precio_base * (1 - descuento)
-    return precio_final, descuentos_aplicados
+                    print(f"Error: {e}")
 
 def reporte_disponibilidad(sala):
     """
@@ -117,11 +99,16 @@ def reporte_disponibilidad(sala):
         sala (SalaCine): La instancia de la sala de cine.
     """
     dias_semana = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
-    reporte = {dia: 0 for dia in dias_semana}
+    reporte = {dia: {"sin_agregar": 0, "disponibles": 0} for dia in dias_semana}
 
-    for asiento in sala.to_dict():
-        if not asiento["reservado"]:
-            reporte[asiento["dia_semana"]] += 1
+    for dia, asientos in sala.to_dict().items():
+        for asiento in asientos:
+            if asiento["reservado"]:
+                continue
+            if asiento["precio"] == 0:
+                reporte[dia]["sin_agregar"] += 1
+            else:
+                reporte[dia]["disponibles"] += 1
 
-    for dia, disponibles in reporte.items():
-        print(f"{dia.capitalize()}: {disponibles} asientos disponibles")
+    for dia, disponibilidad in reporte.items():
+        print(f"{dia.capitalize()}: {disponibilidad['sin_agregar']} asientos sin agregar, {disponibilidad['disponibles']} asientos disponibles para reservar")
