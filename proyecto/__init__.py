@@ -1,1 +1,0 @@
-# Este archivo puede estar vacío o contener inicializaciones de paquete si es necesario.

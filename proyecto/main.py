@@ -1,93 +1,113 @@
-from sala_cine import SalaCine, guardar_estado, cargar_estado, reset_estado
-from utilidades import validar_entrada, validar_opcion, agregar_asientos_en_rango, reporte_disponibilidad
-from mensajes import mostrar_menu, solicitar_datos_asiento, solicitar_datos_reserva, mostrar_mensaje, mostrar_error
+from utilidades import validar_entrada, validar_opcion
+from sala_cine import SalaCine
+from mensajes import Mensajes
+import logging
+
+# Configurar el logger
+logging.basicConfig(filename='debug.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def main():
     """
-    Función principal que maneja la interacción con el usuario.
-    Carga el estado de la sala de cine y presenta un menú de opciones para gestionar los asientos.
+    Función principal que gestiona la interacción con el usuario para la gestión de asientos en la sala de cine.
     """
-    sala = cargar_estado()
-    print("¡Bienvenido al Sistema de Reservas para un Cine!")
-    print("Las filas van del 1 al 10 y los asientos de cada fila van del 1 al 20.")
-    print("Recuerda que los miércoles hay un 20% de descuento y los mayores de 65 años tienen un 30% de descuento adicional.")
+    # Crear una instancia de la clase SalaCine para gestionar los asientos
+    sala = SalaCine()
+    
+    # Mostrar un mensaje de bienvenida al usuario
+    print(Mensajes.bienvenida())
+    logging.info("Mensaje de bienvenida mostrado.")
 
-    dias_semana = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
-
+    # Bucle principal para la interacción con el usuario
     while True:
-        mostrar_menu()
-        opcion = validar_entrada("Seleccione una opción (1-7): ", int, (1, 7))
+        # Mostrar el menú de opciones al usuario
+        print("\nSeleccione una opción:")
+        print("1. Agregar asiento")
+        print("2. Reservar asiento")
+        print("3. Cancelar reserva")
+        print("4. Mostrar asientos")
+        print("5. Generar reporte de disponibilidad")
+        print("6. Resetear estado")
+        print("7. Salir")
 
+        # Validar la opción seleccionada por el usuario
         try:
-            if opcion == 1:
-                dia = validar_entrada("Seleccione el día de la semana (1. Lunes, 2. Martes, 3. Miércoles, 4. Jueves, 5. Viernes, 6. Sábado, 7. Domingo): ", int, (1, 7))
-                dia_semana = dias_semana[dia - 1]
-
-                fila = validar_entrada("Seleccione la fila (1-10): ", int, (1, 10))
-                numero = validar_entrada("Seleccione el número del asiento (1-20): ", int, (1, 20))
-                try:
-                    sala.agregar_asiento(numero, fila, dia_semana)
-                    mostrar_mensaje("Asiento agregado correctamente.")
-                except Exception as e:
-                    mostrar_error(e)
-
-            elif opcion == 2:
-                dia = validar_entrada("Seleccione el día de la semana (1. Lunes, 2. Martes, 3. Miércoles, 4. Jueves, 5. Viernes, 6. Sábado, 7. Domingo): ", int, (1, 7))
-                dia_semana = dias_semana[dia - 1]
-
-                fila = validar_entrada("Seleccione la fila (1-10): ", int, (1, 10))
-                numero = validar_entrada("Seleccione el número del asiento (1-20): ", int, (1, 20))
-                edad = validar_entrada("Ingrese la edad del cliente (1-120): ", int, (1, 120))
-                try:
-                    sala.reservar_asiento(numero, fila, dia_semana, edad)
-                    mostrar_mensaje("Asiento reservado correctamente.")
-                except Exception as e:
-                    mostrar_error(e)
-
-            elif opcion == 3:
-                dia = validar_entrada("Seleccione el día de la semana (1. Lunes, 2. Martes, 3. Miércoles, 4. Jueves, 5. Viernes, 6. Sábado, 7. Domingo): ", int, (1, 7))
-                dia_semana = dias_semana[dia - 1]
-
-                fila = validar_entrada("Seleccione la fila (1-10): ", int, (1, 10))
-                numero = validar_entrada("Seleccione el número del asiento (1-20): ", int, (1, 20))
-                try:
-                    sala.cancelar_reserva(numero, fila, dia_semana, "si")
-                    mostrar_mensaje("Reserva cancelada correctamente.")
-                except Exception as e:
-                    mostrar_error(e)
-
-            elif opcion == 4:
-                while True:
-                    dia = validar_entrada("Seleccione el día de la semana para mostrar asientos (1. Lunes, 2. Martes, 3. Miércoles, 4. Jueves, 5. Viernes, 6. Sábado, 7. Domingo, 8. Volver al menú): ", int, (1, 8))
-                    if dia == 8:
-                        break
-                    dia_semana = dias_semana[dia - 1]
-                    sala.mostrar_asientos(dia_semana)
-
-            elif opcion == 5:
-                reporte_disponibilidad(sala)
-
-            elif opcion == 6:
-                reset_estado()
-                sala = SalaCine()
-                mostrar_mensaje("Estado reseteado correctamente. Todos los asientos han sido eliminados.")
-
-            elif opcion == 7:
-                mostrar_mensaje("Saliendo del sistema...")
-                guardar = validar_opcion("¿Desea guardar el estado antes de salir? (si/no): ", ["si", "no"])
-                if guardar == "si":
-                    guardar_estado(sala)
-                    mostrar_mensaje("Estado guardado correctamente.")
-                break
-
-            else:
-                mostrar_error("Opción no válida. Por favor, intente de nuevo.")
-
+            opcion = validar_entrada("Seleccione una opción (1-7): ", int, (1, 7))
         except ValueError as e:
-            mostrar_error(f"Error: {e}")
+            print(Mensajes.max_intentos())
+            logging.error(e)
+            break
+        logging.info(f"Opción seleccionada: {opcion}")
 
-        except Exception as e:
-            mostrar_error(f"Error inesperado: {e}")
+        if opcion == 1:
+            # Agregar un asiento
+            dia_num = validar_entrada(Mensajes.ingrese_dia(), int, (1, 7))
+            dias = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
+            dia = dias[dia_num - 1]
+            fila = input(Mensajes.ingrese_fila())
+            numero = validar_entrada(Mensajes.ingrese_numero_asiento(), int)
+            try:
+                print(sala.agregar_asiento(dia, fila, numero))
+                logging.info(f"Asiento agregado: {dia}, {fila}, {numero}")
+            except ValueError as e:
+                print(e)
+                logging.error(f"Error al agregar asiento: {e}")
+        elif opcion == 2:
+            # Reservar un asiento
+            dia_num = validar_entrada(Mensajes.ingrese_dia(), int, (1, 7))
+            dias = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
+            dia = dias[dia_num - 1]
+            fila = input(Mensajes.ingrese_fila())
+            numero = validar_entrada(Mensajes.ingrese_numero_asiento(), int)
+            print(sala.reservar_asiento(dia, fila, numero))
+            logging.info(f"Asiento reservado: {dia}, {fila}, {numero}")
+        elif opcion == 3:
+            # Cancelar una reserva
+            dia_num = validar_entrada(Mensajes.ingrese_dia(), int, (1, 7))
+            dias = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
+            dia = dias[dia_num - 1]
+            fila = input(Mensajes.ingrese_fila())
+            numero = validar_entrada(Mensajes.ingrese_numero_asiento(), int)
+            print(sala.cancelar_reserva(dia, fila, numero))
+            logging.info(f"Reserva cancelada: {dia}, {fila}, {numero}")
+        elif opcion == 4:
+            # Mostrar los asientos de un día específico
+            dia_num = validar_entrada(Mensajes.ingrese_dia(), int, (1, 7))
+            dias = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
+            dia = dias[dia_num - 1]
+            if dia in sala.estado:
+                for asiento in sala.estado[dia]:
+                    print(asiento.to_dict())
+                logging.info(f"Asientos mostrados para el día: {dia}")
+            else:
+                print(Mensajes.dia_invalido())
+                logging.warning(f"Día inválido ingresado: {dia}")
+        elif opcion == 5:
+            # Generar un reporte de disponibilidad de asientos
+            reporte = sala.reporte_disponibilidad()
+            for dia, disponibilidad in reporte.items():
+                print(Mensajes.reporte_disponibilidad(dia, disponibilidad["libres"], disponibilidad["reservados"], disponibilidad["no_agregados"]))
+            logging.info("Reporte de disponibilidad generado.")
+        elif opcion == 6:
+            # Resetear el estado de la sala
+            confirmacion = input(Mensajes.confirmar_reseteo()).lower()
+            if confirmacion == 'si':
+                sala.estado = {dia: [] for dia in ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]}
+                sala.guardar_estado()
+                print(Mensajes.estado_reseteado())
+                logging.info("Estado de la sala reseteado.")
+            else:
+                print(Mensajes.reseteo_cancelado())
+                logging.info("Reseteo de estado cancelado.")
+        elif opcion == 7:
+            # Salir del sistema
+            guardar = input(Mensajes.confirmar_guardado()).lower()
+            if guardar == 'si':
+                sala.guardar_estado()
+                print(Mensajes.estado_guardado())
+                logging.info("Estado de la sala guardado.")
+            print(Mensajes.saliendo_sistema())
+            logging.info("Sistema cerrado por el usuario.")
+            break
 
 if __name__ == "__main__":
     main()

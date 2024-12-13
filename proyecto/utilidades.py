@@ -1,5 +1,5 @@
 import logging
-import os
+from mensajes import Mensajes
 
 # Configurar el logger
 logging.basicConfig(filename='debug.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -46,9 +46,10 @@ def validar_entrada(mensaje, tipo=int, rango=None):
             return entrada
         except ValueError:
             intentos += 1
-            logging.debug(f"Entrada inválida. Por favor, ingrese un {tipo.__name__} válido.")
-            print(f"Entrada inválida. Por favor, ingrese un {tipo.__name__} válido.")
-    raise ValueError("Número máximo de intentos alcanzado. Por favor, intente de nuevo más tarde.")
+            logging.debug(Mensajes.opcion_invalida())
+            print(Mensajes.opcion_invalida())
+    logging.error(Mensajes.max_intentos())
+    raise ValueError(Mensajes.max_intentos())
 
 def validar_opcion(mensaje, opciones_validas):
     """
@@ -67,48 +68,6 @@ def validar_opcion(mensaje, opciones_validas):
         if entrada in opciones_validas:
             return entrada
         intentos += 1
-        logging.debug(f"Opción inválida. Las opciones válidas son: {', '.join(opciones_validas)}.")
-        print(f"Opción inválida. Las opciones válidas son: {', '.join(opciones_validas)}.")
-    raise ValueError("Número máximo de intentos alcanzado. Por favor, intente de nuevo más tarde.")
-
-def agregar_asientos_en_rango(sala, dias, filas, numeros):
-    """
-    Agrega múltiples asientos a la sala de cine en los días, filas y números especificados.
-
-    Args:
-        sala (SalaCine): La instancia de la sala de cine.
-        dias (list): Una lista de días de la semana.
-        filas (list): Una lista de filas.
-        numeros (list): Una lista de números de asientos.
-    """
-    for dia in dias:
-        for fila in filas:
-            for numero in numeros:
-                try:
-                    mensaje = sala.agregar_asiento(numero, fila, dia)
-                    print(mensaje)
-                except ValueError as e:
-                    logging.debug(f"Error: {e}")
-                    print(f"Error: {e}")
-
-def reporte_disponibilidad(sala):
-    """
-    Genera un reporte de la disponibilidad de asientos por día.
-
-    Args:
-        sala (SalaCine): La instancia de la sala de cine.
-    """
-    dias_semana = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
-    reporte = {dia: {"sin_agregar": 0, "disponibles": 0} for dia in dias_semana}
-
-    for dia, asientos in sala.to_dict().items():
-        for asiento in asientos:
-            if asiento["reservado"]:
-                continue
-            if asiento["precio"] == 0:
-                reporte[dia]["sin_agregar"] += 1
-            else:
-                reporte[dia]["disponibles"] += 1
-
-    for dia, disponibilidad in reporte.items():
-        print(f"{dia.capitalize()}: {disponibilidad['sin_agregar']} asientos sin agregar, {disponibilidad['disponibles']} asientos disponibles para reservar")
+        logging.debug(Mensajes.opcion_invalida())
+        print(Mensajes.opcion_invalida())
+    raise ValueError(Mensajes.max_intentos())

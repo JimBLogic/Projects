@@ -1,144 +1,64 @@
 import unittest
 from asiento import Asiento
-from tests.test_setup import reset_estado_sala
+from mensajes import Mensajes
 
 class TestAsiento(unittest.TestCase):
+    """
+    Clase de pruebas para la clase Asiento.
+    """
 
-    def setUp(self):
+    def test_reservar_asiento_libre(self):
         """
-        Configuración inicial para los tests.
+        Prueba la reserva de un asiento libre.
         """
-        reset_estado_sala()
-        self.asiento = Asiento(1, 1, "lunes")
+        asiento = Asiento("A", 1)
+        mensaje = asiento.reservar()
+        self.assertEqual(mensaje, Mensajes.asiento_reservado())
+        self.assertEqual(asiento.estado, "reservado")
 
-    def test_get_numero(self):
+    def test_reservar_asiento_reservado(self):
         """
-        Prueba el método get_numero.
+        Prueba la reserva de un asiento ya reservado.
         """
-        self.assertEqual(self.asiento.get_numero(), 1)
+        asiento = Asiento("A", 1, "reservado")
+        mensaje = asiento.reservar()
+        self.assertEqual(mensaje, Mensajes.asiento_ya_reservado())
+        self.assertEqual(asiento.estado, "reservado")
 
-    def test_get_fila(self):
+    def test_cancelar_reserva_asiento_reservado(self):
         """
-        Prueba el método get_fila.
+        Prueba la cancelación de la reserva de un asiento reservado.
         """
-        self.assertEqual(self.asiento.get_fila(), 1)
+        asiento = Asiento("A", 1, "reservado")
+        mensaje = asiento.cancelar()
+        self.assertEqual(mensaje, Mensajes.reserva_cancelada())
+        self.assertEqual(asiento.estado, "libre")
 
-    def test_get_dia_semana(self):
+    def test_cancelar_reserva_asiento_libre(self):
         """
-        Prueba el método get_dia_semana.
+        Prueba la cancelación de la reserva de un asiento libre.
         """
-        self.assertEqual(self.asiento.get_dia_semana(), "lunes")
-
-    def test_get_reservado(self):
-        """
-        Prueba el método get_reservado.
-        """
-        self.assertFalse(self.asiento.get_reservado())
-
-    def test_get_precio(self):
-        """
-        Prueba el método get_precio.
-        """
-        self.assertEqual(self.asiento.get_precio(), 0.0)
-
-    def test_get_edad(self):
-        """
-        Prueba el método get_edad.
-        """
-        self.assertEqual(self.asiento.get_edad(), 0)
-
-    def test_get_descuentos(self):
-        """
-        Prueba el método get_descuentos.
-        """
-        self.assertEqual(self.asiento.get_descuentos(), [])
-
-    def test_set_precio(self):
-        """
-        Prueba el método set_precio.
-        """
-        self.asiento.set_precio(15.0)
-        self.assertEqual(self.asiento.get_precio(), 15.0)
-        with self.assertRaises(ValueError):
-            self.asiento.reservar()
-            self.asiento.set_precio(20.0)
-
-    def test_set_edad(self):
-        """
-        Prueba el método set_edad.
-        """
-        self.asiento.set_edad(30)
-        self.assertEqual(self.asiento.get_edad(), 30)
-        with self.assertRaises(ValueError):
-            self.asiento.reservar()
-            self.asiento.set_edad(40)
-
-    def test_set_descuentos(self):
-        """
-        Prueba el método set_descuentos.
-        """
-        self.asiento.set_descuentos(["20%"])
-        self.assertEqual(self.asiento.get_descuentos(), ["20%"])
-        with self.assertRaises(ValueError):
-            self.asiento.reservar()
-            self.asiento.set_descuentos(["30%"])
-
-    def test_reservar(self):
-        """
-        Prueba el método reservar.
-        """
-        self.assertEqual(self.asiento.reservar(), "Asiento 1 en fila 1 reservado.")
-        with self.assertRaises(ValueError):
-            self.asiento.reservar()
-
-    def test_cancelar_reserva(self):
-        """
-        Prueba el método cancelar_reserva.
-        """
-        self.asiento.reservar()
-        self.assertEqual(self.asiento.cancelar_reserva("si"), "Asiento 1 en fila 1 ahora está disponible.")
-        with self.assertRaises(ValueError):
-            self.asiento.cancelar_reserva("si")
+        asiento = Asiento("A", 1)
+        mensaje = asiento.cancelar()
+        self.assertEqual(mensaje, Mensajes.asiento_no_encontrado())
+        self.assertEqual(asiento.estado, "libre")
 
     def test_to_dict(self):
         """
-        Prueba el método to_dict.
+        Prueba la conversión de un asiento a diccionario.
         """
-        self.asiento.set_precio(15.0)
-        self.asiento.set_edad(30)
-        self.asiento.set_descuentos(["20%"])
-        expected_dict = {
-            "numero": 1,
-            "fila": 1,
-            "dia_semana": "lunes",
-            "reservado": False,
-            "precio": 15.0,
-            "edad": 30,
-            "descuentos": ["20%"]
-        }
-        self.assertEqual(self.asiento.to_dict(), expected_dict)
+        asiento = Asiento("A", 1)
+        self.assertEqual(asiento.to_dict(), {"fila": "A", "numero": 1, "estado": "libre"})
 
     def test_from_dict(self):
         """
-        Prueba el método from_dict.
+        Prueba la creación de un asiento desde un diccionario.
         """
-        data = {
-            "numero": 1,
-            "fila": 1,
-            "dia_semana": "lunes",
-            "reservado": False,
-            "precio": 15.0,
-            "edad": 30,
-            "descuentos": ["20%"]
-        }
+        data = {"fila": "A", "numero": 1, "estado": "libre"}
         asiento = Asiento.from_dict(data)
-        self.assertEqual(asiento.get_numero(), 1)
-        self.assertEqual(asiento.get_fila(), 1)
-        self.assertEqual(asiento.get_dia_semana(), "lunes")
-        self.assertFalse(asiento.get_reservado())
-        self.assertEqual(asiento.get_precio(), 15.0)
-        self.assertEqual(asiento.get_edad(), 30)
-        self.assertEqual(asiento.get_descuentos(), ["20%"])
+        self.assertEqual(asiento.fila, "A")
+        self.assertEqual(asiento.numero, 1)
+        self.assertEqual(asiento.estado, "libre")
 
 if __name__ == '__main__':
     unittest.main()

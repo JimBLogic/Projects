@@ -1,12 +1,30 @@
 import unittest
 from sala_cine import SalaCine
-from tests.test_setup import reset_estado_sala
-import logging
+from asiento import Asiento
+from mensajes import Mensajes
+import os
+import json
 
-# Configurar el logger
-logging.basicConfig(filename='debug.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+def reset_estado_sala():
+    """
+    Resetea el archivo de estado de la sala para las pruebas.
+    """
+    estado_inicial = {
+        "lunes": [],
+        "martes": [],
+        "miércoles": [],
+        "jueves": [],
+        "viernes": [],
+        "sábado": [],
+        "domingo": []
+    }
+    with open('estado_sala.json', 'w') as file:
+        json.dump(estado_inicial, file)
 
 class TestSalaCine(unittest.TestCase):
+    """
+    Clase de pruebas para la clase SalaCine.
+    """
 
     def setUp(self):
         """
@@ -15,78 +33,82 @@ class TestSalaCine(unittest.TestCase):
         reset_estado_sala()
         self.sala = SalaCine()
 
+    def tearDown(self):
+        """
+        Limpieza después de cada test.
+        """
+        if os.path.exists('estado_sala.json'):
+            os.remove('estado_sala.json')
+
     def test_agregar_asiento(self):
         """
         Prueba la función agregar_asiento.
         """
-        mensaje = self.sala.agregar_asiento(1, 1, "lunes")
-        self.assertEqual(mensaje, "Asiento 1 en fila 1 para el día lunes agregado correctamente.")
-        with self.assertRaises(ValueError):
-            self.sala.agregar_asiento(1, 1, "lunes")
+        mensaje = self.sala.agregar_asiento("lunes", "A", 1)
+        self.assertEqual(mensaje, Mensajes.asiento_agregado())
+        self.assertEqual(len(self.sala.estado["lunes"]), 1)
+        self.assertEqual(self.sala.estado["lunes"][0].to_dict(), {"fila": "A", "numero": 1, "estado": "libre"})
 
     def test_reservar_asiento(self):
         """
         Prueba la función reservar_asiento.
         """
-        self.sala.agregar_asiento(1, 1, "lunes")
-        mensaje = self.sala.reservar_asiento(1, 1, "lunes", 70)
-        self.assertEqual(mensaje, "Asiento 1 en fila 1 reservado.")
-        with self.assertRaises(ValueError):
-            self.sala.reservar_asiento(1, 1, "lunes", 70)
+        self.sala.agregar_asiento("lunes", "A", 1)
+        mensaje = self.sala.reservar_asiento("lunes", "A", 1)
+        self.assertEqual(mensaje, Mensajes.asiento_reservado())
+        self.assertEqual(self.sala.estado["lunes"][0].estado, "reservado")
 
     def test_cancelar_reserva(self):
         """
         Prueba la función cancelar_reserva.
         """
-        self.sala.agregar_asiento(1, 1, "lunes")
-        self.sala.reservar_asiento(1, 1, "lunes", 70)
-        mensaje = self.sala.cancelar_reserva(1, 1, "lunes", "si")
-        self.assertEqual(mensaje, "Asiento 1 en fila 1 ahora está disponible.")
+        self.sala.agregar_asiento("lunes", "A", 1)
+        self.sala.reservar_asiento("lunes", "A", 1)
+        mensaje = self.sala.cancelar_reserva("lunes", "A", 1)
+        self.assertEqual(mensaje, Mensajes.reserva_cancelada())
+        self.assertEqual(self.sala.estado["lunes"][0].estado, "libre")
+
+    def test_reporte_disponibilidad(self):
+        """
+        Prueba la función reporte_disponibilidad.
+        """
+        self.sala.agregar_asiento("lunes", "A", 1)
+        self.sala.reservar_asiento("lunes", "A", 1)
+        reporte = self.sala.reporte_disponibilidad()
+        self.assertEqual(reporte["lunes"]["libres"], 0)
+        self.assertEqual(reporte["lunes"]["reservados"], 1)
+        self.assertEqual(reporte["lunes"]["no_agregados"], 99)
+
+    def test_agregar_asiento_existente(self):
+        """
+        Prueba agregar un asiento que ya existe.
+        """
+        self.sala.agregar_asiento("lunes", "A", 1)
         with self.assertRaises(ValueError):
-            self.sala.cancelar_reserva(1, 1, "lunes", "si")
+            self.sala.agregar_asiento("lunes", "A", 1)
 
-    def test_mostrar_asientos(self):
+    def test_reservar_asiento_inexistente(self):
         """
-        Prueba la función mostrar_asientos.
+        Prueba reservar un asiento que no existe.
         """
-        self.sala.agregar_asiento(1, 1, "lunes")
-        self.sala.mostrar_asientos()
+        mensaje = self.sala.reservar_asiento("lunes", "A", 1)
+        self.assertEqual(mensaje, Mensajes.asiento_no_encontrado())
 
-    def test_buscar_asiento(self):
+    def test_cancelar_reserva_asiento_inexistente(self):
         """
-        Prueba la función buscar_asiento.
+        Prueba cancelar la reserva de un asiento que no existe.
         """
-        self.sala.agregar_asiento(1, 1, "lunes")
-        asiento = self.sala.buscar_asiento(1, 1, "lunes")
-        self.assertIsNotNone(asiento)
-        asiento = self.sala.buscar_asiento(2, 1, "lunes")
-        self.assertIsNone(asiento)
+        mensaje = self.sala.cancelar_reserva("lunes", "A", 1)
+        self.assertEqual(mensaje, Mensajes.asiento_no_encontrado())
 
-    def test_hay_asientos_en_dia(self):
+    def test_reporte_disponibilidad_sin_asientos(self):
         """
-        Prueba la función hay_asientos_en_dia.
+        Prueba la función reporte_disponibilidad sin asientos.
         """
-        self.sala.agregar_asiento(1, 1, "lunes")
-        self.assertTrue(self.sala.hay_asientos_en_dia("lunes"))
-        self.assertFalse(self.sala.hay_asientos_en_dia("martes"))
-
-    def test_to_dict(self):
-        """
-        Prueba la función to_dict.
-        """
-        self.sala.agregar_asiento(1, 1, "lunes")
-        asientos_dict = self.sala.to_dict()
-        self.assertEqual(len(asientos_dict["lunes"]), 1)
-
-    def test_from_dict(self):
-        """
-        Prueba la función from_dict.
-        """
-        data = {
-            "lunes": [{"numero": 1, "fila": 1, "dia_semana": "lunes", "reservado": False, "precio": 0.0, "edad": 0, "descuentos": []}]
-        }
-        self.sala.from_dict(data)
-        self.assertEqual(len(self.sala.to_dict()["lunes"]), 1)
+        reporte = self.sala.reporte_disponibilidad()
+        self.assertEqual(reporte["lunes"]["libres"], 0)
+        self.assertEqual(reporte["lunes"]["reservados"], 0)
+        self.assertEqual(reporte["lunes"]["no_agregados"], 100)
 
 if __name__ == '__main__':
     unittest.main()
