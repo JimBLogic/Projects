@@ -1,64 +1,82 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+
+from proyecto.asiento import Asiento
+
 import unittest
-from asiento import Asiento
-from mensajes import Mensajes
 
 class TestAsiento(unittest.TestCase):
     """
-    Clase de pruebas para la clase Asiento.
+    Clase de prueba para la clase Asiento.
     """
 
-    def test_reservar_asiento_libre(self):
+    def test_crear_asiento(self):
         """
-        Prueba la reserva de un asiento libre.
+        Prueba la creación de un asiento.
         """
-        asiento = Asiento("A", 1)
+        asiento = Asiento(1, "A", False, 10.0)
+        self.assertEqual(asiento.get_numero(), 1)
+        self.assertEqual(asiento.get_fila(), "A")
+        self.assertFalse(asiento.is_reservado())
+        self.assertEqual(asiento.get_precio(), 10.0)
+
+    def test_reservar_asiento(self):
+        """
+        Prueba la reserva de un asiento.
+        """
+        asiento = Asiento(1, "A", False, 10.0)
         mensaje = asiento.reservar()
-        self.assertEqual(mensaje, Mensajes.asiento_reservado())
-        self.assertEqual(asiento.estado, "reservado")
+        self.assertTrue(asiento.is_reservado())
+        self.assertEqual(mensaje, "Asiento reservado correctamente.")
 
-    def test_reservar_asiento_reservado(self):
+    def test_cancelar_reserva(self):
         """
-        Prueba la reserva de un asiento ya reservado.
+        Prueba la cancelación de una reserva de asiento.
         """
-        asiento = Asiento("A", 1, "reservado")
-        mensaje = asiento.reservar()
-        self.assertEqual(mensaje, Mensajes.asiento_ya_reservado())
-        self.assertEqual(asiento.estado, "reservado")
-
-    def test_cancelar_reserva_asiento_reservado(self):
-        """
-        Prueba la cancelación de la reserva de un asiento reservado.
-        """
-        asiento = Asiento("A", 1, "reservado")
+        asiento = Asiento(1, "A", True, 10.0)
         mensaje = asiento.cancelar()
-        self.assertEqual(mensaje, Mensajes.reserva_cancelada())
-        self.assertEqual(asiento.estado, "libre")
+        self.assertFalse(asiento.is_reservado())
+        self.assertEqual(mensaje, "Reserva cancelada correctamente.")
 
-    def test_cancelar_reserva_asiento_libre(self):
+    def test_actualizar_asiento(self):
         """
-        Prueba la cancelación de la reserva de un asiento libre.
+        Prueba la actualización de un asiento.
         """
-        asiento = Asiento("A", 1)
-        mensaje = asiento.cancelar()
-        self.assertEqual(mensaje, Mensajes.asiento_no_encontrado())
-        self.assertEqual(asiento.estado, "libre")
+        asiento = Asiento(1, "A", False, 10.0)
+        mensaje = asiento.actualizar("B", 2)
+        self.assertEqual(asiento.get_fila(), "B")
+        self.assertEqual(asiento.get_numero(), 2)
+        self.assertEqual(mensaje, "Asiento actualizado correctamente.")
 
-    def test_to_dict(self):
+    def test_asiento_to_dict(self):
         """
-        Prueba la conversión de un asiento a diccionario.
+        Prueba la conversión de un asiento a un diccionario.
         """
-        asiento = Asiento("A", 1)
-        self.assertEqual(asiento.to_dict(), {"fila": "A", "numero": 1, "estado": "libre"})
+        asiento = Asiento(1, "A", False, 10.0)
+        asiento_dict = asiento.to_dict()
+        self.assertEqual(asiento_dict, {
+            "numero": 1,
+            "fila": "A",
+            "reservado": False,
+            "precio": 10.0
+        })
 
-    def test_from_dict(self):
+    def test_asiento_from_dict(self):
         """
-        Prueba la creación de un asiento desde un diccionario.
+        Prueba la creación de un asiento a partir de un diccionario.
         """
-        data = {"fila": "A", "numero": 1, "estado": "libre"}
+        data = {
+            "numero": 1,
+            "fila": "A",
+            "reservado": False,
+            "precio": 10.0
+        }
         asiento = Asiento.from_dict(data)
-        self.assertEqual(asiento.fila, "A")
-        self.assertEqual(asiento.numero, 1)
-        self.assertEqual(asiento.estado, "libre")
+        self.assertEqual(asiento.get_numero(), 1)
+        self.assertEqual(asiento.get_fila(), "A")
+        self.assertFalse(asiento.is_reservado())
+        self.assertEqual(asiento.get_precio(), 10.0)
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

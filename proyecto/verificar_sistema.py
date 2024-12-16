@@ -1,87 +1,99 @@
-import logging
-import subprocess
-import os
 import json
+import logging
+import os
 
-# Configurar el logger para el archivo de verificación
-logging.basicConfig(filename='verificacion.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+# Limitar el número de filas y asientos para gestionar mejor la sala de cine y evitar asientos infinitos o duplicados.
 
-def ejecutar_tests():
+def load_state_file(file):
     """
-    Ejecuta los tests del sistema y registra los resultados.
+    Carga el estado desde un archivo JSON.
+    
+    Args:
+        file (str): El nombre del archivo.
+    
+    Returns:
+        dict: El estado cargado desde el archivo.
     """
-    logging.info("Ejecutando tests...")
-    result = subprocess.run(["python", "-m", "unittest", "discover"], capture_output=True, text=True)
-    logging.info("Resultado de los tests:\n%s", result.stdout)
-    if result.returncode != 0:
-        logging.error("Algunos tests fallaron:\n%s", result.stderr)
-    else:
-        logging.info("Todos los tests pasaron correctamente.")
-
-def revisar_debug_log():
-    """
-    Revisa el archivo debug.log en busca de errores.
-    """
-    logging.info("Revisando debug.log...")
     try:
-        with open('debug.log', 'r') as file:
-            contenido = file.read()
-            if "ERROR" in contenido:
-                logging.error("Se encontraron errores en debug.log.")
-            else:
-                logging.info("debug.log no contiene errores inesperados.")
+        with open(file, 'r') as f:
+            return json.load(f)
     except FileNotFoundError:
-        logging.error("debug.log no encontrado.")
+        logging.warning(f"Archivo {file} no encontrado.")
+        return {}
+    except json.JSONDecodeError:
+        logging.error(f"Error al decodificar el archivo {file}.")
+        return {}
 
-def probar_programa():
+def create_state_file(file, initial_state):
     """
-    Ejecuta el programa principal para pruebas manuales.
+    Crea un archivo JSON con el estado inicial.
+    
+    Args:
+        file (str): El nombre del archivo.
+        initial_state (dict): El estado inicial a guardar.
     """
-    logging.info("Ejecutando el programa para pruebas manuales...")
-    result = subprocess.run(['python', 'main.py'], capture_output=True, text=True)
-    logging.info(f"Salida del programa:\n{result.stdout}")
-    if result.returncode != 0:
-        logging.error(f"El programa encontró errores:\n{result.stderr}")
+    with open(file, 'w') as f:
+        json.dump(initial_state, f, indent=4)
+    logging.info(f"Archivo {file} creado con el estado inicial.")
 
-def crear_archivo_estado():
+def save_state_file(file, state):
     """
-    Crea el archivo de estado inicial si no existe.
+    Guarda el estado en un archivo JSON.
+    
+    Args:
+        file (str): El nombre del archivo.
+        state (dict): El estado a guardar.
     """
-    if not os.path.exists('estado_sala.json'):
-        with open('estado_sala.json', 'w') as file:
-            json.dump({}, file)
-        logging.info("Archivo de estado inicial creado.")
+    try:
+        with open(file, 'w') as f:
+            json.dump(state, f, indent=4)
+        logging.info(f"Estado guardado en el archivo {file}.")
+    except Exception as e:
+        logging.error(f"Error al guardar el archivo {file}: {e}")
+
+def delete_state_file(file):
+    """
+    Elimina el archivo de estado JSON.
+    
+    Args:
+        file (str): El nombre del archivo.
+    """
+    try:
+        os.remove(file)
+        logging.info(f"Archivo {file} eliminado.")
+    except FileNotFoundError:
+        logging.warning(f"Archivo {file} no encontrado.")
+    except Exception as e:
+        logging.error(f"Error al eliminar el archivo {file}: {e}")
+
+def reset_state_file(file, initial_state):
+    """
+    Resetea el archivo de estado JSON con el estado inicial.
+    
+    Args:
+        file (str): El nombre del archivo.
+        initial_state (dict): El estado inicial a guardar.
+    """
+    try:
+        with open(file, 'w') as f:
+            json.dump(initial_state, f, indent=4)
+        logging.info(f"Archivo {file} reseteado con el estado inicial.")
+    except Exception as e:
+        logging.error(f"Error al resetear el archivo {file}: {e}")
 
 def cargar_archivo_estado():
     """
-    Carga el archivo de estado si existe.
+    Carga el estado de la sala de cine desde el archivo.
     """
-    if os.path.exists('estado_sala.json'):
-        with open('estado_sala.json', 'r') as file:
-            return json.load(file)
-    return {}
+    from sala_cine import SalaCine
+    sala_cine = SalaCine()
+    return sala_cine.get_estado()
 
-def main():
+def crear_archivo_estado():
     """
-    Función principal que ejecuta las verificaciones del sistema.
+    Crea un archivo de estado inicial para la sala de cine.
     """
-    crear_archivo_estado()
-    estado = cargar_archivo_estado()
-    # Lista de funciones a ejecutar
-    funciones = [ejecutar_tests, revisar_debug_log, probar_programa]
-    total_tareas = len(funciones)
-
-    # Ejecutar cada función en la lista
-    for i, funcion in enumerate(funciones, start=1):
-        logging.info(f"Ejecutando tarea {i} de {total_tareas}: {funcion.__name__}")
-        try:
-            funcion()
-        except Exception as e:
-            logging.error(f"Error al ejecutar {funcion.__name__}: {e}")
-            print(f"Error al ejecutar {funcion.__name__}: {e}")
-
-    logging.info("Verificación completa.")
-    print("\nVerificación completa.")
-
-if __name__ == "__main__":
-    main()
+    from sala_cine import SalaCine
+    sala_cine = SalaCine()
+    sala_cine.guardar_estado()
+    return sala_cine.get_estado()

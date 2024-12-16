@@ -208,3 +208,53 @@ class Mensajes:
             str: El mensaje de asiento ya existente.
         """
         return "El asiento ya existe en el sistema."
+
+    @staticmethod
+    def ingrese_edad():
+        """
+        Mensaje para ingresar la edad del espectador.
+        
+        Returns:
+            str: El mensaje para ingresar la edad.
+        """
+        return "Ingrese la edad del espectador: "
+
+    @staticmethod
+    def asiento_actualizado():
+        """
+        Mensaje de asiento actualizado correctamente.
+        
+        Returns:
+            str: El mensaje de asiento actualizado.
+        """
+        return "Asiento actualizado correctamente."
+
+    @staticmethod
+    def ingrese_nueva_fila():
+        """
+        Mensaje para ingresar la nueva fila del asiento.
+        
+        Returns:
+            str: El mensaje para ingresar la nueva fila.
+        """
+        return "Ingrese la nueva fila: "
+
+    @staticmethod
+    def ingrese_nuevo_numero_asiento():
+        """
+        Mensaje para ingresar el nuevo número de asiento.
+        
+        Returns:
+            str: El mensaje para ingresar el nuevo número de asiento.
+        """
+        return "Ingrese el nuevo número de asiento: "
+
+    @staticmethod
+    def asiento_eliminado():
+        """
+        Mensaje de asiento eliminado correctamente.
+        
+        Returns:
+            str: El mensaje de asiento eliminado.
+        """
+        return "Asiento eliminado correctamente."

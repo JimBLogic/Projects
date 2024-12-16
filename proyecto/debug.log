@@ -1,52 +1,392 @@
-2024-12-13 17:57:04,461 - INFO - Mensaje de bienvenida mostrado.
-2024-12-13 17:57:32,214 - INFO - Opci贸n seleccionada: 6
-2024-12-13 17:57:38,195 - INFO - Estado de la sala reseteado.
-2024-12-13 17:57:40,871 - INFO - Mensaje de bienvenida mostrado.
-2024-12-13 17:57:45,777 - INFO - Opci贸n seleccionada: 7
-2024-12-13 17:57:48,493 - INFO - Estado de la sala guardado.
-2024-12-13 17:57:48,493 - INFO - Saliendo del sistema...
-2024-12-13 17:57:48,493 - INFO - Mensaje de bienvenida mostrado.
-2024-12-13 17:57:48,493 - INFO - Opci贸n seleccionada: 5
-2024-12-13 17:57:48,493 - INFO - Reporte de disponibilidad generado.
-2024-12-13 18:01:53,278 - INFO - Mensaje de bienvenida mostrado.
-2024-12-13 18:01:55,576 - INFO - Opci贸n seleccionada: 7
-2024-12-13 18:01:57,528 - INFO - Sistema cerrado por el usuario.
-2024-12-13 18:02:00,013 - INFO - Mensaje de bienvenida mostrado.
-2024-12-13 18:02:02,743 - INFO - Opci贸n seleccionada: 7
-2024-12-13 18:02:04,909 - INFO - Estado de la sala guardado.
-2024-12-13 18:02:04,909 - INFO - Sistema cerrado por el usuario.
-2024-12-13 18:02:08,526 - INFO - Mensaje de bienvenida mostrado.
-2024-12-13 18:02:10,592 - INFO - Opci贸n seleccionada: 6
-2024-12-13 18:02:13,442 - INFO - Reseteo de estado cancelado.
-2024-12-13 18:02:15,806 - INFO - Opci贸n seleccionada: 6
-2024-12-13 18:02:55,456 - INFO - Mensaje de bienvenida mostrado.
-2024-12-13 18:02:59,686 - INFO - Opci贸n seleccionada: 5
-2024-12-13 18:02:59,687 - INFO - Reporte de disponibilidad generado.
-2024-12-13 18:03:39,871 - INFO - Opci贸n seleccionada: 7
-2024-12-13 18:03:41,896 - INFO - Sistema cerrado por el usuario.
-2024-12-13 18:05:24,108 - INFO - Mensaje de bienvenida mostrado.
-2024-12-13 18:05:26,146 - INFO - Opci贸n seleccionada: 7
-2024-12-13 18:05:27,853 - INFO - Estado de la sala guardado.
-2024-12-13 18:05:27,853 - INFO - Sistema cerrado por el usuario.
-2024-12-13 18:05:29,366 - INFO - Mensaje de bienvenida mostrado.
-2024-12-13 18:05:30,913 - INFO - Opci贸n seleccionada: 7
-2024-12-13 18:05:32,381 - INFO - Sistema cerrado por el usuario.
-2024-12-13 18:05:33,790 - INFO - Mensaje de bienvenida mostrado.
-2024-12-13 18:05:36,227 - INFO - Opci贸n seleccionada: 6
-2024-12-13 18:05:38,536 - INFO - Reseteo de estado cancelado.
-2024-12-13 18:05:43,493 - INFO - Opci贸n seleccionada: 6
-2024-12-13 18:05:45,115 - INFO - Reseteo de estado cancelado.
-2024-12-13 18:05:50,513 - INFO - Opci贸n seleccionada: 6
-2024-12-13 18:05:51,853 - INFO - Estado de la sala reseteado.
-2024-12-13 18:06:00,041 - INFO - Opci贸n seleccionada: 5
-2024-12-13 18:06:00,042 - INFO - Reporte de disponibilidad generado.
-2024-12-13 18:06:17,185 - INFO - Opci贸n seleccionada: 1
-2024-12-13 18:06:25,213 - INFO - Mensaje de bienvenida mostrado.
-2024-12-13 18:06:27,881 - INFO - Opci贸n seleccionada: 2
-2024-12-13 18:06:29,973 - INFO - Mensaje de bienvenida mostrado.
-2024-12-13 18:06:31,400 - INFO - Opci贸n seleccionada: 1
-2024-12-13 18:32:57,238 - INFO - Mensaje de bienvenida mostrado.
-2024-12-13 18:32:59,567 - INFO - Opci贸n seleccionada: 7
-2024-12-13 18:33:01,546 - INFO - Sistema cerrado por el usuario.
-2024-12-13 18:33:02,939 - INFO - Mensaje de bienvenida mostrado.
-2024-12-13 18:33:05,634 - INFO - Opci贸n seleccionada: 1
+2024-12-16 23:00:21,979 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:00:21,998 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:00:22,001 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:00:22,008 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:00:22,011 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:00:22,018 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:00:22,021 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:00:22,028 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:00:22,033 - INFO - Asiento actualizado: lunes, A, 1 a B, 2
+2024-12-16 23:00:22,034 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:00:22,038 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:00:22,038 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:00:22,039 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:00:22,039 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:00:22,039 - INFO - Asiento reservado: lunes, A, 1, precio: 10.0
+2024-12-16 23:00:22,039 - INFO - Reserva cancelada: ('lunes', 'A', 1)
+2024-12-16 23:00:22,039 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:00:22,041 - INFO - Asiento eliminado: lunes, A, 1
+2024-12-16 23:00:22,042 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:00:22,042 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:00:22,042 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:00:22,042 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:00:22,042 - INFO - Asiento reservado: lunes, A, 1, precio: 10.0
+2024-12-16 23:00:22,049 - DEBUG - Descuento calculado: 0.5 para precio: 10.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:00:22,049 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: mi閞coles
+2024-12-16 23:00:22,049 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, d韆: lunes
+2024-12-16 23:00:22,049 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:00:22,049 - DEBUG - Descuento calculado: 0.5 para precio: 0.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:00:22,049 - DEBUG - Descuento calculado: 0.5 para precio: 100.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:00:22,050 - DEBUG - Descuento calculado: 0.2 para precio: 10.0, edad: 0, d韆: mi閞coles
+2024-12-16 23:00:22,050 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, d韆: domingo
+2024-12-16 23:00:22,050 - DEBUG - Descuento calculado: 0.5 para precio: 10.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:00:22,050 - DEBUG - Precio final calculado: 5.0 para precio: 10.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:00:22,050 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: mi閞coles
+2024-12-16 23:00:22,050 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, d韆: mi閞coles
+2024-12-16 23:00:22,050 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, d韆: lunes
+2024-12-16 23:00:22,050 - DEBUG - Precio final calculado: 7.0 para precio: 10.0, edad: 70, d韆: lunes
+2024-12-16 23:00:22,050 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:00:22,050 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:00:22,050 - DEBUG - Descuento calculado: 0.5 para precio: 0.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:00:22,050 - DEBUG - Precio final calculado: 0.0 para precio: 0.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:00:22,050 - DEBUG - Descuento calculado: 0.2 para precio: 10.0, edad: 0, d韆: mi閞coles
+2024-12-16 23:00:22,050 - DEBUG - Precio final calculado: 8.0 para precio: 10.0, edad: 0, d韆: mi閞coles
+2024-12-16 23:00:22,050 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 10, d韆: lunes
+2024-12-16 23:00:22,050 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 10, d韆: lunes
+2024-12-16 23:00:22,058 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, d韆: domingo
+2024-12-16 23:00:22,058 - DEBUG - Precio final calculado: 7.0 para precio: 10.0, edad: 70, d韆: domingo
+2024-12-16 23:00:22,059 - ERROR - Entrada inv醠ida: El valor debe estar entre 1 y 10. Ejemplo: 1
+2024-12-16 23:00:22,060 - ERROR - Entrada inv醠ida: El valor debe estar entre 1 y 10. Ejemplo: 1
+2024-12-16 23:00:22,060 - ERROR - Entrada inv醠ida: El valor debe estar entre 1 y 10. Ejemplo: 1
+2024-12-16 23:00:22,060 - ERROR - Entrada inv醠ida: invalid literal for int() with base 10: 'abc'
+2024-12-16 23:00:22,061 - ERROR - Opci髇 inv醠ida: quiz醩
+2024-12-16 23:00:22,061 - ERROR - Opci髇 inv醠ida: quiz醩
+2024-12-16 23:00:22,061 - ERROR - Opci髇 inv醠ida: quiz醩
+2024-12-16 23:01:21,809 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:01:21,821 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:01:21,826 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:01:21,830 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:01:21,835 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:01:21,838 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:01:21,844 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:01:21,847 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:01:21,850 - INFO - Asiento actualizado: lunes, A, 1 a B, 2
+2024-12-16 23:01:21,851 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:01:21,855 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:01:21,855 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:01:21,855 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:01:21,855 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:01:21,855 - INFO - Asiento reservado: lunes, A, 1, precio: 10.0
+2024-12-16 23:01:21,855 - INFO - Reserva cancelada: ('lunes', 'A', 1)
+2024-12-16 23:01:21,856 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:01:21,857 - INFO - Asiento eliminado: lunes, A, 1
+2024-12-16 23:01:21,858 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:01:21,859 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:01:21,859 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:01:21,859 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:01:21,859 - INFO - Asiento reservado: lunes, A, 1, precio: 10.0
+2024-12-16 23:01:21,864 - DEBUG - Descuento calculado: 0.5 para precio: 10.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:01:21,864 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: mi閞coles
+2024-12-16 23:01:21,864 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, d韆: lunes
+2024-12-16 23:01:21,865 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:01:21,865 - DEBUG - Descuento calculado: 0.5 para precio: 0.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:01:21,865 - DEBUG - Descuento calculado: 0.5 para precio: 100.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:01:21,865 - DEBUG - Descuento calculado: 0.2 para precio: 10.0, edad: 0, d韆: mi閞coles
+2024-12-16 23:01:21,865 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, d韆: domingo
+2024-12-16 23:01:21,865 - DEBUG - Descuento calculado: 0.5 para precio: 10.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:01:21,865 - DEBUG - Precio final calculado: 5.0 para precio: 10.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:01:21,865 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: mi閞coles
+2024-12-16 23:01:21,865 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, d韆: mi閞coles
+2024-12-16 23:01:21,865 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, d韆: lunes
+2024-12-16 23:01:21,865 - DEBUG - Precio final calculado: 7.0 para precio: 10.0, edad: 70, d韆: lunes
+2024-12-16 23:01:21,865 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:01:21,865 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:01:21,865 - DEBUG - Descuento calculado: 0.5 para precio: 0.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:01:21,865 - DEBUG - Precio final calculado: 0.0 para precio: 0.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:01:21,865 - DEBUG - Descuento calculado: 0.2 para precio: 10.0, edad: 0, d韆: mi閞coles
+2024-12-16 23:01:21,865 - DEBUG - Precio final calculado: 8.0 para precio: 10.0, edad: 0, d韆: mi閞coles
+2024-12-16 23:01:21,865 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 10, d韆: lunes
+2024-12-16 23:01:21,865 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 10, d韆: lunes
+2024-12-16 23:01:21,866 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, d韆: domingo
+2024-12-16 23:01:21,866 - DEBUG - Precio final calculado: 7.0 para precio: 10.0, edad: 70, d韆: domingo
+2024-12-16 23:01:21,866 - ERROR - Entrada inv醠ida: El valor debe estar entre 1 y 10. Ejemplo: 1
+2024-12-16 23:01:21,867 - ERROR - Entrada inv醠ida: El valor debe estar entre 1 y 10. Ejemplo: 1
+2024-12-16 23:01:21,867 - ERROR - Entrada inv醠ida: El valor debe estar entre 1 y 10. Ejemplo: 1
+2024-12-16 23:01:21,867 - ERROR - Entrada inv醠ida: invalid literal for int() with base 10: 'abc'
+2024-12-16 23:01:21,868 - ERROR - Opci髇 inv醠ida: quiz醩
+2024-12-16 23:01:21,868 - ERROR - Opci髇 inv醠ida: quiz醩
+2024-12-16 23:01:21,868 - ERROR - Opci髇 inv醠ida: quiz醩
+2024-12-16 23:02:58,619 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:02:58,619 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:02:58,619 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:02:58,630 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:02:58,630 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:02:58,630 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:02:58,633 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:02:58,633 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:02:58,633 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:02:58,639 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:02:58,639 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:02:58,639 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:02:58,643 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:02:58,643 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:02:58,644 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:02:58,649 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:02:58,650 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:02:58,650 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:02:58,653 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:02:58,653 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:02:58,653 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:02:58,659 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:02:58,659 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:02:58,659 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:02:58,664 - INFO - Asiento actualizado: lunes, A, 1 a B, 2
+2024-12-16 23:02:58,665 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:02:58,667 - INFO - Asiento agregado: lunes, B, 2
+2024-12-16 23:02:58,668 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:02:58,669 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:02:58,669 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:02:58,669 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:02:58,669 - INFO - Asiento reservado: lunes, A, 1, precio: 10.0
+2024-12-16 23:02:58,669 - INFO - Reserva cancelada: ('lunes', 'A', 1)
+2024-12-16 23:02:58,670 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:02:58,671 - INFO - Asiento eliminado: lunes, A, 1
+2024-12-16 23:02:58,672 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:02:58,673 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:02:58,673 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:02:58,673 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:02:58,673 - INFO - Asiento reservado: lunes, A, 1, precio: 10.0
+2024-12-16 23:02:58,680 - DEBUG - Descuento calculado: 0.5 para precio: 10.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:02:58,680 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: mi閞coles
+2024-12-16 23:02:58,680 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, d韆: lunes
+2024-12-16 23:02:58,680 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:02:58,680 - DEBUG - Descuento calculado: 0.5 para precio: 0.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:02:58,680 - DEBUG - Descuento calculado: 0.5 para precio: 100.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:02:58,680 - DEBUG - Descuento calculado: 0.2 para precio: 10.0, edad: 0, d韆: mi閞coles
+2024-12-16 23:02:58,680 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, d韆: domingo
+2024-12-16 23:02:58,680 - DEBUG - Descuento calculado: 0.5 para precio: 10.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:02:58,680 - DEBUG - Precio final calculado: 5.0 para precio: 10.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:02:58,680 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: mi閞coles
+2024-12-16 23:02:58,680 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, d韆: mi閞coles
+2024-12-16 23:02:58,680 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, d韆: lunes
+2024-12-16 23:02:58,680 - DEBUG - Precio final calculado: 7.0 para precio: 10.0, edad: 70, d韆: lunes
+2024-12-16 23:02:58,681 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:02:58,681 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:02:58,681 - DEBUG - Descuento calculado: 0.5 para precio: 0.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:02:58,681 - DEBUG - Precio final calculado: 0.0 para precio: 0.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:02:58,681 - DEBUG - Descuento calculado: 0.2 para precio: 10.0, edad: 0, d韆: mi閞coles
+2024-12-16 23:02:58,681 - DEBUG - Precio final calculado: 8.0 para precio: 10.0, edad: 0, d韆: mi閞coles
+2024-12-16 23:02:58,681 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 10, d韆: lunes
+2024-12-16 23:02:58,681 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 10, d韆: lunes
+2024-12-16 23:02:58,681 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, d韆: domingo
+2024-12-16 23:02:58,681 - DEBUG - Precio final calculado: 7.0 para precio: 10.0, edad: 70, d韆: domingo
+2024-12-16 23:02:58,682 - ERROR - Entrada inv醠ida: El valor debe estar entre 1 y 10. Ejemplo: 1
+2024-12-16 23:02:58,682 - ERROR - Entrada inv醠ida: El valor debe estar entre 1 y 10. Ejemplo: 1
+2024-12-16 23:02:58,682 - ERROR - Entrada inv醠ida: El valor debe estar entre 1 y 10. Ejemplo: 1
+2024-12-16 23:02:58,682 - ERROR - Entrada inv醠ida: invalid literal for int() with base 10: 'abc'
+2024-12-16 23:02:58,683 - ERROR - Opci髇 inv醠ida: quiz醩
+2024-12-16 23:02:58,683 - ERROR - Opci髇 inv醠ida: quiz醩
+2024-12-16 23:02:58,683 - ERROR - Opci髇 inv醠ida: quiz醩
+2024-12-16 23:03:31,487 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:03:31,540 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:03:31,540 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:03:31,549 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:03:31,549 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:03:31,549 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:03:31,552 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:03:31,552 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:03:31,553 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:03:31,558 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:03:31,559 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:03:31,559 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:03:31,563 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:03:31,563 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:03:31,563 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:03:31,571 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:03:31,572 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:03:31,572 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:03:31,579 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:03:31,579 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:03:31,579 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:03:31,586 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:03:31,586 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:03:31,586 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:03:31,590 - INFO - Asiento actualizado: lunes, A, 1 a B, 2
+2024-12-16 23:03:31,592 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:03:31,593 - INFO - Asiento agregado: lunes, B, 2
+2024-12-16 23:03:31,594 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:03:31,594 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:03:31,594 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:03:31,594 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:03:31,594 - INFO - Asiento reservado: lunes, A, 1, precio: 10.0
+2024-12-16 23:03:31,594 - INFO - Reserva cancelada: ('lunes', 'A', 1)
+2024-12-16 23:03:31,595 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:03:31,596 - INFO - Asiento eliminado: lunes, A, 1
+2024-12-16 23:03:31,597 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:03:31,598 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:03:31,598 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:03:31,598 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:03:31,598 - INFO - Asiento reservado: lunes, A, 1, precio: 10.0
+2024-12-16 23:03:31,603 - DEBUG - Descuento calculado: 0.5 para precio: 10.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:03:31,603 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: mi閞coles
+2024-12-16 23:03:31,603 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, d韆: lunes
+2024-12-16 23:03:31,603 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:03:31,604 - DEBUG - Descuento calculado: 0.5 para precio: 0.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:03:31,604 - DEBUG - Descuento calculado: 0.5 para precio: 100.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:03:31,604 - DEBUG - Descuento calculado: 0.2 para precio: 10.0, edad: 0, d韆: mi閞coles
+2024-12-16 23:03:31,604 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, d韆: domingo
+2024-12-16 23:03:31,604 - DEBUG - Descuento calculado: 0.5 para precio: 10.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:03:31,604 - DEBUG - Precio final calculado: 5.0 para precio: 10.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:03:31,604 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: mi閞coles
+2024-12-16 23:03:31,604 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, d韆: mi閞coles
+2024-12-16 23:03:31,604 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, d韆: lunes
+2024-12-16 23:03:31,604 - DEBUG - Precio final calculado: 7.0 para precio: 10.0, edad: 70, d韆: lunes
+2024-12-16 23:03:31,604 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:03:31,604 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:03:31,604 - DEBUG - Descuento calculado: 0.5 para precio: 0.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:03:31,604 - DEBUG - Precio final calculado: 0.0 para precio: 0.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:03:31,604 - DEBUG - Descuento calculado: 0.2 para precio: 10.0, edad: 0, d韆: mi閞coles
+2024-12-16 23:03:31,698 - DEBUG - Precio final calculado: 8.0 para precio: 10.0, edad: 0, d韆: mi閞coles
+2024-12-16 23:03:31,698 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 10, d韆: lunes
+2024-12-16 23:03:31,698 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 10, d韆: lunes
+2024-12-16 23:03:31,698 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, d韆: domingo
+2024-12-16 23:03:31,698 - DEBUG - Precio final calculado: 7.0 para precio: 10.0, edad: 70, d韆: domingo
+2024-12-16 23:03:31,699 - ERROR - Entrada inv醠ida: El valor debe estar entre 1 y 10. Ejemplo: 1
+2024-12-16 23:03:31,699 - ERROR - Entrada inv醠ida: El valor debe estar entre 1 y 10. Ejemplo: 1
+2024-12-16 23:03:31,700 - ERROR - Entrada inv醠ida: El valor debe estar entre 1 y 10. Ejemplo: 1
+2024-12-16 23:03:31,700 - ERROR - Entrada inv醠ida: invalid literal for int() with base 10: 'abc'
+2024-12-16 23:03:31,701 - ERROR - Opci髇 inv醠ida: quiz醩
+2024-12-16 23:03:31,701 - ERROR - Opci髇 inv醠ida: quiz醩
+2024-12-16 23:03:31,701 - ERROR - Opci髇 inv醠ida: quiz醩
+2024-12-16 23:04:27,393 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:04:27,393 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:04:27,393 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:04:27,402 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:04:27,402 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:04:27,402 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:04:27,405 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:04:27,406 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:04:27,406 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:04:27,413 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:04:27,413 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:04:27,413 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:04:27,417 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:04:27,417 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:04:27,417 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:04:27,423 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:04:27,424 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:04:27,424 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:04:27,427 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:04:27,427 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:04:27,427 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:04:27,433 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:04:27,433 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:04:27,433 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:04:27,438 - INFO - Asiento actualizado: lunes, A, 1 a B, 2
+2024-12-16 23:04:27,439 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:04:27,440 - INFO - Asiento agregado: lunes, B, 2
+2024-12-16 23:04:27,441 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:04:27,442 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:04:27,442 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:04:27,442 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:04:27,442 - INFO - Asiento reservado: lunes, A, 1, precio: 10.0
+2024-12-16 23:04:27,442 - INFO - Reserva cancelada: ('lunes', 'A', 1)
+2024-12-16 23:04:27,443 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:04:27,444 - INFO - Asiento eliminado: lunes, A, 1
+2024-12-16 23:04:27,445 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:04:27,446 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:04:27,446 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:04:27,446 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:04:27,446 - INFO - Asiento reservado: lunes, A, 1, precio: 10.0
+2024-12-16 23:04:27,452 - DEBUG - Descuento calculado: 0.5 para precio: 10.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:04:27,452 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: mi閞coles
+2024-12-16 23:04:27,452 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, d韆: lunes
+2024-12-16 23:04:27,452 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:04:27,453 - DEBUG - Descuento calculado: 0.5 para precio: 0.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:04:27,453 - DEBUG - Descuento calculado: 0.5 para precio: 100.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:04:27,453 - DEBUG - Descuento calculado: 0.2 para precio: 10.0, edad: 0, d韆: mi閞coles
+2024-12-16 23:04:27,453 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, d韆: domingo
+2024-12-16 23:04:27,453 - DEBUG - Descuento calculado: 0.5 para precio: 10.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:04:27,453 - DEBUG - Precio final calculado: 5.0 para precio: 10.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:04:27,453 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: mi閞coles
+2024-12-16 23:04:27,453 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, d韆: mi閞coles
+2024-12-16 23:04:27,453 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, d韆: lunes
+2024-12-16 23:04:27,453 - DEBUG - Precio final calculado: 7.0 para precio: 10.0, edad: 70, d韆: lunes
+2024-12-16 23:04:27,453 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:04:27,453 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:04:27,453 - DEBUG - Descuento calculado: 0.5 para precio: 0.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:04:27,453 - DEBUG - Precio final calculado: 0.0 para precio: 0.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:04:27,453 - DEBUG - Descuento calculado: 0.2 para precio: 10.0, edad: 0, d韆: mi閞coles
+2024-12-16 23:04:27,453 - DEBUG - Precio final calculado: 8.0 para precio: 10.0, edad: 0, d韆: mi閞coles
+2024-12-16 23:04:27,453 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 10, d韆: lunes
+2024-12-16 23:04:27,453 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 10, d韆: lunes
+2024-12-16 23:04:27,453 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, d韆: domingo
+2024-12-16 23:04:27,453 - DEBUG - Precio final calculado: 7.0 para precio: 10.0, edad: 70, d韆: domingo
+2024-12-16 23:04:27,454 - ERROR - Entrada inv醠ida: El valor debe estar entre 1 y 10. Ejemplo: 1
+2024-12-16 23:04:27,454 - ERROR - Entrada inv醠ida: El valor debe estar entre 1 y 10. Ejemplo: 1
+2024-12-16 23:04:27,455 - ERROR - Entrada inv醠ida: El valor debe estar entre 1 y 10. Ejemplo: 1
+2024-12-16 23:04:27,455 - ERROR - Entrada inv醠ida: invalid literal for int() with base 10: 'abc'
+2024-12-16 23:04:27,456 - ERROR - Opci髇 inv醠ida: quiz醩
+2024-12-16 23:04:27,456 - ERROR - Opci髇 inv醠ida: quiz醩
+2024-12-16 23:04:27,456 - ERROR - Opci髇 inv醠ida: quiz醩
+2024-12-16 23:05:50,564 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:05:50,564 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:05:50,564 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:05:50,573 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:05:50,573 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:05:50,573 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:05:50,576 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:05:50,576 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:05:50,576 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:05:50,581 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:05:50,582 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:05:50,582 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:05:50,584 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:05:50,584 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:05:50,585 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:05:50,590 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:05:50,590 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:05:50,590 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:05:50,593 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:05:50,594 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:05:50,594 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:05:50,601 - INFO - Mensaje de bienvenida mostrado.
+2024-12-16 23:05:50,601 - INFO - Opci髇 seleccionada: 1
+2024-12-16 23:05:50,602 - INFO - Sub-opci髇 seleccionada: 2
+2024-12-16 23:05:50,608 - INFO - Asiento actualizado: lunes, A, 1 a B, 2
+2024-12-16 23:05:50,610 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:05:50,611 - INFO - Asiento agregado: lunes, B, 2
+2024-12-16 23:05:50,613 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:05:50,613 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:05:50,613 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:05:50,613 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:05:50,614 - INFO - Asiento reservado: lunes, A, 1, precio: 10.0
+2024-12-16 23:05:50,614 - INFO - Reserva cancelada: ('lunes', 'A', 1)
+2024-12-16 23:05:50,614 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:05:50,616 - INFO - Asiento eliminado: lunes, A, 1
+2024-12-16 23:05:50,617 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:05:50,617 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-16 23:05:50,618 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:05:50,618 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:05:50,618 - INFO - Asiento reservado: lunes, A, 1, precio: 10.0
+2024-12-16 23:05:50,624 - DEBUG - Descuento calculado: 0.5 para precio: 10.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:05:50,624 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: mi閞coles
+2024-12-16 23:05:50,624 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, d韆: lunes
+2024-12-16 23:05:50,624 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:05:50,624 - DEBUG - Descuento calculado: 0.5 para precio: 0.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:05:50,624 - DEBUG - Descuento calculado: 0.5 para precio: 100.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:05:50,624 - DEBUG - Descuento calculado: 0.2 para precio: 10.0, edad: 0, d韆: mi閞coles
+2024-12-16 23:05:50,625 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, d韆: domingo
+2024-12-16 23:05:50,625 - DEBUG - Descuento calculado: 0.5 para precio: 10.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:05:50,625 - DEBUG - Precio final calculado: 5.0 para precio: 10.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:05:50,625 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: mi閞coles
+2024-12-16 23:05:50,625 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, d韆: mi閞coles
+2024-12-16 23:05:50,625 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, d韆: lunes
+2024-12-16 23:05:50,625 - DEBUG - Precio final calculado: 7.0 para precio: 10.0, edad: 70, d韆: lunes
+2024-12-16 23:05:50,625 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:05:50,625 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, d韆: lunes
+2024-12-16 23:05:50,625 - DEBUG - Descuento calculado: 0.5 para precio: 0.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:05:50,625 - DEBUG - Precio final calculado: 0.0 para precio: 0.0, edad: 70, d韆: mi閞coles
+2024-12-16 23:05:50,625 - DEBUG - Descuento calculado: 0.2 para precio: 10.0, edad: 0, d韆: mi閞coles
+2024-12-16 23:05:50,625 - DEBUG - Precio final calculado: 8.0 para precio: 10.0, edad: 0, d韆: mi閞coles
+2024-12-16 23:05:50,625 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 10, d韆: lunes
+2024-12-16 23:05:50,625 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 10, d韆: lunes
+2024-12-16 23:05:50,625 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, d韆: domingo
+2024-12-16 23:05:50,626 - DEBUG - Precio final calculado: 7.0 para precio: 10.0, edad: 70, d韆: domingo
+2024-12-16 23:05:50,627 - ERROR - Entrada inv醠ida: El valor debe estar entre 1 y 10. Ejemplo: 1
+2024-12-16 23:05:50,627 - ERROR - Entrada inv醠ida: El valor debe estar entre 1 y 10. Ejemplo: 1
+2024-12-16 23:05:50,627 - ERROR - Entrada inv醠ida: El valor debe estar entre 1 y 10. Ejemplo: 1
+2024-12-16 23:05:50,627 - ERROR - Entrada inv醠ida: invalid literal for int() with base 10: 'abc'
+2024-12-16 23:05:50,628 - ERROR - Opci髇 inv醠ida: quiz醩
+2024-12-16 23:05:50,628 - ERROR - Opci髇 inv醠ida: quiz醩
+2024-12-16 23:05:50,629 - ERROR - Opci髇 inv醠ida: quiz醩

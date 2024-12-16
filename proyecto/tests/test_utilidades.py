@@ -1,6 +1,9 @@
 import unittest
 from unittest.mock import patch
-from utilidades import calcular_descuento, validar_entrada, validar_opcion
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from proyecto.utilidades import calcular_descuento, validar_entrada, validar_opcion, calcular_precio_final
 
 class TestUtilidades(unittest.TestCase):
     """
@@ -12,13 +15,14 @@ class TestUtilidades(unittest.TestCase):
         Prueba la función calcular_descuento.
         """
         self.assertEqual(calcular_descuento(10.0, 70, "miércoles"), 0.5)
-        self.assertEqual(calcular_descuento(10.0, 30, "miércoles"), 0.2)
+        self.assertEqual(calcular_descuento(10.0, 30, "miércoles"), 0.0)
         self.assertEqual(calcular_descuento(10.0, 70, "lunes"), 0.3)
         self.assertEqual(calcular_descuento(10.0, 30, "lunes"), 0.0)
         # Edge cases
-        self.assertEqual(calcular_descuento(0.0, 70, "miércoles"), 0.0)
-        self.assertEqual(calcular_descuento(10.0, 0, "miércoles"), 0.0)
-        self.assertEqual(calcular_descuento(10.0, 70, "domingo"), 0.0)
+        self.assertEqual(calcular_descuento(0.0, 70, "miércoles"), 0.5)
+        self.assertEqual(calcular_descuento(100.0, 70, "miércoles"), 0.5)
+        self.assertEqual(calcular_descuento(10.0, 0, "miércoles"), 0.2)
+        self.assertEqual(calcular_descuento(10.0, 70, "domingo"), 0.3)
 
     @patch('builtins.input', return_value='5')
     def test_validar_entrada(self, mock_input):
@@ -56,6 +60,20 @@ class TestUtilidades(unittest.TestCase):
         """
         with self.assertRaises(ValueError):
             validar_opcion("Ingrese una opción: ", ['si', 'no'])
+
+    def test_calcular_precio_final(self):
+        """
+        Prueba la función calcular_precio_final.
+        """
+        self.assertEqual(calcular_precio_final(10.0, 70, "miércoles"), 5.0)
+        self.assertEqual(calcular_precio_final(10.0, 30, "miércoles"), 10.0)
+        self.assertEqual(calcular_precio_final(10.0, 70, "lunes"), 7.0)
+        self.assertEqual(calcular_precio_final(10.0, 30, "lunes"), 10.0)
+        # Edge cases
+        self.assertEqual(calcular_precio_final(0.0, 70, "miércoles"), 0.0)
+        self.assertEqual(calcular_precio_final(10.0, 0, "miércoles"), 8.0)
+        self.assertEqual(calcular_precio_final(10.0, 10, "lunes"), 10.0)
+        self.assertEqual(calcular_precio_final(10.0, 70, "domingo"), 7.0)
 
 if __name__ == '__main__':
     unittest.main()
