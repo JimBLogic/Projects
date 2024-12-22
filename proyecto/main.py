@@ -1,12 +1,13 @@
 import os
 import logging
 import sys
+import json
 
 # Asegurar que la ruta es correcta
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 # Importar los módulos necesarios
-from proyecto.utilidades import validate_input, validate_option, save_state, reset_state, calculate_final_price
+from proyecto.utilidades import validate_input, save_state, reset_state
 from proyecto.sala_cine import SalaCine
 from proyecto.mensajes import Mensajes
 
@@ -18,6 +19,8 @@ os.chmod(log_file_path, 0o666)
 
 # Configurar el logger
 logging.basicConfig(filename=log_file_path, level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+
+MAX_ROWS = 6
 
 def main_menu():
     while True:
@@ -79,49 +82,47 @@ def manage_seats():
 
 def add_seat():
     try:
-        day_num = validate_input(Mensajes.ingrese_dia(), int, range(1, 8))
-        days = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
-        day = days[int(day_num) - 1]
-        row = validate_input(Mensajes.ingrese_fila(), str, [])
-        number = validate_input(Mensajes.ingrese_numero_asiento(), int, range(1, 11))
+        day = select_day()
+        row = select_row(day)
+        number = select_seat(day, row)
         print(cinema.agregar_asiento(day, row, number))
         logging.info(f"Asiento agregado: {day}, {row}, {number}")
     except ValueError as e:
         print(e)
         logging.error(f"Error al agregar asiento: {e}")
+    
+    save_state('estado_sala.json', cinema.get_estado())
 
 def reserve_seat():
     try:
-        day_num = validate_input(Mensajes.ingrese_dia(), int, range(1, 8))
-        days = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
-        day = days[int(day_num) - 1]
-        row = validate_input(Mensajes.ingrese_fila(), str, [])
-        number = validate_input(Mensajes.ingrese_numero_asiento(), int, range(1, 11))
+        day = select_day()
+        row = select_row(day)
+        number = select_seat(day, row)
         age = validate_input(Mensajes.ingrese_edad(), int, range(1, 101))
         print(cinema.reservar_asiento(day, row, number, age))
         logging.info(f"Asiento reservado: {day}, {row}, {number}")
     except ValueError as e:
         print(e)
         logging.error(f"Error al reservar asiento: {e}")
+    
+    save_state('estado_sala.json', cinema.get_estado())
 
 def cancel_reservation():
     try:
-        day_num = validate_input(Mensajes.ingrese_dia(), int, range(1, 8))
-        days = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
-        day = days[int(day_num) - 1]
-        row = validate_input(Mensajes.ingrese_fila(), str, [])
-        number = validate_input(Mensajes.ingrese_numero_asiento(), int, range(1, 11))
+        day = select_day()
+        row = select_row(day)
+        number = select_seat(day, row)
         print(cinema.cancelar_reserva(day, row, number))
         logging.info(f"Reserva cancelada: {day}, {row}, {number}")
     except ValueError as e:
         print(e)
         logging.error(f"Error al cancelar reserva: {e}")
+    
+    save_state('estado_sala.json', cinema.get_estado())
 
 def show_seats():
     try:
-        day_num = validate_input(Mensajes.ingrese_dia(), int, range(1, 8))
-        days = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
-        day = days[int(day_num) - 1]
+        day = select_day()
         if day in cinema.get_estado():
             for seat in cinema.get_estado()[day]:
                 print(seat)
@@ -134,11 +135,9 @@ def show_seats():
 
 def update_seat_info():
     try:
-        day_num = validate_input(Mensajes.ingrese_dia(), int, range(1, 8))
-        days = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
-        day = days[int(day_num) - 1]
-        row = validate_input(Mensajes.ingrese_fila(), str, [])
-        number = validate_input(Mensajes.ingrese_numero_asiento(), int, range(1, 11))
+        day = select_day()
+        row = select_row(day)
+        number = select_seat(day, row)
         new_row = validate_input(Mensajes.ingrese_nueva_fila(), str, [])
         new_number = validate_input(Mensajes.ingrese_nuevo_numero_asiento(), int, range(1, 11))
         print(cinema.actualizar_asiento(day, row, number, new_row, new_number))
@@ -146,15 +145,62 @@ def update_seat_info():
     except ValueError as e:
         print(e)
         logging.error(f"Error al actualizar asiento: {e}")
+    
+    save_state('estado_sala.json', cinema.get_estado())
 
 def generate_report():
     report = cinema.mostrar_asientos()
     for day, availability in report.items():
         libres = len([asiento for asiento in availability if not asiento['reservado']])
         reservados = len([asiento for asiento in availability if asiento['reservado']])
-        no_agregados = 10 - (libres + reservados)
+        no_agregados = MAX_ROWS * 10 - (libres + reservados)
         print(Mensajes.reporte_disponibilidad(day, libres, reservados, no_agregados))
     logging.info("Reporte de disponibilidad generado.")
+
+def select_day():
+    while True:
+        try:
+            day_num = validate_input(Mensajes.ingrese_dia(), int, range(1, 8))
+            days = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
+            return days[int(day_num) - 1]
+        except ValueError:
+            print(Mensajes.dia_invalido())
+
+def select_row(day):
+    while True:
+        try:
+            row = validate_input(Mensajes.ingrese_fila(), str, [])
+            if row.upper() not in "ABCDEF":
+                raise ValueError("Fila inválida. Debe ser una letra entre A y F.")
+            if len(cinema.get_estado()[day]) >= MAX_ROWS:
+                print("Número máximo de filas alcanzado. Seleccione otro día.")
+                continue
+            return row
+        except ValueError as e:
+            print(e)
+
+def select_seat(day, row):
+    while True:
+        try:
+            number = validate_input(Mensajes.ingrese_numero_asiento(), int, range(1, 11))
+            if any(asiento.get_fila() == row and asiento.get_numero() == number for asiento in cinema.get_estado()[day]):
+                print("El asiento ya existe en el sistema. Seleccione otro asiento.")
+                continue
+            return number
+        except ValueError:
+            print("Número de asiento inválido. Por favor, intente de nuevo.")
+
+def reset_state(filename, initial_state):
+    """
+    Resetea el estado del archivo JSON con el estado inicial proporcionado.
+    
+    Args:
+        filename (str): El nombre del archivo JSON.
+        initial_state (dict): El estado inicial para resetear el archivo.
+    """
+    with open(filename, 'w') as file:
+        json.dump(initial_state, file, indent=4)
+    logging.info(f"Archivo {filename} reseteado con el estado inicial.")
 
 def main():
     """

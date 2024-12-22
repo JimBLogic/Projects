@@ -1,104 +1,102 @@
 import json
 import logging
 import os
-import sys
-
-# Asegurar que la ruta es correcta
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 # Importar el módulo SalaCine
 from proyecto.sala_cine import SalaCine
-from proyecto.utilidades import save_state_file, reset_state_file
-
-MAX_ROWS = 10
-MAX_SEATS_PER_ROW = 10
 
 def load_state_file(filename):
     """
-    Carga el estado desde un archivo JSON.
+    Carga el estado de la sala de cine desde un archivo JSON.
     
     Args:
-        filename (str): El nombre del archivo.
+        filename (str): El nombre del archivo JSON.
     
     Returns:
-        dict: El estado cargado.
+        dict: El estado de la sala de cine.
     """
-    if not os.path.exists(filename):
-        logging.warning(f"Archivo {filename} no encontrado.")
-        return {}
     try:
-        with open(filename, 'r') as f:
-            state = json.load(f)
+        with open(filename, 'r') as file:
+            state = json.load(file)
         logging.info(f"Archivo {filename} cargado correctamente.")
         return state
-    except Exception as e:
-        logging.error(f"Error al cargar el archivo {filename}: {e}")
-        return {}
+    except FileNotFoundError:
+        logging.error(f"Archivo {filename} no encontrado.")
+        return None
+    except json.JSONDecodeError:
+        logging.error(f"Error al decodificar el archivo {filename}.")
+        return None
 
-def create_state_file(filename, state):
+def create_state_file(filename, initial_state):
     """
-    Crea un archivo de estado JSON con el estado inicial.
+    Crea un archivo JSON con el estado inicial de la sala de cine.
     
     Args:
-        filename (str): El nombre del archivo.
-        state (dict): El estado inicial a guardar.
+        filename (str): El nombre del archivo JSON.
+        initial_state (dict): El estado inicial de la sala de cine.
     """
-    try:
-        with open(filename, 'w') as f:
-            json.dump(state, f, indent=4)
-        logging.info(f"Archivo {filename} creado con el estado inicial.")
-    except Exception as e:
-        logging.error(f"Error al crear el archivo {filename}: {e}")
+    with open(filename, 'w') as file:
+        json.dump(initial_state, file, indent=4)
+    logging.info(f"Archivo {filename} creado con el estado inicial.")
 
 def delete_state_file(filename):
     """
-    Elimina el archivo de estado JSON.
+    Elimina el archivo JSON que contiene el estado de la sala de cine.
     
     Args:
-        filename (str): El nombre del archivo.
+        filename (str): El nombre del archivo JSON.
     """
-    try:
-        if os.path.exists(filename):
-            os.remove(filename)
-            logging.info(f"Archivo {filename} eliminado.")
-        else:
-            logging.warning(f"Archivo {filename} no encontrado.")
-    except Exception as e:
-        logging.error(f"Error al eliminar el archivo {filename}: {e}")
+    if os.path.exists(filename):
+        os.remove(filename)
+        logging.info(f"Archivo {filename} eliminado.")
+    else:
+        logging.error(f"Archivo {filename} no encontrado para eliminar.")
 
-def load_cinema_state():
+def save_state_file(filename, state):
     """
-    Carga el estado de la sala de cine desde el archivo.
-    """
-    cinema = SalaCine()
-    state = load_state_file('estado_sala.json')
-    cinema.set_state(state)
-    return cinema.get_state()
-
-def create_cinema_state():
-    """
-    Crea un archivo de estado inicial para la sala de cine.
-    """
-    cinema = SalaCine()
-    initial_state = cinema.get_state()
-    create_state_file('estado_sala.json', initial_state)
-    return initial_state
-
-def add_seat(cinema, day, row, number):
-    """
-    Agrega un asiento a la sala de cine si no excede los límites.
+    Guarda el estado de la sala de cine en un archivo JSON.
     
     Args:
-        cinema (SalaCine): La instancia de la sala de cine.
+        filename (str): El nombre del archivo JSON.
+        state (dict): El estado de la sala de cine.
+    """
+    with open(filename, 'w') as file:
+        json.dump(state, file, indent=4)
+    logging.info(f"Estado guardado en el archivo {filename}.")
+
+def reset_state_file(filename, initial_state):
+    """
+    Resetea el estado del archivo JSON con el estado inicial proporcionado.
+    
+    Args:
+        filename (str): El nombre del archivo JSON.
+        initial_state (dict): El estado inicial para resetear el archivo.
+    """
+    with open(filename, 'w') as file:
+        json.dump(initial_state, file, indent=4)
+    logging.info(f"Archivo {filename} reseteado con el estado inicial.")
+
+def update_state_file(filename, day, row, number, new_row, new_number):
+    """
+    Actualiza la información de un asiento específico en el archivo JSON.
+    
+    Args:
+        filename (str): El nombre del archivo JSON.
         day (str): El día de la semana.
         row (str): La fila del asiento.
         number (int): El número del asiento.
-    
-    Returns:
-        str: Un mensaje indicando si el asiento fue agregado correctamente o si excede los límites.
+        new_row (str): La nueva fila del asiento.
+        new_number (int): El nuevo número del asiento.
     """
-    if len(cinema.get_estado()[day]) >= MAX_ROWS:
-        return "Número máximo de filas alcanzado."
-    if any(asiento.get_fila() == row and asiento.get_numero() == number for asiento in cinema.get_estado()[day]):
-        return "El asiento ya existe en el sistema."
-    return cinema.agregar_asiento(day, row, number)
+    state = load_state_file(filename)
+    if state:
+        for asiento in state[day]:
+            if asiento['fila'] == row and asiento['numero'] == number:
+                asiento['fila'] = new_row
+                asiento['numero'] = new_number
+                save_state_file(filename, state)
+                logging.info(f"Asiento actualizado en el archivo {filename}: {day, row, number} a {new_row, new_number}")
+                return
+        logging.error(f"Asiento no encontrado en el archivo {filename}: {day, row, number}")
+    else:
+        logging.error(f"No se pudo cargar el archivo {filename} para actualizar el asiento.")

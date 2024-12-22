@@ -9,46 +9,10 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 # Importar los módulos necesarios
 from proyecto.asiento import Asiento
 from proyecto.mensajes import Mensajes
+from proyecto.utilidades import calculate_final_price  # Asegurarse de importar la función
 
-MAX_ROWS = 10
+MAX_ROWS = 6
 MAX_SEATS_PER_ROW = 10
-
-def calculate_discount(price, age, day):
-    """
-    Calcula el descuento basado en el precio, la edad y el día de la semana.
-    
-    Args:
-        price (float): El precio base del asiento.
-        age (int): La edad del espectador.
-        day (str): El día de la semana.
-    
-    Returns:
-        float: El porcentaje de descuento a aplicar.
-    """
-    discount = 0.0
-    if day == "miércoles":
-        discount = 0.2
-    if age >= 65:
-        discount += 0.3
-    logging.debug(f"Descuento calculado: {discount} para precio: {price}, edad: {age}, día: {day}")
-    return discount
-
-def calculate_final_price(price, age, day):
-    """
-    Calcula el precio final aplicando el descuento correspondiente.
-    
-    Args:
-        price (float): El precio base del asiento.
-        age (int): La edad del espectador.
-        day (str): El día de la semana.
-    
-    Returns:
-        float: El precio final después de aplicar el descuento.
-    """
-    discount = calculate_discount(price, age, day)
-    final_price = price * (1 - discount)
-    logging.debug(f"Precio final calculado: {final_price} para precio: {price}, edad: {age}, día: {day}")
-    return final_price
 
 class SalaCine:
     """
@@ -114,8 +78,9 @@ class SalaCine:
         Guarda el estado de la sala en un archivo JSON.
         """
         with open(self._archivo_estado, 'w') as file:
-            data = {dia: [asiento.to_dict() for asiento in asientos] for dia, asientos in self._estado.items()}
+            data = {dia: [asiento.to_dict() for asiento in self._estado[dia]] for dia in self._estado}
             json.dump(data, file, indent=4)
+        logging.info(f"Estado guardado en el archivo {self._archivo_estado}")
 
     def agregar_asiento(self, dia, fila, numero):
         """
@@ -132,8 +97,8 @@ class SalaCine:
         Raises:
             ValueError: Si el día es inválido o el asiento ya existe.
         """
-        if not (fila.isalpha() and len(fila) == 1 and fila.upper() in "ABCDEFGHIJ"):
-            raise ValueError("Fila inválida. Debe ser una letra entre A y J.")
+        if not (fila.isalpha() and len(fila) == 1 and fila.upper() in "ABCDEF"):
+            raise ValueError("Fila inválida. Debe ser una letra entre A y F.")
         if not (1 <= int(numero) <= 10):
             raise ValueError("Número de asiento inválido. Debe estar entre 1 y 10.")
         if dia not in self._estado:

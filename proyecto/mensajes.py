@@ -157,7 +157,7 @@ class Mensajes:
         Returns:
             str: El mensaje para ingresar la fila.
         """
-        return "Ingrese la fila: "
+        return "Ingrese la fila (A-F): "
 
     @staticmethod
     def ingrese_numero_asiento():
@@ -167,7 +167,7 @@ class Mensajes:
         Returns:
             str: El mensaje para ingresar el número de asiento.
         """
-        return "Ingrese el número de asiento: "
+        return "Ingrese el número de asiento (1-10): "
 
     @staticmethod
     def dia_invalido():
@@ -237,7 +237,7 @@ class Mensajes:
         Returns:
             str: El mensaje para ingresar la nueva fila.
         """
-        return "Ingrese la nueva fila: "
+        return "Ingrese la nueva fila (A-F): "
 
     @staticmethod
     def ingrese_nuevo_numero_asiento():
@@ -247,7 +247,7 @@ class Mensajes:
         Returns:
             str: El mensaje para ingresar el nuevo número de asiento.
         """
-        return "Ingrese el nuevo número de asiento: "
+        return "Ingrese el nuevo número de asiento (1-10): "
 
     @staticmethod
     def asiento_eliminado():

@@ -1,19 +1,8 @@
 import logging
 import json
-import sys
-import os
-
-# Asegurar que la ruta es correcta
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
-# Importar los módulos necesarios
-from proyecto.mensajes import Mensajes
 
 # Configurar el logger
 logging.basicConfig(filename='debug.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
-
-MAX_ROWS = 10
-MAX_SEATS_PER_ROW = 10
 
 def calculate_discount(price, age, day):
     """
@@ -53,119 +42,138 @@ def calculate_final_price(price, age, day):
     return final_price
 
 def validate_input(prompt, input_type, valid_range):
-    attempts = 0
-    while attempts < 3:
+    """
+    Valida la entrada del usuario.
+    
+    Args:
+        prompt (str): El mensaje que se muestra al usuario.
+        input_type (type): El tipo de dato que se espera.
+        valid_range (range): El rango de valores válidos.
+    
+    Returns:
+        input_type: El valor ingresado por el usuario.
+    
+    Raises:
+        ValueError: Si la entrada no es válida.
+    """
+    while True:
         try:
-            user_input = input(prompt)
-            if input_type == str:
-                return user_input
-            value = input_type(user_input)
-            if isinstance(valid_range, range):
-                if value in valid_range:
-                    return value
-                else:
-                    print(f"Entrada inválida: El valor debe estar entre {valid_range.start} y {valid_range.stop - 1}. Ejemplo: {valid_range.start}")
-            else:
-                return value
+            user_input = input_type(input(prompt))
+            if valid_range and user_input not in valid_range:
+                raise ValueError
+            return user_input
         except ValueError:
-            print(f"Entrada inválida: invalid literal for {input_type.__name__}() with base 10: '{user_input}'")
-        except StopIteration:
-            raise ValueError("Número máximo de intentos alcanzado")
-        attempts += 1
-    raise ValueError("Número máximo de intentos alcanzado")
+            print("Entrada inválida. Por favor, intente de nuevo.")
+            logging.error("Entrada inválida.")
 
 def validate_option(prompt, options):
     """
-    Valida que la opción ingresada esté dentro de las opciones permitidas.
+    Valida la opción seleccionada por el usuario.
     
     Args:
-        prompt (str): El mensaje a mostrar al usuario.
-        options (list): Una lista de opciones válidas.
+        prompt (str): El mensaje que se muestra al usuario.
+        options (list): La lista de opciones válidas.
     
     Returns:
-        str: La opción validada del usuario.
+        str: La opción seleccionada por el usuario.
     
     Raises:
-        ValueError: Si la opción no es válida después de tres intentos.
+        ValueError: Si la opción no es válida.
     """
-    attempts = 3
-    while attempts > 0:
-        option = input(prompt).lower()
-        if option in options:
-            return option
+    while True:
+        user_input = input(prompt)
+        if user_input in options:
+            return user_input
         else:
-            print(f"Opción inválida. Las opciones válidas son: {', '.join(options)}")
-            logging.error(f"Opción inválida: {option}")
-            attempts -= 1
-    raise ValueError("Número máximo de intentos alcanzado")
+            print("Opción inválida. Por favor, intente de nuevo.")
+            logging.error("Opción inválida.")
 
-def update_seat(cinema, day, row, number, new_row, new_number):
+def save_state(filename, state):
     """
-    Actualiza la información de un asiento específico.
+    Guarda el estado de la sala de cine en un archivo JSON.
     
     Args:
-        cinema (SalaCine): La instancia de la sala de cine.
+        filename (str): El nombre del archivo JSON.
+        state (dict): El estado de la sala de cine.
+    """
+    # Convertir objetos Asiento a diccionarios
+    state_dict = {dia: [asiento.to_dict() for asiento in asientos] for dia, asientos in state.items()}
+    with open(filename, 'w') as file:
+        json.dump(state_dict, file, indent=4)
+    logging.info(f"Estado guardado en el archivo {filename}.")
+
+def reset_state(filename, initial_state):
+    """
+    Resetea el estado del archivo JSON con el estado inicial proporcionado.
+    
+    Args:
+        filename (str): El nombre del archivo JSON.
+        initial_state (dict): El estado inicial para resetear el archivo.
+    """
+    with open(filename, 'w') as file:
+        json.dump(initial_state, file, indent=4)
+    logging.info(f"Archivo {filename} reseteado con el estado inicial.")
+
+def reset_state_file(filename, initial_state):
+    """
+    Resetea el estado del archivo JSON con el estado inicial proporcionado.
+    
+    Args:
+        filename (str): El nombre del archivo JSON.
+        initial_state (dict): El estado inicial para resetear el archivo.
+    """
+    with open(filename, 'w') as file:
+        json.dump(initial_state, file, indent=4)
+    logging.info(f"Archivo {filename} reseteado con el estado inicial.")
+
+def update_state(filename, day, row, number, new_row, new_number):
+    """
+    Actualiza la información de un asiento específico en el archivo JSON.
+    
+    Args:
+        filename (str): El nombre del archivo JSON.
         day (str): El día de la semana.
         row (str): La fila del asiento.
         number (int): El número del asiento.
         new_row (str): La nueva fila del asiento.
         new_number (int): El nuevo número del asiento.
+    """
+    state = load_state_file(filename)
+    if state:
+        for asiento in state[day]:
+            if asiento['fila'] == row and asiento['numero'] == number:
+                asiento['fila'] = new_row
+                asiento['numero'] = new_number
+                save_state_file(filename, state)
+                logging.info(f"Asiento actualizado en el archivo {filename}: {day, row, number} a {new_row, new_number}")
+                return
+        logging.error(f"Asiento no encontrado en el archivo {filename}: {day, row, number}")
+    else:
+        logging.error(f"No se pudo cargar el archivo {filename} para actualizar el asiento.")
+
+def load_state_file(filename):
+    """
+    Carga el estado de la sala de cine desde un archivo JSON.
+    
+    Args:
+        filename (str): El nombre del archivo JSON.
     
     Returns:
-        str: Un mensaje indicando si la actualización fue exitosa o si el asiento no fue encontrado.
+        dict: El estado de la sala de cine.
     """
-    if len(cinema.get_estado()[day]) >= MAX_ROWS:
-        return "Número máximo de filas alcanzado."
-    if any(asiento.get_fila() == new_row and asiento.get_numero() == new_number for asiento in cinema.get_estado()[day]):
-        return "El asiento ya existe en el sistema."
-    return cinema.actualizar_asiento(day, row, number, new_row, new_number)
+    with open(filename, 'r') as file:
+        state = json.load(file)
+    logging.info(f"Estado cargado desde el archivo {filename}.")
+    return state
 
-def save_state_file(file, state):
+def save_state_file(filename, state):
     """
-    Guarda el estado en un archivo JSON.
+    Guarda el estado de la sala de cine en un archivo JSON.
     
     Args:
-        file (str): El nombre del archivo.
-        state (dict): El estado a guardar.
+        filename (str): El nombre del archivo JSON.
+        state (dict): El estado de la sala de cine.
     """
-    try:
-        with open(file, 'w') as f:
-            json.dump(state, f, indent=4)
-        logging.info(f"Estado guardado en el archivo {file}.")
-    except Exception as e:
-        logging.error(f"Error al guardar el archivo {file}: {e}")
-
-def reset_state_file(file, initial_state):
-    """
-    Resetea el archivo de estado JSON con el estado inicial.
-    
-    Args:
-        file (str): El nombre del archivo.
-        initial_state (dict): El estado inicial a guardar.
-    """
-    try:
-        with open(file, 'w') as f:
-            json.dump(initial_state, f, indent=4)
-        logging.info(f"Archivo {file} reseteado con el estado inicial.")
-    except Exception as e:
-        logging.error(f"Error al resetear el archivo {file}: {e}")
-
-def save_state(filename, state):
-    """
-    Guarda el estado en un archivo JSON.
-    
-    Args:
-        filename (str): El nombre del archivo.
-        state (dict): El estado a guardar.
-    """
-    save_state_file(filename, state)
-
-def reset_state(filename, initial_state):
-    """
-    Resetea el estado en un archivo JSON.
-    
-    Args:
-        filename (str): El nombre del archivo.
-        initial_state (dict): El estado inicial a guardar.
-    """
-    reset_state_file(filename, initial_state)
+    with open(filename, 'w') as file:
+        json.dump(state, file, indent=4)
+    logging.info(f"Estado guardado en el archivo {filename}.")

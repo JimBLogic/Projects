@@ -1,59 +1,13 @@
 DEBUG:root:Asiento actualizado a número 2 en fila B.
-INFO:root:Asiento actualizado correctamente.
-ERROR:root:Error al cancelar reserva: El asiento no está reservado.
+DEBUG:root:Asiento 1 en fila A reservado.
 DEBUG:root:Reserva del asiento 1 en fila A cancelada.
-INFO:root:Reserva cancelada correctamente.
-INFO:root:Asiento creado a partir de diccionario correctamente.
 DEBUG:root:Asiento 1 en fila A reservado.
-INFO:root:Asiento reservado correctamente.
-ERROR:root:Error al reservar asiento: El asiento ya está reservado.
-INFO:root:Asiento convertido a diccionario correctamente.
-ERROR:root:Error al agregar asiento: Número máximo de intentos alcanzado
-ERROR:root:Error al agregar asiento: Número máximo de intentos alcanzado
-INFO:root:Asiento agregado: lunes, A, 1
-WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
-INFO:root:Asiento agregado: lunes, A, 1
-INFO:root:Asiento agregado: lunes, B, 1
-INFO:root:Asiento agregado: lunes, C, 1
-INFO:root:Asiento agregado: lunes, D, 1
-INFO:root:Asiento agregado: lunes, E, 1
-INFO:root:Asiento agregado: lunes, F, 1
-INFO:root:Asiento agregado: lunes, G, 1
-INFO:root:Asiento agregado: lunes, H, 1
-INFO:root:Asiento agregado: lunes, I, 1
-INFO:root:Asiento agregado: lunes, J, 1
-WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
-INFO:root:Asiento agregado: lunes, A, 1
-DEBUG:root:Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-DEBUG:root:Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
-DEBUG:root:Asiento 1 en fila A reservado.
-INFO:root:Asiento reservado: lunes, A, 1, precio: 10.0
-DEBUG:root:Reserva del asiento 1 en fila A cancelada.
-INFO:root:Reserva cancelada: lunes, A, 1
-WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
-INFO:root:Asiento agregado: lunes, A, 1
-INFO:root:Asiento eliminado: lunes, A, 1
-WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
-INFO:root:Asiento agregado: lunes, A, 1
-DEBUG:root:Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-DEBUG:root:Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
-DEBUG:root:Asiento 1 en fila A reservado.
-INFO:root:Asiento reservado: lunes, A, 1, precio: 10.0
-WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
-INFO:root:Asiento agregado: lunes, A, 1
-DEBUG:root:Asiento actualizado a número 2 en fila B.
-INFO:root:Asiento actualizado: lunes, A, 1 a B, 2
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json eliminado.
-DEBUG:root:test_delete_state_file passed
-WARNING:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\../estado_sala.json no encontrado.
-WARNING:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json no encontrado.
-WARNING:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\../estado_sala.json no encontrado.
+DEBUG:root:TestUtilidades setUp ejecutado
 DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 25, día: lunes
 DEBUG:root:Descuento calculado: 0.5 para precio: 100, edad: 65, día: miércoles
 DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 30, día: domingo
 DEBUG:root:test_calculate_discount passed
+DEBUG:root:TestUtilidades setUp ejecutado
 DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 25, día: lunes
 DEBUG:root:Precio final calculado: 100.0 para precio: 100, edad: 25, día: lunes
 DEBUG:root:Descuento calculado: 0.5 para precio: 100, edad: 65, día: miércoles
@@ -61,80 +15,42 @@ DEBUG:root:Precio final calculado: 50.0 para precio: 100, edad: 65, día: miércol
 DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 30, día: domingo
 DEBUG:root:Precio final calculado: 100.0 para precio: 100, edad: 30, día: domingo
 DEBUG:root:test_calculate_final_price passed
+DEBUG:root:TestUtilidades setUp ejecutado
 DEBUG:root:test_validate_input passed
-DEBUG:root:test_validate_input_invalid passed
-DEBUG:root:test_validate_input_stop_iteration passed
+DEBUG:root:TestUtilidades setUp ejecutado
+ERROR:root:Entrada inválida.
+ERROR:root:Entrada inválida.
+ERROR:root:Entrada inválida.
+DEBUG:root:TestUtilidades setUp ejecutado
+DEBUG:root:TestUtilidades setUp ejecutado
 DEBUG:root:test_validate_option passed
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
+DEBUG:root:TestVerificarSistema setUpClass executed
+INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json creado con el estado inicial.
 DEBUG:root:test_create_state_file passed
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json eliminado.
+INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json creado con el estado inicial.
+INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json eliminado.
 DEBUG:root:test_delete_state_file passed
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json cargado correctamente.
+INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json creado con el estado inicial.
+INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json cargado correctamente.
 DEBUG:root:test_load_state_file passed
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
-INFO:root:Estado guardado en el archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json.
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json reseteado con el estado inicial.
+INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json creado con el estado inicial.
+INFO:root:Estado guardado en el archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json.
+INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json reseteado con el estado inicial.
 DEBUG:root:test_reset_state_file passed
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
-INFO:root:Estado guardado en el archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json.
+INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json creado con el estado inicial.
+INFO:root:Estado guardado en el archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json.
 DEBUG:root:test_save_state_file passed
+DEBUG:root:TestVerificarSistema tearDownClass executed
 DEBUG:root:Asiento actualizado a número 2 en fila B.
-INFO:root:Asiento actualizado correctamente.
-ERROR:root:Error al cancelar reserva: El asiento no está reservado.
+DEBUG:root:Asiento 1 en fila A reservado.
 DEBUG:root:Reserva del asiento 1 en fila A cancelada.
-INFO:root:Reserva cancelada correctamente.
-INFO:root:Asiento creado a partir de diccionario correctamente.
 DEBUG:root:Asiento 1 en fila A reservado.
-INFO:root:Asiento reservado correctamente.
-ERROR:root:Error al reservar asiento: El asiento ya está reservado.
-INFO:root:Asiento convertido a diccionario correctamente.
-ERROR:root:Error al agregar asiento: Número máximo de intentos alcanzado
-INFO:root:Asiento agregado: lunes, A, 1
-WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
-INFO:root:Asiento agregado: lunes, A, 1
-INFO:root:Asiento agregado: lunes, B, 1
-INFO:root:Asiento agregado: lunes, C, 1
-INFO:root:Asiento agregado: lunes, D, 1
-INFO:root:Asiento agregado: lunes, E, 1
-INFO:root:Asiento agregado: lunes, F, 1
-INFO:root:Asiento agregado: lunes, G, 1
-INFO:root:Asiento agregado: lunes, H, 1
-INFO:root:Asiento agregado: lunes, I, 1
-INFO:root:Asiento agregado: lunes, J, 1
-WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
-INFO:root:Asiento agregado: lunes, A, 1
-DEBUG:root:Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-DEBUG:root:Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
-DEBUG:root:Asiento 1 en fila A reservado.
-INFO:root:Asiento reservado: lunes, A, 1, precio: 10.0
-DEBUG:root:Reserva del asiento 1 en fila A cancelada.
-INFO:root:Reserva cancelada: lunes, A, 1
-WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
-INFO:root:Asiento agregado: lunes, A, 1
-INFO:root:Asiento eliminado: lunes, A, 1
-WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
-INFO:root:Asiento agregado: lunes, A, 1
-DEBUG:root:Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-DEBUG:root:Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
-DEBUG:root:Asiento 1 en fila A reservado.
-INFO:root:Asiento reservado: lunes, A, 1, precio: 10.0
-WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
-INFO:root:Asiento agregado: lunes, A, 1
-DEBUG:root:Asiento actualizado a número 2 en fila B.
-INFO:root:Asiento actualizado: lunes, A, 1 a B, 2
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json eliminado.
-DEBUG:root:test_delete_state_file passed
-WARNING:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\../estado_sala.json no encontrado.
-WARNING:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json no encontrado.
-WARNING:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\../estado_sala.json no encontrado.
+DEBUG:root:TestUtilidades setUp ejecutado
 DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 25, día: lunes
 DEBUG:root:Descuento calculado: 0.5 para precio: 100, edad: 65, día: miércoles
 DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 30, día: domingo
 DEBUG:root:test_calculate_discount passed
+DEBUG:root:TestUtilidades setUp ejecutado
 DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 25, día: lunes
 DEBUG:root:Precio final calculado: 100.0 para precio: 100, edad: 25, día: lunes
 DEBUG:root:Descuento calculado: 0.5 para precio: 100, edad: 65, día: miércoles
@@ -142,80 +58,42 @@ DEBUG:root:Precio final calculado: 50.0 para precio: 100, edad: 65, día: miércol
 DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 30, día: domingo
 DEBUG:root:Precio final calculado: 100.0 para precio: 100, edad: 30, día: domingo
 DEBUG:root:test_calculate_final_price passed
+DEBUG:root:TestUtilidades setUp ejecutado
 DEBUG:root:test_validate_input passed
-DEBUG:root:test_validate_input_invalid passed
-DEBUG:root:test_validate_input_stop_iteration passed
+DEBUG:root:TestUtilidades setUp ejecutado
+ERROR:root:Entrada inválida.
+ERROR:root:Entrada inválida.
+ERROR:root:Entrada inválida.
+DEBUG:root:TestUtilidades setUp ejecutado
+DEBUG:root:TestUtilidades setUp ejecutado
 DEBUG:root:test_validate_option passed
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
+DEBUG:root:TestVerificarSistema setUpClass executed
+INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json creado con el estado inicial.
 DEBUG:root:test_create_state_file passed
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json eliminado.
+INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json creado con el estado inicial.
+INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json eliminado.
 DEBUG:root:test_delete_state_file passed
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json cargado correctamente.
+INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json creado con el estado inicial.
+INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json cargado correctamente.
 DEBUG:root:test_load_state_file passed
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
-INFO:root:Estado guardado en el archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json.
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json reseteado con el estado inicial.
+INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json creado con el estado inicial.
+INFO:root:Estado guardado en el archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json.
+INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json reseteado con el estado inicial.
 DEBUG:root:test_reset_state_file passed
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
-INFO:root:Estado guardado en el archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json.
+INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json creado con el estado inicial.
+INFO:root:Estado guardado en el archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json.
 DEBUG:root:test_save_state_file passed
+DEBUG:root:TestVerificarSistema tearDownClass executed
 DEBUG:root:Asiento actualizado a número 2 en fila B.
-INFO:root:Asiento actualizado correctamente.
-ERROR:root:Error al cancelar reserva: El asiento no está reservado.
+DEBUG:root:Asiento 1 en fila A reservado.
 DEBUG:root:Reserva del asiento 1 en fila A cancelada.
-INFO:root:Reserva cancelada correctamente.
-INFO:root:Asiento creado a partir de diccionario correctamente.
 DEBUG:root:Asiento 1 en fila A reservado.
-INFO:root:Asiento reservado correctamente.
-ERROR:root:Error al reservar asiento: El asiento ya está reservado.
-INFO:root:Asiento convertido a diccionario correctamente.
-ERROR:root:Error al agregar asiento: Número máximo de intentos alcanzado
-INFO:root:Asiento agregado: lunes, A, 1
-WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
-INFO:root:Asiento agregado: lunes, A, 1
-INFO:root:Asiento agregado: lunes, B, 1
-INFO:root:Asiento agregado: lunes, C, 1
-INFO:root:Asiento agregado: lunes, D, 1
-INFO:root:Asiento agregado: lunes, E, 1
-INFO:root:Asiento agregado: lunes, F, 1
-INFO:root:Asiento agregado: lunes, G, 1
-INFO:root:Asiento agregado: lunes, H, 1
-INFO:root:Asiento agregado: lunes, I, 1
-INFO:root:Asiento agregado: lunes, J, 1
-WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
-INFO:root:Asiento agregado: lunes, A, 1
-DEBUG:root:Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-DEBUG:root:Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
-DEBUG:root:Asiento 1 en fila A reservado.
-INFO:root:Asiento reservado: lunes, A, 1, precio: 10.0
-DEBUG:root:Reserva del asiento 1 en fila A cancelada.
-INFO:root:Reserva cancelada: lunes, A, 1
-WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
-INFO:root:Asiento agregado: lunes, A, 1
-INFO:root:Asiento eliminado: lunes, A, 1
-WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
-INFO:root:Asiento agregado: lunes, A, 1
-DEBUG:root:Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-DEBUG:root:Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
-DEBUG:root:Asiento 1 en fila A reservado.
-INFO:root:Asiento reservado: lunes, A, 1, precio: 10.0
-WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
-INFO:root:Asiento agregado: lunes, A, 1
-DEBUG:root:Asiento actualizado a número 2 en fila B.
-INFO:root:Asiento actualizado: lunes, A, 1 a B, 2
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json eliminado.
-DEBUG:root:test_delete_state_file passed
-WARNING:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\../estado_sala.json no encontrado.
-WARNING:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json no encontrado.
-WARNING:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\../estado_sala.json no encontrado.
+DEBUG:root:TestUtilidades setUp ejecutado
 DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 25, día: lunes
 DEBUG:root:Descuento calculado: 0.5 para precio: 100, edad: 65, día: miércoles
 DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 30, día: domingo
 DEBUG:root:test_calculate_discount passed
+DEBUG:root:TestUtilidades setUp ejecutado
 DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 25, día: lunes
 DEBUG:root:Precio final calculado: 100.0 para precio: 100, edad: 25, día: lunes
 DEBUG:root:Descuento calculado: 0.5 para precio: 100, edad: 65, día: miércoles
@@ -223,22 +101,29 @@ DEBUG:root:Precio final calculado: 50.0 para precio: 100, edad: 65, día: miércol
 DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 30, día: domingo
 DEBUG:root:Precio final calculado: 100.0 para precio: 100, edad: 30, día: domingo
 DEBUG:root:test_calculate_final_price passed
+DEBUG:root:TestUtilidades setUp ejecutado
 DEBUG:root:test_validate_input passed
-DEBUG:root:test_validate_input_invalid passed
-DEBUG:root:test_validate_input_stop_iteration passed
+DEBUG:root:TestUtilidades setUp ejecutado
+ERROR:root:Entrada inválida.
+ERROR:root:Entrada inválida.
+ERROR:root:Entrada inválida.
+DEBUG:root:TestUtilidades setUp ejecutado
+DEBUG:root:TestUtilidades setUp ejecutado
 DEBUG:root:test_validate_option passed
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
+DEBUG:root:TestVerificarSistema setUpClass executed
+INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json creado con el estado inicial.
 DEBUG:root:test_create_state_file passed
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json eliminado.
+INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json creado con el estado inicial.
+INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json eliminado.
 DEBUG:root:test_delete_state_file passed
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json cargado correctamente.
+INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json creado con el estado inicial.
+INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json cargado correctamente.
 DEBUG:root:test_load_state_file passed
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
-INFO:root:Estado guardado en el archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json.
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json reseteado con el estado inicial.
+INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json creado con el estado inicial.
+INFO:root:Estado guardado en el archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json.
+INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json reseteado con el estado inicial.
 DEBUG:root:test_reset_state_file passed
-INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
-INFO:root:Estado guardado en el archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json.
+INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json creado con el estado inicial.
+INFO:root:Estado guardado en el archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json.
 DEBUG:root:test_save_state_file passed
+DEBUG:root:TestVerificarSistema tearDownClass executed
