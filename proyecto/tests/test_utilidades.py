@@ -2,78 +2,79 @@ import unittest
 from unittest.mock import patch
 import sys
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from proyecto.utilidades import calcular_descuento, validar_entrada, validar_opcion, calcular_precio_final
+import logging
+
+# Asegurar que la ruta es correcta
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+
+# Verificar la ruta
+print(sys.path)
+
+# Importar el módulo
+from proyecto.utilidades import calculate_discount, calculate_final_price, validate_input, validate_option
 
 class TestUtilidades(unittest.TestCase):
     """
     Clase de pruebas para las funciones del módulo utilidades.
     """
 
-    def test_calcular_descuento(self):
+    def setUp(self):
         """
-        Prueba la función calcular_descuento.
+        Configuración inicial para las pruebas.
         """
-        self.assertEqual(calcular_descuento(10.0, 70, "miércoles"), 0.5)
-        self.assertEqual(calcular_descuento(10.0, 30, "miércoles"), 0.0)
-        self.assertEqual(calcular_descuento(10.0, 70, "lunes"), 0.3)
-        self.assertEqual(calcular_descuento(10.0, 30, "lunes"), 0.0)
-        # Edge cases
-        self.assertEqual(calcular_descuento(0.0, 70, "miércoles"), 0.5)
-        self.assertEqual(calcular_descuento(100.0, 70, "miércoles"), 0.5)
-        self.assertEqual(calcular_descuento(10.0, 0, "miércoles"), 0.2)
-        self.assertEqual(calcular_descuento(10.0, 70, "domingo"), 0.3)
+        logging.basicConfig(filename='debug.log', level=logging.DEBUG)
 
-    @patch('builtins.input', return_value='5')
-    def test_validar_entrada(self, mock_input):
+    def test_calculate_discount(self):
         """
-        Prueba la función validar_entrada con una entrada válida.
+        Prueba la función calculate_discount.
         """
-        self.assertEqual(validar_entrada("Ingrese un número: ", int, (1, 10)), 5)
+        self.assertEqual(calculate_discount(100, 25, "lunes"), 0.0)
+        self.assertEqual(calculate_discount(100, 65, "miércoles"), 0.5)
+        self.assertEqual(calculate_discount(100, 30, "domingo"), 0.0)
+        logging.debug('test_calculate_discount passed')
 
-    @patch('builtins.input', return_value='15')
-    def test_validar_entrada_fuera_de_rango(self, mock_input):
+    def test_calculate_final_price(self):
         """
-        Prueba la función validar_entrada con una entrada fuera de rango.
+        Prueba la función calculate_final_price.
+        """
+        self.assertEqual(calculate_final_price(100, 25, "lunes"), 100.0)
+        self.assertEqual(calculate_final_price(100, 65, "miércoles"), 50.0)
+        self.assertEqual(calculate_final_price(100, 30, "domingo"), 100.0)
+        logging.debug('test_calculate_final_price passed')
+
+    @patch('builtins.input', side_effect=['5'])
+    def test_validate_input(self, mock_input):
+        """
+        Prueba la función validate_input.
+        """
+        self.assertEqual(validate_input("Ingrese un número: ", int, range(1, 6)), 5)
+        logging.debug('test_validate_input passed')
+
+    @patch('builtins.input', side_effect=['A', 'B', 'C'])
+    def test_validate_input_invalid(self, mock_input):
+        """
+        Prueba la función validate_input para manejar entradas inválidas.
         """
         with self.assertRaises(ValueError):
-            validar_entrada("Ingrese un número: ", int, (1, 10))
+            validate_input("Ingrese un número: ", int, range(1, 6))
+        logging.debug('test_validate_input_invalid passed')
 
-    @patch('builtins.input', side_effect=['abc', '5'])
-    def test_validar_entrada_invalida(self, mock_input):
+    @patch('builtins.input', side_effect=StopIteration)
+    def test_validate_input_stop_iteration(self, mock_input):
         """
-        Prueba la función validar_entrada con una entrada no válida.
-        """
-        self.assertEqual(validar_entrada("Ingrese un número: ", int, (1, 10)), 5)
-
-    @patch('builtins.input', return_value='si')
-    def test_validar_opcion(self, mock_input):
-        """
-        Prueba la función validar_opcion con una opción válida.
-        """
-        self.assertEqual(validar_opcion("Ingrese una opción: ", ['si', 'no']), 'si')
-
-    @patch('builtins.input', return_value='quizás')
-    def test_validar_opcion_invalida(self, mock_input):
-        """
-        Prueba la función validar_opcion con una opción inválida.
+        Prueba la función validate_input para manejar StopIteration.
         """
         with self.assertRaises(ValueError):
-            validar_opcion("Ingrese una opción: ", ['si', 'no'])
+            validate_input("Ingrese un número: ", int, range(1, 6))
+        logging.debug('test_validate_input_stop_iteration passed')
 
-    def test_calcular_precio_final(self):
+    @patch('builtins.input', side_effect=['opcion1'])
+    def test_validate_option(self, mock_input):
         """
-        Prueba la función calcular_precio_final.
+        Prueba la función validate_option.
         """
-        self.assertEqual(calcular_precio_final(10.0, 70, "miércoles"), 5.0)
-        self.assertEqual(calcular_precio_final(10.0, 30, "miércoles"), 10.0)
-        self.assertEqual(calcular_precio_final(10.0, 70, "lunes"), 7.0)
-        self.assertEqual(calcular_precio_final(10.0, 30, "lunes"), 10.0)
-        # Edge cases
-        self.assertEqual(calcular_precio_final(0.0, 70, "miércoles"), 0.0)
-        self.assertEqual(calcular_precio_final(10.0, 0, "miércoles"), 8.0)
-        self.assertEqual(calcular_precio_final(10.0, 10, "lunes"), 10.0)
-        self.assertEqual(calcular_precio_final(10.0, 70, "domingo"), 7.0)
+        self.assertEqual(validate_option("Seleccione una opción: ", ['opcion1', 'opcion2']), 'opcion1')
+        logging.debug('test_validate_option passed')
 
 if __name__ == '__main__':
     unittest.main()

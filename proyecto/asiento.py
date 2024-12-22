@@ -1,4 +1,15 @@
+import json
+import logging
+import sys
+import os
+
+# Asegurar que la ruta es correcta
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+# Importar el módulo Mensajes
 from proyecto.mensajes import Mensajes
+
+logging.basicConfig(filename='debug.log', level=logging.DEBUG)
 
 class Asiento:
     """
@@ -62,6 +73,7 @@ class Asiento:
         """
         if not self.is_reservado():
             self.set_reservado(True)
+            logging.debug(f'Asiento {self._numero} en fila {self._fila} reservado.')
             return Mensajes.asiento_reservado()
         raise Exception("El asiento ya está reservado.")
 
@@ -77,6 +89,7 @@ class Asiento:
         """
         if self.is_reservado():
             self.set_reservado(False)
+            logging.debug(f'Reserva del asiento {self._numero} en fila {self._fila} cancelada.')
             return Mensajes.reserva_cancelada()
         raise Exception("El asiento no está reservado.")
 
@@ -93,6 +106,7 @@ class Asiento:
         """
         self.set_fila(nueva_fila)
         self.set_numero(nuevo_numero)
+        logging.debug(f'Asiento actualizado a número {nuevo_numero} en fila {nueva_fila}.')
         return Mensajes.asiento_actualizado()
 
     def to_dict(self):
@@ -126,3 +140,17 @@ class Asiento:
         if "numero" not in data or "fila" not in data or "reservado" not in data or "precio" not in data:
             raise KeyError("El diccionario debe contener las claves 'numero', 'fila', 'reservado' y 'precio'.")
         return cls(data["numero"], data["fila"], data["reservado"], data["precio"])
+
+    @staticmethod
+    def guardar_estado(asientos, filename='estado_cine.json'):
+        """
+        Guarda el estado de los asientos en un archivo .json.
+        
+        Args:
+            asientos (list): Lista de objetos Asiento.
+            filename (str): Nombre del archivo .json donde se guardará el estado.
+        """
+        estado = [asiento.to_dict() for asiento in asientos]
+        with open(filename, 'w') as file:
+            json.dump(estado, file, indent=4)
+        logging.debug(f'Estado de los asientos guardado en {filename}.')

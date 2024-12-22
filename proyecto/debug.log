@@ -1,392 +1,244 @@
-2024-12-16 23:00:21,979 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:00:21,998 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:00:22,001 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:00:22,008 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:00:22,011 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:00:22,018 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:00:22,021 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:00:22,028 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:00:22,033 - INFO - Asiento actualizado: lunes, A, 1 a B, 2
-2024-12-16 23:00:22,034 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:00:22,038 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:00:22,038 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:00:22,039 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:00:22,039 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:00:22,039 - INFO - Asiento reservado: lunes, A, 1, precio: 10.0
-2024-12-16 23:00:22,039 - INFO - Reserva cancelada: ('lunes', 'A', 1)
-2024-12-16 23:00:22,039 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:00:22,041 - INFO - Asiento eliminado: lunes, A, 1
-2024-12-16 23:00:22,042 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:00:22,042 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:00:22,042 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:00:22,042 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:00:22,042 - INFO - Asiento reservado: lunes, A, 1, precio: 10.0
-2024-12-16 23:00:22,049 - DEBUG - Descuento calculado: 0.5 para precio: 10.0, edad: 70, día: miércoles
-2024-12-16 23:00:22,049 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: miércoles
-2024-12-16 23:00:22,049 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, día: lunes
-2024-12-16 23:00:22,049 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:00:22,049 - DEBUG - Descuento calculado: 0.5 para precio: 0.0, edad: 70, día: miércoles
-2024-12-16 23:00:22,049 - DEBUG - Descuento calculado: 0.5 para precio: 100.0, edad: 70, día: miércoles
-2024-12-16 23:00:22,050 - DEBUG - Descuento calculado: 0.2 para precio: 10.0, edad: 0, día: miércoles
-2024-12-16 23:00:22,050 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, día: domingo
-2024-12-16 23:00:22,050 - DEBUG - Descuento calculado: 0.5 para precio: 10.0, edad: 70, día: miércoles
-2024-12-16 23:00:22,050 - DEBUG - Precio final calculado: 5.0 para precio: 10.0, edad: 70, día: miércoles
-2024-12-16 23:00:22,050 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: miércoles
-2024-12-16 23:00:22,050 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: miércoles
-2024-12-16 23:00:22,050 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, día: lunes
-2024-12-16 23:00:22,050 - DEBUG - Precio final calculado: 7.0 para precio: 10.0, edad: 70, día: lunes
-2024-12-16 23:00:22,050 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:00:22,050 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:00:22,050 - DEBUG - Descuento calculado: 0.5 para precio: 0.0, edad: 70, día: miércoles
-2024-12-16 23:00:22,050 - DEBUG - Precio final calculado: 0.0 para precio: 0.0, edad: 70, día: miércoles
-2024-12-16 23:00:22,050 - DEBUG - Descuento calculado: 0.2 para precio: 10.0, edad: 0, día: miércoles
-2024-12-16 23:00:22,050 - DEBUG - Precio final calculado: 8.0 para precio: 10.0, edad: 0, día: miércoles
-2024-12-16 23:00:22,050 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 10, día: lunes
-2024-12-16 23:00:22,050 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 10, día: lunes
-2024-12-16 23:00:22,058 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, día: domingo
-2024-12-16 23:00:22,058 - DEBUG - Precio final calculado: 7.0 para precio: 10.0, edad: 70, día: domingo
-2024-12-16 23:00:22,059 - ERROR - Entrada inválida: El valor debe estar entre 1 y 10. Ejemplo: 1
-2024-12-16 23:00:22,060 - ERROR - Entrada inválida: El valor debe estar entre 1 y 10. Ejemplo: 1
-2024-12-16 23:00:22,060 - ERROR - Entrada inválida: El valor debe estar entre 1 y 10. Ejemplo: 1
-2024-12-16 23:00:22,060 - ERROR - Entrada inválida: invalid literal for int() with base 10: 'abc'
-2024-12-16 23:00:22,061 - ERROR - Opción inválida: quizás
-2024-12-16 23:00:22,061 - ERROR - Opción inválida: quizás
-2024-12-16 23:00:22,061 - ERROR - Opción inválida: quizás
-2024-12-16 23:01:21,809 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:01:21,821 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:01:21,826 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:01:21,830 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:01:21,835 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:01:21,838 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:01:21,844 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:01:21,847 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:01:21,850 - INFO - Asiento actualizado: lunes, A, 1 a B, 2
-2024-12-16 23:01:21,851 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:01:21,855 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:01:21,855 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:01:21,855 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:01:21,855 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:01:21,855 - INFO - Asiento reservado: lunes, A, 1, precio: 10.0
-2024-12-16 23:01:21,855 - INFO - Reserva cancelada: ('lunes', 'A', 1)
-2024-12-16 23:01:21,856 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:01:21,857 - INFO - Asiento eliminado: lunes, A, 1
-2024-12-16 23:01:21,858 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:01:21,859 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:01:21,859 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:01:21,859 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:01:21,859 - INFO - Asiento reservado: lunes, A, 1, precio: 10.0
-2024-12-16 23:01:21,864 - DEBUG - Descuento calculado: 0.5 para precio: 10.0, edad: 70, día: miércoles
-2024-12-16 23:01:21,864 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: miércoles
-2024-12-16 23:01:21,864 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, día: lunes
-2024-12-16 23:01:21,865 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:01:21,865 - DEBUG - Descuento calculado: 0.5 para precio: 0.0, edad: 70, día: miércoles
-2024-12-16 23:01:21,865 - DEBUG - Descuento calculado: 0.5 para precio: 100.0, edad: 70, día: miércoles
-2024-12-16 23:01:21,865 - DEBUG - Descuento calculado: 0.2 para precio: 10.0, edad: 0, día: miércoles
-2024-12-16 23:01:21,865 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, día: domingo
-2024-12-16 23:01:21,865 - DEBUG - Descuento calculado: 0.5 para precio: 10.0, edad: 70, día: miércoles
-2024-12-16 23:01:21,865 - DEBUG - Precio final calculado: 5.0 para precio: 10.0, edad: 70, día: miércoles
-2024-12-16 23:01:21,865 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: miércoles
-2024-12-16 23:01:21,865 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: miércoles
-2024-12-16 23:01:21,865 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, día: lunes
-2024-12-16 23:01:21,865 - DEBUG - Precio final calculado: 7.0 para precio: 10.0, edad: 70, día: lunes
-2024-12-16 23:01:21,865 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:01:21,865 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:01:21,865 - DEBUG - Descuento calculado: 0.5 para precio: 0.0, edad: 70, día: miércoles
-2024-12-16 23:01:21,865 - DEBUG - Precio final calculado: 0.0 para precio: 0.0, edad: 70, día: miércoles
-2024-12-16 23:01:21,865 - DEBUG - Descuento calculado: 0.2 para precio: 10.0, edad: 0, día: miércoles
-2024-12-16 23:01:21,865 - DEBUG - Precio final calculado: 8.0 para precio: 10.0, edad: 0, día: miércoles
-2024-12-16 23:01:21,865 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 10, día: lunes
-2024-12-16 23:01:21,865 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 10, día: lunes
-2024-12-16 23:01:21,866 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, día: domingo
-2024-12-16 23:01:21,866 - DEBUG - Precio final calculado: 7.0 para precio: 10.0, edad: 70, día: domingo
-2024-12-16 23:01:21,866 - ERROR - Entrada inválida: El valor debe estar entre 1 y 10. Ejemplo: 1
-2024-12-16 23:01:21,867 - ERROR - Entrada inválida: El valor debe estar entre 1 y 10. Ejemplo: 1
-2024-12-16 23:01:21,867 - ERROR - Entrada inválida: El valor debe estar entre 1 y 10. Ejemplo: 1
-2024-12-16 23:01:21,867 - ERROR - Entrada inválida: invalid literal for int() with base 10: 'abc'
-2024-12-16 23:01:21,868 - ERROR - Opción inválida: quizás
-2024-12-16 23:01:21,868 - ERROR - Opción inválida: quizás
-2024-12-16 23:01:21,868 - ERROR - Opción inválida: quizás
-2024-12-16 23:02:58,619 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:02:58,619 - INFO - Opción seleccionada: 1
-2024-12-16 23:02:58,619 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:02:58,630 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:02:58,630 - INFO - Opción seleccionada: 1
-2024-12-16 23:02:58,630 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:02:58,633 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:02:58,633 - INFO - Opción seleccionada: 1
-2024-12-16 23:02:58,633 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:02:58,639 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:02:58,639 - INFO - Opción seleccionada: 1
-2024-12-16 23:02:58,639 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:02:58,643 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:02:58,643 - INFO - Opción seleccionada: 1
-2024-12-16 23:02:58,644 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:02:58,649 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:02:58,650 - INFO - Opción seleccionada: 1
-2024-12-16 23:02:58,650 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:02:58,653 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:02:58,653 - INFO - Opción seleccionada: 1
-2024-12-16 23:02:58,653 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:02:58,659 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:02:58,659 - INFO - Opción seleccionada: 1
-2024-12-16 23:02:58,659 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:02:58,664 - INFO - Asiento actualizado: lunes, A, 1 a B, 2
-2024-12-16 23:02:58,665 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:02:58,667 - INFO - Asiento agregado: lunes, B, 2
-2024-12-16 23:02:58,668 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:02:58,669 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:02:58,669 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:02:58,669 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:02:58,669 - INFO - Asiento reservado: lunes, A, 1, precio: 10.0
-2024-12-16 23:02:58,669 - INFO - Reserva cancelada: ('lunes', 'A', 1)
-2024-12-16 23:02:58,670 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:02:58,671 - INFO - Asiento eliminado: lunes, A, 1
-2024-12-16 23:02:58,672 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:02:58,673 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:02:58,673 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:02:58,673 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:02:58,673 - INFO - Asiento reservado: lunes, A, 1, precio: 10.0
-2024-12-16 23:02:58,680 - DEBUG - Descuento calculado: 0.5 para precio: 10.0, edad: 70, día: miércoles
-2024-12-16 23:02:58,680 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: miércoles
-2024-12-16 23:02:58,680 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, día: lunes
-2024-12-16 23:02:58,680 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:02:58,680 - DEBUG - Descuento calculado: 0.5 para precio: 0.0, edad: 70, día: miércoles
-2024-12-16 23:02:58,680 - DEBUG - Descuento calculado: 0.5 para precio: 100.0, edad: 70, día: miércoles
-2024-12-16 23:02:58,680 - DEBUG - Descuento calculado: 0.2 para precio: 10.0, edad: 0, día: miércoles
-2024-12-16 23:02:58,680 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, día: domingo
-2024-12-16 23:02:58,680 - DEBUG - Descuento calculado: 0.5 para precio: 10.0, edad: 70, día: miércoles
-2024-12-16 23:02:58,680 - DEBUG - Precio final calculado: 5.0 para precio: 10.0, edad: 70, día: miércoles
-2024-12-16 23:02:58,680 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: miércoles
-2024-12-16 23:02:58,680 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: miércoles
-2024-12-16 23:02:58,680 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, día: lunes
-2024-12-16 23:02:58,680 - DEBUG - Precio final calculado: 7.0 para precio: 10.0, edad: 70, día: lunes
-2024-12-16 23:02:58,681 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:02:58,681 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:02:58,681 - DEBUG - Descuento calculado: 0.5 para precio: 0.0, edad: 70, día: miércoles
-2024-12-16 23:02:58,681 - DEBUG - Precio final calculado: 0.0 para precio: 0.0, edad: 70, día: miércoles
-2024-12-16 23:02:58,681 - DEBUG - Descuento calculado: 0.2 para precio: 10.0, edad: 0, día: miércoles
-2024-12-16 23:02:58,681 - DEBUG - Precio final calculado: 8.0 para precio: 10.0, edad: 0, día: miércoles
-2024-12-16 23:02:58,681 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 10, día: lunes
-2024-12-16 23:02:58,681 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 10, día: lunes
-2024-12-16 23:02:58,681 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, día: domingo
-2024-12-16 23:02:58,681 - DEBUG - Precio final calculado: 7.0 para precio: 10.0, edad: 70, día: domingo
-2024-12-16 23:02:58,682 - ERROR - Entrada inválida: El valor debe estar entre 1 y 10. Ejemplo: 1
-2024-12-16 23:02:58,682 - ERROR - Entrada inválida: El valor debe estar entre 1 y 10. Ejemplo: 1
-2024-12-16 23:02:58,682 - ERROR - Entrada inválida: El valor debe estar entre 1 y 10. Ejemplo: 1
-2024-12-16 23:02:58,682 - ERROR - Entrada inválida: invalid literal for int() with base 10: 'abc'
-2024-12-16 23:02:58,683 - ERROR - Opción inválida: quizás
-2024-12-16 23:02:58,683 - ERROR - Opción inválida: quizás
-2024-12-16 23:02:58,683 - ERROR - Opción inválida: quizás
-2024-12-16 23:03:31,487 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:03:31,540 - INFO - Opción seleccionada: 1
-2024-12-16 23:03:31,540 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:03:31,549 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:03:31,549 - INFO - Opción seleccionada: 1
-2024-12-16 23:03:31,549 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:03:31,552 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:03:31,552 - INFO - Opción seleccionada: 1
-2024-12-16 23:03:31,553 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:03:31,558 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:03:31,559 - INFO - Opción seleccionada: 1
-2024-12-16 23:03:31,559 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:03:31,563 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:03:31,563 - INFO - Opción seleccionada: 1
-2024-12-16 23:03:31,563 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:03:31,571 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:03:31,572 - INFO - Opción seleccionada: 1
-2024-12-16 23:03:31,572 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:03:31,579 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:03:31,579 - INFO - Opción seleccionada: 1
-2024-12-16 23:03:31,579 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:03:31,586 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:03:31,586 - INFO - Opción seleccionada: 1
-2024-12-16 23:03:31,586 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:03:31,590 - INFO - Asiento actualizado: lunes, A, 1 a B, 2
-2024-12-16 23:03:31,592 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:03:31,593 - INFO - Asiento agregado: lunes, B, 2
-2024-12-16 23:03:31,594 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:03:31,594 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:03:31,594 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:03:31,594 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:03:31,594 - INFO - Asiento reservado: lunes, A, 1, precio: 10.0
-2024-12-16 23:03:31,594 - INFO - Reserva cancelada: ('lunes', 'A', 1)
-2024-12-16 23:03:31,595 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:03:31,596 - INFO - Asiento eliminado: lunes, A, 1
-2024-12-16 23:03:31,597 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:03:31,598 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:03:31,598 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:03:31,598 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:03:31,598 - INFO - Asiento reservado: lunes, A, 1, precio: 10.0
-2024-12-16 23:03:31,603 - DEBUG - Descuento calculado: 0.5 para precio: 10.0, edad: 70, día: miércoles
-2024-12-16 23:03:31,603 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: miércoles
-2024-12-16 23:03:31,603 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, día: lunes
-2024-12-16 23:03:31,603 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:03:31,604 - DEBUG - Descuento calculado: 0.5 para precio: 0.0, edad: 70, día: miércoles
-2024-12-16 23:03:31,604 - DEBUG - Descuento calculado: 0.5 para precio: 100.0, edad: 70, día: miércoles
-2024-12-16 23:03:31,604 - DEBUG - Descuento calculado: 0.2 para precio: 10.0, edad: 0, día: miércoles
-2024-12-16 23:03:31,604 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, día: domingo
-2024-12-16 23:03:31,604 - DEBUG - Descuento calculado: 0.5 para precio: 10.0, edad: 70, día: miércoles
-2024-12-16 23:03:31,604 - DEBUG - Precio final calculado: 5.0 para precio: 10.0, edad: 70, día: miércoles
-2024-12-16 23:03:31,604 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: miércoles
-2024-12-16 23:03:31,604 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: miércoles
-2024-12-16 23:03:31,604 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, día: lunes
-2024-12-16 23:03:31,604 - DEBUG - Precio final calculado: 7.0 para precio: 10.0, edad: 70, día: lunes
-2024-12-16 23:03:31,604 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:03:31,604 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:03:31,604 - DEBUG - Descuento calculado: 0.5 para precio: 0.0, edad: 70, día: miércoles
-2024-12-16 23:03:31,604 - DEBUG - Precio final calculado: 0.0 para precio: 0.0, edad: 70, día: miércoles
-2024-12-16 23:03:31,604 - DEBUG - Descuento calculado: 0.2 para precio: 10.0, edad: 0, día: miércoles
-2024-12-16 23:03:31,698 - DEBUG - Precio final calculado: 8.0 para precio: 10.0, edad: 0, día: miércoles
-2024-12-16 23:03:31,698 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 10, día: lunes
-2024-12-16 23:03:31,698 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 10, día: lunes
-2024-12-16 23:03:31,698 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, día: domingo
-2024-12-16 23:03:31,698 - DEBUG - Precio final calculado: 7.0 para precio: 10.0, edad: 70, día: domingo
-2024-12-16 23:03:31,699 - ERROR - Entrada inválida: El valor debe estar entre 1 y 10. Ejemplo: 1
-2024-12-16 23:03:31,699 - ERROR - Entrada inválida: El valor debe estar entre 1 y 10. Ejemplo: 1
-2024-12-16 23:03:31,700 - ERROR - Entrada inválida: El valor debe estar entre 1 y 10. Ejemplo: 1
-2024-12-16 23:03:31,700 - ERROR - Entrada inválida: invalid literal for int() with base 10: 'abc'
-2024-12-16 23:03:31,701 - ERROR - Opción inválida: quizás
-2024-12-16 23:03:31,701 - ERROR - Opción inválida: quizás
-2024-12-16 23:03:31,701 - ERROR - Opción inválida: quizás
-2024-12-16 23:04:27,393 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:04:27,393 - INFO - Opción seleccionada: 1
-2024-12-16 23:04:27,393 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:04:27,402 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:04:27,402 - INFO - Opción seleccionada: 1
-2024-12-16 23:04:27,402 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:04:27,405 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:04:27,406 - INFO - Opción seleccionada: 1
-2024-12-16 23:04:27,406 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:04:27,413 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:04:27,413 - INFO - Opción seleccionada: 1
-2024-12-16 23:04:27,413 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:04:27,417 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:04:27,417 - INFO - Opción seleccionada: 1
-2024-12-16 23:04:27,417 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:04:27,423 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:04:27,424 - INFO - Opción seleccionada: 1
-2024-12-16 23:04:27,424 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:04:27,427 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:04:27,427 - INFO - Opción seleccionada: 1
-2024-12-16 23:04:27,427 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:04:27,433 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:04:27,433 - INFO - Opción seleccionada: 1
-2024-12-16 23:04:27,433 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:04:27,438 - INFO - Asiento actualizado: lunes, A, 1 a B, 2
-2024-12-16 23:04:27,439 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:04:27,440 - INFO - Asiento agregado: lunes, B, 2
-2024-12-16 23:04:27,441 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:04:27,442 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:04:27,442 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:04:27,442 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:04:27,442 - INFO - Asiento reservado: lunes, A, 1, precio: 10.0
-2024-12-16 23:04:27,442 - INFO - Reserva cancelada: ('lunes', 'A', 1)
-2024-12-16 23:04:27,443 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:04:27,444 - INFO - Asiento eliminado: lunes, A, 1
-2024-12-16 23:04:27,445 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:04:27,446 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:04:27,446 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:04:27,446 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:04:27,446 - INFO - Asiento reservado: lunes, A, 1, precio: 10.0
-2024-12-16 23:04:27,452 - DEBUG - Descuento calculado: 0.5 para precio: 10.0, edad: 70, día: miércoles
-2024-12-16 23:04:27,452 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: miércoles
-2024-12-16 23:04:27,452 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, día: lunes
-2024-12-16 23:04:27,452 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:04:27,453 - DEBUG - Descuento calculado: 0.5 para precio: 0.0, edad: 70, día: miércoles
-2024-12-16 23:04:27,453 - DEBUG - Descuento calculado: 0.5 para precio: 100.0, edad: 70, día: miércoles
-2024-12-16 23:04:27,453 - DEBUG - Descuento calculado: 0.2 para precio: 10.0, edad: 0, día: miércoles
-2024-12-16 23:04:27,453 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, día: domingo
-2024-12-16 23:04:27,453 - DEBUG - Descuento calculado: 0.5 para precio: 10.0, edad: 70, día: miércoles
-2024-12-16 23:04:27,453 - DEBUG - Precio final calculado: 5.0 para precio: 10.0, edad: 70, día: miércoles
-2024-12-16 23:04:27,453 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: miércoles
-2024-12-16 23:04:27,453 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: miércoles
-2024-12-16 23:04:27,453 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, día: lunes
-2024-12-16 23:04:27,453 - DEBUG - Precio final calculado: 7.0 para precio: 10.0, edad: 70, día: lunes
-2024-12-16 23:04:27,453 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:04:27,453 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:04:27,453 - DEBUG - Descuento calculado: 0.5 para precio: 0.0, edad: 70, día: miércoles
-2024-12-16 23:04:27,453 - DEBUG - Precio final calculado: 0.0 para precio: 0.0, edad: 70, día: miércoles
-2024-12-16 23:04:27,453 - DEBUG - Descuento calculado: 0.2 para precio: 10.0, edad: 0, día: miércoles
-2024-12-16 23:04:27,453 - DEBUG - Precio final calculado: 8.0 para precio: 10.0, edad: 0, día: miércoles
-2024-12-16 23:04:27,453 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 10, día: lunes
-2024-12-16 23:04:27,453 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 10, día: lunes
-2024-12-16 23:04:27,453 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, día: domingo
-2024-12-16 23:04:27,453 - DEBUG - Precio final calculado: 7.0 para precio: 10.0, edad: 70, día: domingo
-2024-12-16 23:04:27,454 - ERROR - Entrada inválida: El valor debe estar entre 1 y 10. Ejemplo: 1
-2024-12-16 23:04:27,454 - ERROR - Entrada inválida: El valor debe estar entre 1 y 10. Ejemplo: 1
-2024-12-16 23:04:27,455 - ERROR - Entrada inválida: El valor debe estar entre 1 y 10. Ejemplo: 1
-2024-12-16 23:04:27,455 - ERROR - Entrada inválida: invalid literal for int() with base 10: 'abc'
-2024-12-16 23:04:27,456 - ERROR - Opción inválida: quizás
-2024-12-16 23:04:27,456 - ERROR - Opción inválida: quizás
-2024-12-16 23:04:27,456 - ERROR - Opción inválida: quizás
-2024-12-16 23:05:50,564 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:05:50,564 - INFO - Opción seleccionada: 1
-2024-12-16 23:05:50,564 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:05:50,573 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:05:50,573 - INFO - Opción seleccionada: 1
-2024-12-16 23:05:50,573 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:05:50,576 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:05:50,576 - INFO - Opción seleccionada: 1
-2024-12-16 23:05:50,576 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:05:50,581 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:05:50,582 - INFO - Opción seleccionada: 1
-2024-12-16 23:05:50,582 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:05:50,584 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:05:50,584 - INFO - Opción seleccionada: 1
-2024-12-16 23:05:50,585 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:05:50,590 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:05:50,590 - INFO - Opción seleccionada: 1
-2024-12-16 23:05:50,590 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:05:50,593 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:05:50,594 - INFO - Opción seleccionada: 1
-2024-12-16 23:05:50,594 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:05:50,601 - INFO - Mensaje de bienvenida mostrado.
-2024-12-16 23:05:50,601 - INFO - Opción seleccionada: 1
-2024-12-16 23:05:50,602 - INFO - Sub-opción seleccionada: 2
-2024-12-16 23:05:50,608 - INFO - Asiento actualizado: lunes, A, 1 a B, 2
-2024-12-16 23:05:50,610 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:05:50,611 - INFO - Asiento agregado: lunes, B, 2
-2024-12-16 23:05:50,613 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:05:50,613 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:05:50,613 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:05:50,613 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:05:50,614 - INFO - Asiento reservado: lunes, A, 1, precio: 10.0
-2024-12-16 23:05:50,614 - INFO - Reserva cancelada: ('lunes', 'A', 1)
-2024-12-16 23:05:50,614 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:05:50,616 - INFO - Asiento eliminado: lunes, A, 1
-2024-12-16 23:05:50,617 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:05:50,617 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
-2024-12-16 23:05:50,618 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:05:50,618 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:05:50,618 - INFO - Asiento reservado: lunes, A, 1, precio: 10.0
-2024-12-16 23:05:50,624 - DEBUG - Descuento calculado: 0.5 para precio: 10.0, edad: 70, día: miércoles
-2024-12-16 23:05:50,624 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: miércoles
-2024-12-16 23:05:50,624 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, día: lunes
-2024-12-16 23:05:50,624 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:05:50,624 - DEBUG - Descuento calculado: 0.5 para precio: 0.0, edad: 70, día: miércoles
-2024-12-16 23:05:50,624 - DEBUG - Descuento calculado: 0.5 para precio: 100.0, edad: 70, día: miércoles
-2024-12-16 23:05:50,624 - DEBUG - Descuento calculado: 0.2 para precio: 10.0, edad: 0, día: miércoles
-2024-12-16 23:05:50,625 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, día: domingo
-2024-12-16 23:05:50,625 - DEBUG - Descuento calculado: 0.5 para precio: 10.0, edad: 70, día: miércoles
-2024-12-16 23:05:50,625 - DEBUG - Precio final calculado: 5.0 para precio: 10.0, edad: 70, día: miércoles
-2024-12-16 23:05:50,625 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: miércoles
-2024-12-16 23:05:50,625 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: miércoles
-2024-12-16 23:05:50,625 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, día: lunes
-2024-12-16 23:05:50,625 - DEBUG - Precio final calculado: 7.0 para precio: 10.0, edad: 70, día: lunes
-2024-12-16 23:05:50,625 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:05:50,625 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
-2024-12-16 23:05:50,625 - DEBUG - Descuento calculado: 0.5 para precio: 0.0, edad: 70, día: miércoles
-2024-12-16 23:05:50,625 - DEBUG - Precio final calculado: 0.0 para precio: 0.0, edad: 70, día: miércoles
-2024-12-16 23:05:50,625 - DEBUG - Descuento calculado: 0.2 para precio: 10.0, edad: 0, día: miércoles
-2024-12-16 23:05:50,625 - DEBUG - Precio final calculado: 8.0 para precio: 10.0, edad: 0, día: miércoles
-2024-12-16 23:05:50,625 - DEBUG - Descuento calculado: 0.0 para precio: 10.0, edad: 10, día: lunes
-2024-12-16 23:05:50,625 - DEBUG - Precio final calculado: 10.0 para precio: 10.0, edad: 10, día: lunes
-2024-12-16 23:05:50,625 - DEBUG - Descuento calculado: 0.3 para precio: 10.0, edad: 70, día: domingo
-2024-12-16 23:05:50,626 - DEBUG - Precio final calculado: 7.0 para precio: 10.0, edad: 70, día: domingo
-2024-12-16 23:05:50,627 - ERROR - Entrada inválida: El valor debe estar entre 1 y 10. Ejemplo: 1
-2024-12-16 23:05:50,627 - ERROR - Entrada inválida: El valor debe estar entre 1 y 10. Ejemplo: 1
-2024-12-16 23:05:50,627 - ERROR - Entrada inválida: El valor debe estar entre 1 y 10. Ejemplo: 1
-2024-12-16 23:05:50,627 - ERROR - Entrada inválida: invalid literal for int() with base 10: 'abc'
-2024-12-16 23:05:50,628 - ERROR - Opción inválida: quizás
-2024-12-16 23:05:50,628 - ERROR - Opción inválida: quizás
-2024-12-16 23:05:50,629 - ERROR - Opción inválida: quizás
+DEBUG:root:Asiento actualizado a número 2 en fila B.
+INFO:root:Asiento actualizado correctamente.
+ERROR:root:Error al cancelar reserva: El asiento no está reservado.
+DEBUG:root:Reserva del asiento 1 en fila A cancelada.
+INFO:root:Reserva cancelada correctamente.
+INFO:root:Asiento creado a partir de diccionario correctamente.
+DEBUG:root:Asiento 1 en fila A reservado.
+INFO:root:Asiento reservado correctamente.
+ERROR:root:Error al reservar asiento: El asiento ya está reservado.
+INFO:root:Asiento convertido a diccionario correctamente.
+ERROR:root:Error al agregar asiento: Número máximo de intentos alcanzado
+ERROR:root:Error al agregar asiento: Número máximo de intentos alcanzado
+INFO:root:Asiento agregado: lunes, A, 1
+WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
+INFO:root:Asiento agregado: lunes, A, 1
+INFO:root:Asiento agregado: lunes, B, 1
+INFO:root:Asiento agregado: lunes, C, 1
+INFO:root:Asiento agregado: lunes, D, 1
+INFO:root:Asiento agregado: lunes, E, 1
+INFO:root:Asiento agregado: lunes, F, 1
+INFO:root:Asiento agregado: lunes, G, 1
+INFO:root:Asiento agregado: lunes, H, 1
+INFO:root:Asiento agregado: lunes, I, 1
+INFO:root:Asiento agregado: lunes, J, 1
+WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
+INFO:root:Asiento agregado: lunes, A, 1
+DEBUG:root:Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
+DEBUG:root:Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
+DEBUG:root:Asiento 1 en fila A reservado.
+INFO:root:Asiento reservado: lunes, A, 1, precio: 10.0
+DEBUG:root:Reserva del asiento 1 en fila A cancelada.
+INFO:root:Reserva cancelada: lunes, A, 1
+WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
+INFO:root:Asiento agregado: lunes, A, 1
+INFO:root:Asiento eliminado: lunes, A, 1
+WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
+INFO:root:Asiento agregado: lunes, A, 1
+DEBUG:root:Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
+DEBUG:root:Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
+DEBUG:root:Asiento 1 en fila A reservado.
+INFO:root:Asiento reservado: lunes, A, 1, precio: 10.0
+WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
+INFO:root:Asiento agregado: lunes, A, 1
+DEBUG:root:Asiento actualizado a número 2 en fila B.
+INFO:root:Asiento actualizado: lunes, A, 1 a B, 2
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json eliminado.
+DEBUG:root:test_delete_state_file passed
+WARNING:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\../estado_sala.json no encontrado.
+WARNING:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json no encontrado.
+WARNING:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\../estado_sala.json no encontrado.
+DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 25, día: lunes
+DEBUG:root:Descuento calculado: 0.5 para precio: 100, edad: 65, día: miércoles
+DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 30, día: domingo
+DEBUG:root:test_calculate_discount passed
+DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 25, día: lunes
+DEBUG:root:Precio final calculado: 100.0 para precio: 100, edad: 25, día: lunes
+DEBUG:root:Descuento calculado: 0.5 para precio: 100, edad: 65, día: miércoles
+DEBUG:root:Precio final calculado: 50.0 para precio: 100, edad: 65, día: miércoles
+DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 30, día: domingo
+DEBUG:root:Precio final calculado: 100.0 para precio: 100, edad: 30, día: domingo
+DEBUG:root:test_calculate_final_price passed
+DEBUG:root:test_validate_input passed
+DEBUG:root:test_validate_input_invalid passed
+DEBUG:root:test_validate_input_stop_iteration passed
+DEBUG:root:test_validate_option passed
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
+DEBUG:root:test_create_state_file passed
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json eliminado.
+DEBUG:root:test_delete_state_file passed
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json cargado correctamente.
+DEBUG:root:test_load_state_file passed
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
+INFO:root:Estado guardado en el archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json.
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json reseteado con el estado inicial.
+DEBUG:root:test_reset_state_file passed
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
+INFO:root:Estado guardado en el archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json.
+DEBUG:root:test_save_state_file passed
+DEBUG:root:Asiento actualizado a número 2 en fila B.
+INFO:root:Asiento actualizado correctamente.
+ERROR:root:Error al cancelar reserva: El asiento no está reservado.
+DEBUG:root:Reserva del asiento 1 en fila A cancelada.
+INFO:root:Reserva cancelada correctamente.
+INFO:root:Asiento creado a partir de diccionario correctamente.
+DEBUG:root:Asiento 1 en fila A reservado.
+INFO:root:Asiento reservado correctamente.
+ERROR:root:Error al reservar asiento: El asiento ya está reservado.
+INFO:root:Asiento convertido a diccionario correctamente.
+ERROR:root:Error al agregar asiento: Número máximo de intentos alcanzado
+INFO:root:Asiento agregado: lunes, A, 1
+WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
+INFO:root:Asiento agregado: lunes, A, 1
+INFO:root:Asiento agregado: lunes, B, 1
+INFO:root:Asiento agregado: lunes, C, 1
+INFO:root:Asiento agregado: lunes, D, 1
+INFO:root:Asiento agregado: lunes, E, 1
+INFO:root:Asiento agregado: lunes, F, 1
+INFO:root:Asiento agregado: lunes, G, 1
+INFO:root:Asiento agregado: lunes, H, 1
+INFO:root:Asiento agregado: lunes, I, 1
+INFO:root:Asiento agregado: lunes, J, 1
+WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
+INFO:root:Asiento agregado: lunes, A, 1
+DEBUG:root:Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
+DEBUG:root:Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
+DEBUG:root:Asiento 1 en fila A reservado.
+INFO:root:Asiento reservado: lunes, A, 1, precio: 10.0
+DEBUG:root:Reserva del asiento 1 en fila A cancelada.
+INFO:root:Reserva cancelada: lunes, A, 1
+WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
+INFO:root:Asiento agregado: lunes, A, 1
+INFO:root:Asiento eliminado: lunes, A, 1
+WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
+INFO:root:Asiento agregado: lunes, A, 1
+DEBUG:root:Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
+DEBUG:root:Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
+DEBUG:root:Asiento 1 en fila A reservado.
+INFO:root:Asiento reservado: lunes, A, 1, precio: 10.0
+WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
+INFO:root:Asiento agregado: lunes, A, 1
+DEBUG:root:Asiento actualizado a número 2 en fila B.
+INFO:root:Asiento actualizado: lunes, A, 1 a B, 2
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json eliminado.
+DEBUG:root:test_delete_state_file passed
+WARNING:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\../estado_sala.json no encontrado.
+WARNING:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json no encontrado.
+WARNING:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\../estado_sala.json no encontrado.
+DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 25, día: lunes
+DEBUG:root:Descuento calculado: 0.5 para precio: 100, edad: 65, día: miércoles
+DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 30, día: domingo
+DEBUG:root:test_calculate_discount passed
+DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 25, día: lunes
+DEBUG:root:Precio final calculado: 100.0 para precio: 100, edad: 25, día: lunes
+DEBUG:root:Descuento calculado: 0.5 para precio: 100, edad: 65, día: miércoles
+DEBUG:root:Precio final calculado: 50.0 para precio: 100, edad: 65, día: miércoles
+DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 30, día: domingo
+DEBUG:root:Precio final calculado: 100.0 para precio: 100, edad: 30, día: domingo
+DEBUG:root:test_calculate_final_price passed
+DEBUG:root:test_validate_input passed
+DEBUG:root:test_validate_input_invalid passed
+DEBUG:root:test_validate_input_stop_iteration passed
+DEBUG:root:test_validate_option passed
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
+DEBUG:root:test_create_state_file passed
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json eliminado.
+DEBUG:root:test_delete_state_file passed
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json cargado correctamente.
+DEBUG:root:test_load_state_file passed
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
+INFO:root:Estado guardado en el archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json.
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json reseteado con el estado inicial.
+DEBUG:root:test_reset_state_file passed
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
+INFO:root:Estado guardado en el archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json.
+DEBUG:root:test_save_state_file passed
+DEBUG:root:Asiento actualizado a número 2 en fila B.
+INFO:root:Asiento actualizado correctamente.
+ERROR:root:Error al cancelar reserva: El asiento no está reservado.
+DEBUG:root:Reserva del asiento 1 en fila A cancelada.
+INFO:root:Reserva cancelada correctamente.
+INFO:root:Asiento creado a partir de diccionario correctamente.
+DEBUG:root:Asiento 1 en fila A reservado.
+INFO:root:Asiento reservado correctamente.
+ERROR:root:Error al reservar asiento: El asiento ya está reservado.
+INFO:root:Asiento convertido a diccionario correctamente.
+ERROR:root:Error al agregar asiento: Número máximo de intentos alcanzado
+INFO:root:Asiento agregado: lunes, A, 1
+WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
+INFO:root:Asiento agregado: lunes, A, 1
+INFO:root:Asiento agregado: lunes, B, 1
+INFO:root:Asiento agregado: lunes, C, 1
+INFO:root:Asiento agregado: lunes, D, 1
+INFO:root:Asiento agregado: lunes, E, 1
+INFO:root:Asiento agregado: lunes, F, 1
+INFO:root:Asiento agregado: lunes, G, 1
+INFO:root:Asiento agregado: lunes, H, 1
+INFO:root:Asiento agregado: lunes, I, 1
+INFO:root:Asiento agregado: lunes, J, 1
+WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
+INFO:root:Asiento agregado: lunes, A, 1
+DEBUG:root:Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
+DEBUG:root:Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
+DEBUG:root:Asiento 1 en fila A reservado.
+INFO:root:Asiento reservado: lunes, A, 1, precio: 10.0
+DEBUG:root:Reserva del asiento 1 en fila A cancelada.
+INFO:root:Reserva cancelada: lunes, A, 1
+WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
+INFO:root:Asiento agregado: lunes, A, 1
+INFO:root:Asiento eliminado: lunes, A, 1
+WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
+INFO:root:Asiento agregado: lunes, A, 1
+DEBUG:root:Descuento calculado: 0.0 para precio: 10.0, edad: 30, día: lunes
+DEBUG:root:Precio final calculado: 10.0 para precio: 10.0, edad: 30, día: lunes
+DEBUG:root:Asiento 1 en fila A reservado.
+INFO:root:Asiento reservado: lunes, A, 1, precio: 10.0
+WARNING:root:Archivo de estado no encontrado, creando nuevo estado.
+INFO:root:Asiento agregado: lunes, A, 1
+DEBUG:root:Asiento actualizado a número 2 en fila B.
+INFO:root:Asiento actualizado: lunes, A, 1 a B, 2
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json eliminado.
+DEBUG:root:test_delete_state_file passed
+WARNING:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\../estado_sala.json no encontrado.
+WARNING:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json no encontrado.
+WARNING:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\tests\../estado_sala.json no encontrado.
+DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 25, día: lunes
+DEBUG:root:Descuento calculado: 0.5 para precio: 100, edad: 65, día: miércoles
+DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 30, día: domingo
+DEBUG:root:test_calculate_discount passed
+DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 25, día: lunes
+DEBUG:root:Precio final calculado: 100.0 para precio: 100, edad: 25, día: lunes
+DEBUG:root:Descuento calculado: 0.5 para precio: 100, edad: 65, día: miércoles
+DEBUG:root:Precio final calculado: 50.0 para precio: 100, edad: 65, día: miércoles
+DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 30, día: domingo
+DEBUG:root:Precio final calculado: 100.0 para precio: 100, edad: 30, día: domingo
+DEBUG:root:test_calculate_final_price passed
+DEBUG:root:test_validate_input passed
+DEBUG:root:test_validate_input_invalid passed
+DEBUG:root:test_validate_input_stop_iteration passed
+DEBUG:root:test_validate_option passed
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
+DEBUG:root:test_create_state_file passed
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json eliminado.
+DEBUG:root:test_delete_state_file passed
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json cargado correctamente.
+DEBUG:root:test_load_state_file passed
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
+INFO:root:Estado guardado en el archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json.
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json reseteado con el estado inicial.
+DEBUG:root:test_reset_state_file passed
+INFO:root:Archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json creado con el estado inicial.
+INFO:root:Estado guardado en el archivo D:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_sala.json.
+DEBUG:root:test_save_state_file passed

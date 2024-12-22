@@ -1,1 +1,1 @@
-# Este archivo está intencionalmente vacío para marcar el directorio como un paquete.
+# Este archivo está intencionalmente en blanco para hacer de este directorio un paquete.

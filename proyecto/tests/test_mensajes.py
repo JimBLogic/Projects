@@ -1,13 +1,27 @@
 import unittest
 import sys
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+import json
+import logging
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 from proyecto.mensajes import Mensajes
+
+# Configurar el logger
+log_file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../proyecto/debug.log'))
+logging.basicConfig(filename=log_file_path, level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class TestMensajes(unittest.TestCase):
     """
     Clase de pruebas para la clase Mensajes.
     """
+
+    def setUp(self):
+        """
+        Configuración inicial para las pruebas.
+        """
+        initial_state = {dia: [] for dia in ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]}
+        with open(os.path.join(os.path.dirname(__file__), '../estado_sala.json'), 'w') as file:
+            json.dump(initial_state, file, indent=4)
 
     def test_bienvenida(self):
         """

@@ -1,5 +1,54 @@
 import json
 import logging
+import sys
+import os
+
+# Asegurar que la ruta es correcta
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+# Importar los módulos necesarios
+from proyecto.asiento import Asiento
+from proyecto.mensajes import Mensajes
+
+MAX_ROWS = 10
+MAX_SEATS_PER_ROW = 10
+
+def calculate_discount(price, age, day):
+    """
+    Calcula el descuento basado en el precio, la edad y el día de la semana.
+    
+    Args:
+        price (float): El precio base del asiento.
+        age (int): La edad del espectador.
+        day (str): El día de la semana.
+    
+    Returns:
+        float: El porcentaje de descuento a aplicar.
+    """
+    discount = 0.0
+    if day == "miércoles":
+        discount = 0.2
+    if age >= 65:
+        discount += 0.3
+    logging.debug(f"Descuento calculado: {discount} para precio: {price}, edad: {age}, día: {day}")
+    return discount
+
+def calculate_final_price(price, age, day):
+    """
+    Calcula el precio final aplicando el descuento correspondiente.
+    
+    Args:
+        price (float): El precio base del asiento.
+        age (int): La edad del espectador.
+        day (str): El día de la semana.
+    
+    Returns:
+        float: El precio final después de aplicar el descuento.
+    """
+    discount = calculate_discount(price, age, day)
+    final_price = price * (1 - discount)
+    logging.debug(f"Precio final calculado: {final_price} para precio: {price}, edad: {age}, día: {day}")
+    return final_price
 
 class SalaCine:
     """
@@ -48,13 +97,11 @@ class SalaCine:
         Returns:
             dict: Un diccionario con el estado de los asientos por día.
         """
-        from proyecto.asiento import Asiento
         try:
             with open(self._archivo_estado, 'r') as file:
                 data = json.load(file)
-                for dia, asientos in data.items():
-                    data[dia] = [Asiento.from_dict(asiento) for asiento in asientos]
-                return data
+                estado = {dia: [Asiento.from_dict(asiento) for asiento in asientos] for dia, asientos in data.items()}
+                return estado
         except FileNotFoundError:
             logging.warning("Archivo de estado no encontrado, creando nuevo estado.")
             return {dia: [] for dia in ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]}
@@ -66,7 +113,6 @@ class SalaCine:
         """
         Guarda el estado de la sala en un archivo JSON.
         """
-        from proyecto.asiento import Asiento
         with open(self._archivo_estado, 'w') as file:
             data = {dia: [asiento.to_dict() for asiento in asientos] for dia, asientos in self._estado.items()}
             json.dump(data, file, indent=4)
@@ -86,14 +132,14 @@ class SalaCine:
         Raises:
             ValueError: Si el día es inválido o el asiento ya existe.
         """
-        from proyecto.asiento import Asiento
-        from proyecto.mensajes import Mensajes
         if not (fila.isalpha() and len(fila) == 1 and fila.upper() in "ABCDEFGHIJ"):
             raise ValueError("Fila inválida. Debe ser una letra entre A y J.")
         if not (1 <= int(numero) <= 10):
             raise ValueError("Número de asiento inválido. Debe estar entre 1 y 10.")
         if dia not in self._estado:
             raise ValueError(Mensajes.dia_invalido())
+        if len(self._estado[dia]) >= MAX_ROWS:
+            return "Número máximo de filas alcanzado."
         for asiento in self._estado[dia]:
             if asiento.get_fila() == fila and asiento.get_numero() == numero:
                 raise ValueError(Mensajes.asiento_ya_existe())
@@ -115,13 +161,14 @@ class SalaCine:
         Returns:
             str: Un mensaje indicando si la reserva fue exitosa o si el asiento no fue encontrado.
         """
-        from proyecto.utilidades import calcular_precio_final
-        from proyecto.mensajes import Mensajes
         for asiento in self._estado[dia]:
             if asiento.get_fila() == fila and asiento.get_numero() == numero:
-                precio_final = calcular_precio_final(self._precio_base, edad, dia)
+                if asiento.is_reservado():
+                    return Mensajes.asiento_ya_reservado()
+                precio_final = calculate_final_price(asiento.get_precio(), edad, dia)
                 asiento.set_precio(precio_final)
-                asiento.set_reservado(True)
+                asiento.reservar()
+                self.guardar_estado()
                 logging.info(f"Asiento reservado: {dia}, {fila}, {numero}, precio: {precio_final}")
                 return Mensajes.asiento_reservado()
         return Mensajes.asiento_no_encontrado()
@@ -136,14 +183,15 @@ class SalaCine:
             numero (int): El número del asiento.
         
         Returns:
-            str: Un mensaje indicando si la cancelación fue exitosa o si el asiento no fue encontrado.
+            str: Un mensaje indicando si la cancelación fue exitosa o si el asiento no estaba reservado.
         """
-        from proyecto.mensajes import Mensajes
         for asiento in self._estado[dia]:
             if asiento.get_fila() == fila and asiento.get_numero() == numero:
-                asiento.set_precio(self._precio_base)  # Resetear el precio al cancelar la reserva
-                asiento.set_reservado(False)
-                logging.info(f"Reserva cancelada: {dia, fila, numero}")
+                if not asiento.is_reservado():
+                    return Mensajes.asiento_no_encontrado()
+                asiento.cancelar()
+                self.guardar_estado()
+                logging.info(f"Reserva cancelada: {dia}, {fila}, {numero}")
                 return Mensajes.reserva_cancelada()
         return Mensajes.asiento_no_encontrado()
 
@@ -171,7 +219,6 @@ class SalaCine:
         Returns:
             dict: Un diccionario con la información del asiento si se encuentra.
         """
-        from proyecto.mensajes import Mensajes
         for asiento in self._estado[dia]:
             if asiento.get_fila() == fila and asiento.get_numero() == numero:
                 return asiento.to_dict()
@@ -181,11 +228,9 @@ class SalaCine:
         """
         Actualiza la información de un asiento específico.
         """
-        from proyecto.mensajes import Mensajes
         for asiento in self._estado[dia]:
             if asiento.get_fila() == fila and asiento.get_numero() == numero:
-                asiento.set_fila(nueva_fila)
-                asiento.set_numero(nuevo_numero)
+                asiento.actualizar(nueva_fila, nuevo_numero)
                 self.guardar_estado()
                 logging.info(f"Asiento actualizado: {dia}, {fila}, {numero} a {nueva_fila}, {nuevo_numero}")
                 return Mensajes.asiento_actualizado()
@@ -206,7 +251,6 @@ class SalaCine:
         Raises:
             ValueError: Si el día es inválido.
         """
-        from proyecto.mensajes import Mensajes
         if dia not in self._estado:
             raise ValueError(Mensajes.dia_invalido())
         for asiento in self._estado[dia]:
