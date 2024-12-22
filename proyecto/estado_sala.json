@@ -1,0 +1,28 @@
+{
+    "lunes": [],
+    "martes": [],
+    "mi\u00e9rcoles": [
+        {
+            "numero": 1,
+            "fila": "a",
+            "reservado": false,
+            "precio": 10.0
+        },
+        {
+            "numero": 10,
+            "fila": "f",
+            "reservado": false,
+            "precio": 10.0
+        },
+        {
+            "numero": 2,
+            "fila": "a",
+            "reservado": false,
+            "precio": 10.0
+        }
+    ],
+    "jueves": [],
+    "viernes": [],
+    "s\u00e1bado": [],
+    "domingo": []
+}

@@ -182,11 +182,10 @@ def select_row(day):
 def select_seat(day, row):
     while True:
         try:
-            number = validate_input(Mensajes.ingrese_numero_asiento(), int, range(1, 11))
+            number = validate_input(Mensajes.ingrese_numero_asiento(1, 10), int, range(1, 11))
             if any(asiento.get_fila() == row and asiento.get_numero() == number for asiento in cinema.get_estado()[day]):
-                print("El asiento ya existe en el sistema. Seleccione otro asiento.")
-                continue
-            return number
+                return number
+            print("El asiento no existe en el sistema. Seleccione otro asiento.")
         except ValueError:
             print("Número de asiento inválido. Por favor, intente de nuevo.")
 

@@ -1,3 +1,28 @@
+2024-12-22 17:48:41,668 - WARNING - Archivo de estado no encontrado, creando nuevo estado.
+2024-12-22 17:48:41,670 - INFO - Archivo estado_sala.json reseteado con el estado inicial.
+2024-12-22 17:48:41,670 - INFO - Mensaje de bienvenida mostrado.
+2024-12-22 17:48:46,679 - INFO - Reporte de disponibilidad generado.
+2024-12-22 17:48:57,282 - INFO - Mensaje de bienvenida mostrado.
+2024-12-22 17:49:16,918 - ERROR - Entrada inválida.
+2024-12-22 17:49:18,586 - INFO - Estado guardado en el archivo estado_sala.json
+2024-12-22 17:49:18,587 - INFO - Asiento agregado: miércoles, a, 1
+2024-12-22 17:49:18,587 - INFO - Asiento agregado: miércoles, a, 1
+2024-12-22 17:49:18,588 - INFO - Estado guardado en el archivo estado_sala.json.
+2024-12-22 17:51:35,680 - INFO - Mensaje de bienvenida mostrado.
+2024-12-22 17:52:00,224 - INFO - Estado guardado en el archivo estado_sala.json
+2024-12-22 17:52:00,224 - INFO - Asiento agregado: miércoles, f, 10
+2024-12-22 17:52:00,224 - INFO - Asiento agregado: miércoles, f, 10
+2024-12-22 17:52:00,225 - INFO - Estado guardado en el archivo estado_sala.json.
+2024-12-22 17:53:05,953 - INFO - Mensaje de bienvenida mostrado.
+2024-12-22 17:53:19,028 - INFO - Estado guardado en el archivo estado_sala.json
+2024-12-22 17:53:19,029 - INFO - Asiento agregado: miércoles, a, 2
+2024-12-22 17:53:19,029 - INFO - Asiento agregado: miércoles, a, 2
+2024-12-22 17:53:19,030 - INFO - Estado guardado en el archivo estado_sala.json.
+2024-12-22 17:53:23,927 - INFO - Asientos mostrados para el día: miércoles
+2024-12-22 17:53:51,205 - INFO - Asiento actualizado: miércoles, a, 3 a 4, 1
+2024-12-22 17:53:51,206 - INFO - Estado guardado en el archivo estado_sala.json.
+2024-12-22 17:54:20,787 - INFO - Asiento reservado: miércoles, a, 3
+2024-12-22 17:54:20,788 - INFO - Estado guardado en el archivo estado_sala.json.
 DEBUG:root:Asiento actualizado a número 2 en fila B.
 DEBUG:root:Asiento 1 en fila A reservado.
 DEBUG:root:Reserva del asiento 1 en fila A cancelada.
@@ -21,93 +46,9 @@ DEBUG:root:TestUtilidades setUp ejecutado
 ERROR:root:Entrada inválida.
 ERROR:root:Entrada inválida.
 ERROR:root:Entrada inválida.
+DEBUG:root:test_validate_input_invalid passed
 DEBUG:root:TestUtilidades setUp ejecutado
-DEBUG:root:TestUtilidades setUp ejecutado
-DEBUG:root:test_validate_option passed
-DEBUG:root:TestVerificarSistema setUpClass executed
-INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json creado con el estado inicial.
-DEBUG:root:test_create_state_file passed
-INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json creado con el estado inicial.
-INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json eliminado.
-DEBUG:root:test_delete_state_file passed
-INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json creado con el estado inicial.
-INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json cargado correctamente.
-DEBUG:root:test_load_state_file passed
-INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json creado con el estado inicial.
-INFO:root:Estado guardado en el archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json.
-INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json reseteado con el estado inicial.
-DEBUG:root:test_reset_state_file passed
-INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json creado con el estado inicial.
-INFO:root:Estado guardado en el archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json.
-DEBUG:root:test_save_state_file passed
-DEBUG:root:TestVerificarSistema tearDownClass executed
-DEBUG:root:Asiento actualizado a número 2 en fila B.
-DEBUG:root:Asiento 1 en fila A reservado.
-DEBUG:root:Reserva del asiento 1 en fila A cancelada.
-DEBUG:root:Asiento 1 en fila A reservado.
-DEBUG:root:TestUtilidades setUp ejecutado
-DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 25, día: lunes
-DEBUG:root:Descuento calculado: 0.5 para precio: 100, edad: 65, día: miércoles
-DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 30, día: domingo
-DEBUG:root:test_calculate_discount passed
-DEBUG:root:TestUtilidades setUp ejecutado
-DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 25, día: lunes
-DEBUG:root:Precio final calculado: 100.0 para precio: 100, edad: 25, día: lunes
-DEBUG:root:Descuento calculado: 0.5 para precio: 100, edad: 65, día: miércoles
-DEBUG:root:Precio final calculado: 50.0 para precio: 100, edad: 65, día: miércoles
-DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 30, día: domingo
-DEBUG:root:Precio final calculado: 100.0 para precio: 100, edad: 30, día: domingo
-DEBUG:root:test_calculate_final_price passed
-DEBUG:root:TestUtilidades setUp ejecutado
-DEBUG:root:test_validate_input passed
-DEBUG:root:TestUtilidades setUp ejecutado
-ERROR:root:Entrada inválida.
-ERROR:root:Entrada inválida.
-ERROR:root:Entrada inválida.
-DEBUG:root:TestUtilidades setUp ejecutado
-DEBUG:root:TestUtilidades setUp ejecutado
-DEBUG:root:test_validate_option passed
-DEBUG:root:TestVerificarSistema setUpClass executed
-INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json creado con el estado inicial.
-DEBUG:root:test_create_state_file passed
-INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json creado con el estado inicial.
-INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json eliminado.
-DEBUG:root:test_delete_state_file passed
-INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json creado con el estado inicial.
-INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json cargado correctamente.
-DEBUG:root:test_load_state_file passed
-INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json creado con el estado inicial.
-INFO:root:Estado guardado en el archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json.
-INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json reseteado con el estado inicial.
-DEBUG:root:test_reset_state_file passed
-INFO:root:Archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json creado con el estado inicial.
-INFO:root:Estado guardado en el archivo C:\Users\JimBLogic\Documents\MY DOCUMENTS\LEARNING\Python & IT\Projects\proyecto\estado_cine.json.
-DEBUG:root:test_save_state_file passed
-DEBUG:root:TestVerificarSistema tearDownClass executed
-DEBUG:root:Asiento actualizado a número 2 en fila B.
-DEBUG:root:Asiento 1 en fila A reservado.
-DEBUG:root:Reserva del asiento 1 en fila A cancelada.
-DEBUG:root:Asiento 1 en fila A reservado.
-DEBUG:root:TestUtilidades setUp ejecutado
-DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 25, día: lunes
-DEBUG:root:Descuento calculado: 0.5 para precio: 100, edad: 65, día: miércoles
-DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 30, día: domingo
-DEBUG:root:test_calculate_discount passed
-DEBUG:root:TestUtilidades setUp ejecutado
-DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 25, día: lunes
-DEBUG:root:Precio final calculado: 100.0 para precio: 100, edad: 25, día: lunes
-DEBUG:root:Descuento calculado: 0.5 para precio: 100, edad: 65, día: miércoles
-DEBUG:root:Precio final calculado: 50.0 para precio: 100, edad: 65, día: miércoles
-DEBUG:root:Descuento calculado: 0.0 para precio: 100, edad: 30, día: domingo
-DEBUG:root:Precio final calculado: 100.0 para precio: 100, edad: 30, día: domingo
-DEBUG:root:test_calculate_final_price passed
-DEBUG:root:TestUtilidades setUp ejecutado
-DEBUG:root:test_validate_input passed
-DEBUG:root:TestUtilidades setUp ejecutado
-ERROR:root:Entrada inválida.
-ERROR:root:Entrada inválida.
-ERROR:root:Entrada inválida.
-DEBUG:root:TestUtilidades setUp ejecutado
+DEBUG:root:test_validate_input_stop_iteration passed
 DEBUG:root:TestUtilidades setUp ejecutado
 DEBUG:root:test_validate_option passed
 DEBUG:root:TestVerificarSistema setUpClass executed

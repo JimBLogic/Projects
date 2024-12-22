@@ -140,10 +140,11 @@ class TestSalaCine(unittest.TestCase):
         """
         Prueba agregar un asiento que excede el límite de filas.
         """
-        for i in range(1, 11):
+        for i in range(1, 7):
             self.cinema.agregar_asiento('lunes', chr(64 + i), 1)
-        message = self.cinema.agregar_asiento('lunes', 'J', 2)
-        self.assertEqual(message, "Número máximo de filas alcanzado.")
+        with self.assertRaises(ValueError) as context:
+            self.cinema.agregar_asiento('lunes', 'G', 1)
+        self.assertTrue("Fila inválida. Debe ser una letra entre A y F." in str(context.exception))
         logging.debug('test_add_seat_exceeds_limit passed')
 
     def test_reserve_seat(self):
@@ -308,14 +309,14 @@ class TestMensajes(unittest.TestCase):
         """
         Prueba el mensaje para ingresar la fila.
         """
-        self.assertEqual(Mensajes.ingrese_fila(), "Ingrese la fila: ")
+        self.assertEqual(Mensajes.ingrese_fila(), "Ingrese la fila (A-F): ")
         logging.debug('test_ingrese_fila passed')
 
     def test_ingrese_numero_asiento(self):
         """
         Prueba el mensaje para ingresar el número de asiento.
         """
-        self.assertEqual(Mensajes.ingrese_numero_asiento(), "Ingrese el número de asiento: ")
+        self.assertEqual(Mensajes.ingrese_numero_asiento(), "Ingrese el número de asiento (1-10): ")
         logging.debug('test_ingrese_numero_asiento passed')
 
     def test_dia_invalido(self):

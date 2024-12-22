@@ -160,14 +160,18 @@ class Mensajes:
         return "Ingrese la fila (A-F): "
 
     @staticmethod
-    def ingrese_numero_asiento():
+    def ingrese_numero_asiento(min_option=1, max_option=10):
         """
         Mensaje para ingresar el número de asiento.
+        
+        Args:
+            min_option (int): El número mínimo de asiento.
+            max_option (int): El número máximo de asiento.
         
         Returns:
             str: El mensaje para ingresar el número de asiento.
         """
-        return "Ingrese el número de asiento (1-10): "
+        return f"Ingrese el número de asiento ({min_option}-{max_option}): "
 
     @staticmethod
     def dia_invalido():
@@ -237,7 +241,7 @@ class Mensajes:
         Returns:
             str: El mensaje para ingresar la nueva fila.
         """
-        return "Ingrese la nueva fila (A-F): "
+        return "Ingrese la nueva fila: "
 
     @staticmethod
     def ingrese_nuevo_numero_asiento():
@@ -247,7 +251,7 @@ class Mensajes:
         Returns:
             str: El mensaje para ingresar el nuevo número de asiento.
         """
-        return "Ingrese el nuevo número de asiento (1-10): "
+        return "Ingrese el nuevo número de asiento: "
 
     @staticmethod
     def asiento_eliminado():
