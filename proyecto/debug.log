@@ -1,0 +1,635 @@
+2024-12-23 13:25:13,873 - DEBUG - Asiento 1 en fila A reservado con descuento 0.
+2024-12-23 13:25:13,873 - DEBUG - Reserva del asiento 1 en fila A cancelada.
+2024-12-23 13:25:13,874 - DEBUG - Asiento 1 en fila A reservado con descuento 0.
+2024-12-23 13:25:13,875 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:25:13,875 - DEBUG - test_asiento_actualizado passed
+2024-12-23 13:25:13,876 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:25:13,876 - DEBUG - test_asiento_agregado passed
+2024-12-23 13:25:13,877 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:25:13,877 - DEBUG - test_asiento_eliminado passed
+2024-12-23 13:25:13,878 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:25:13,878 - DEBUG - test_asiento_no_encontrado passed
+2024-12-23 13:25:13,881 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:25:13,881 - DEBUG - test_asiento_reservado passed
+2024-12-23 13:25:13,882 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:25:13,882 - DEBUG - test_asiento_ya_existe passed
+2024-12-23 13:25:13,882 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:25:13,883 - DEBUG - test_asiento_ya_reservado passed
+2024-12-23 13:25:13,884 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:25:13,884 - DEBUG - test_bienvenida passed
+2024-12-23 13:25:13,884 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:25:13,885 - DEBUG - test_confirmar_guardado passed
+2024-12-23 13:25:13,886 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:25:13,886 - DEBUG - test_confirmar_reseteo passed
+2024-12-23 13:25:13,887 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:25:13,887 - DEBUG - test_dia_invalido passed
+2024-12-23 13:25:13,888 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:25:13,888 - DEBUG - test_estado_guardado passed
+2024-12-23 13:25:13,889 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:25:13,889 - DEBUG - test_estado_reseteado passed
+2024-12-23 13:25:13,890 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:25:13,890 - DEBUG - test_ingrese_dia passed
+2024-12-23 13:25:13,891 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:25:13,891 - DEBUG - test_ingrese_edad passed
+2024-12-23 13:25:13,892 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:25:13,892 - DEBUG - test_ingrese_fila passed
+2024-12-23 13:25:13,893 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:25:13,893 - DEBUG - test_ingrese_nueva_fila passed
+2024-12-23 13:25:13,894 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:25:13,894 - DEBUG - test_ingrese_nuevo_numero_asiento passed
+2024-12-23 13:25:13,894 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:25:13,895 - DEBUG - test_ingrese_numero_asiento passed
+2024-12-23 13:25:13,895 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:25:13,896 - DEBUG - test_max_intentos passed
+2024-12-23 13:25:13,896 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:25:13,896 - DEBUG - test_opcion_invalida passed
+2024-12-23 13:25:13,897 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:25:13,897 - DEBUG - test_reporte_disponibilidad passed
+2024-12-23 13:25:13,898 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:25:13,898 - DEBUG - test_reserva_cancelada passed
+2024-12-23 13:25:13,899 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:25:13,899 - DEBUG - test_reseteo_cancelado passed
+2024-12-23 13:25:13,900 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:25:13,900 - DEBUG - test_saliendo_sistema passed
+2024-12-23 13:25:13,901 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,901 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,902 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,902 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,902 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,902 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,903 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,903 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,904 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,904 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,904 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,905 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,905 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,905 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,906 - DEBUG - TestSalaCine setUp ejecutado
+2024-12-23 13:25:13,906 - DEBUG - Asiento 1A agregado.
+2024-12-23 13:25:13,908 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,908 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,908 - DEBUG - test_add_seat passed
+2024-12-23 13:25:13,910 - DEBUG - TestSalaCine tearDown ejecutado
+2024-12-23 13:25:13,911 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,911 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,912 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,912 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,912 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,912 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,913 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,913 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,913 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,913 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,914 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,914 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,914 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,914 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,915 - DEBUG - TestSalaCine setUp ejecutado
+2024-12-23 13:25:13,915 - DEBUG - Asiento 1A agregado.
+2024-12-23 13:25:13,917 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,917 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,917 - DEBUG - Calculado descuento de 0.0 para edad 30 y día lunes.
+2024-12-23 13:25:13,917 - DEBUG - Asiento 1 en fila A reservado con descuento 0.0.
+2024-12-23 13:25:13,920 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,920 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,920 - DEBUG - Reserva del asiento 1 en fila A cancelada.
+2024-12-23 13:25:13,922 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,922 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,922 - DEBUG - test_cancel_reservation passed
+2024-12-23 13:25:13,923 - DEBUG - TestSalaCine tearDown ejecutado
+2024-12-23 13:25:13,924 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,924 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,925 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,925 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,926 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,926 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,926 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,926 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,927 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,927 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,927 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,927 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,928 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,928 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,929 - DEBUG - TestSalaCine setUp ejecutado
+2024-12-23 13:25:13,929 - DEBUG - Asiento 1A agregado.
+2024-12-23 13:25:13,931 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,931 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,932 - DEBUG - TestSalaCine tearDown ejecutado
+2024-12-23 13:25:13,933 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,933 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,933 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,933 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,934 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,934 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,934 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,935 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,935 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,935 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,935 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,935 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,936 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,936 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,937 - DEBUG - TestSalaCine setUp ejecutado
+2024-12-23 13:25:13,938 - DEBUG - TestSalaCine tearDown ejecutado
+2024-12-23 13:25:13,939 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,939 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,939 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,939 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,939 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,940 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,940 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,940 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,941 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,941 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,941 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,942 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,942 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:13,942 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,943 - DEBUG - TestSalaCine setUp ejecutado
+2024-12-23 13:25:13,943 - DEBUG - Asiento 1A agregado.
+2024-12-23 13:25:13,945 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,945 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,945 - DEBUG - Calculado descuento de 0.0 para edad 30 y día lunes.
+2024-12-23 13:25:13,945 - DEBUG - Asiento 1 en fila A reservado con descuento 0.0.
+2024-12-23 13:25:13,947 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,947 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,947 - DEBUG - test_reserve_seat passed
+2024-12-23 13:25:13,948 - DEBUG - TestSalaCine tearDown ejecutado
+2024-12-23 13:25:13,948 - DEBUG - TestUtilidades setUp ejecutado
+2024-12-23 13:25:13,949 - DEBUG - Calculado descuento de 0.0 para edad 25 y día lunes.
+2024-12-23 13:25:13,949 - DEBUG - Calculado descuento de 0.5 para edad 65 y día miércoles.
+2024-12-23 13:25:13,949 - DEBUG - Calculado descuento de 0.0 para edad 30 y día domingo.
+2024-12-23 13:25:13,949 - DEBUG - test_calculate_discount passed
+2024-12-23 13:25:13,949 - DEBUG - TestUtilidades setUp ejecutado
+2024-12-23 13:25:13,949 - DEBUG - Calculado descuento de 0.0 para edad 25 y día lunes.
+2024-12-23 13:25:13,949 - DEBUG - Precio final calculado: 100.0 para precio base 100, edad 25, día lunes.
+2024-12-23 13:25:13,949 - DEBUG - Calculado descuento de 0.5 para edad 65 y día miércoles.
+2024-12-23 13:25:13,949 - DEBUG - Precio final calculado: 50.0 para precio base 100, edad 65, día miércoles.
+2024-12-23 13:25:13,949 - DEBUG - Calculado descuento de 0.0 para edad 30 y día domingo.
+2024-12-23 13:25:13,949 - DEBUG - Precio final calculado: 100.0 para precio base 100, edad 30, día domingo.
+2024-12-23 13:25:13,950 - DEBUG - test_calculate_final_price passed
+2024-12-23 13:25:13,950 - DEBUG - TestUtilidades setUp ejecutado
+2024-12-23 13:25:13,951 - DEBUG - Entrada validada: 5
+2024-12-23 13:25:13,951 - DEBUG - test_validate_input passed
+2024-12-23 13:25:13,951 - DEBUG - TestUtilidades setUp ejecutado
+2024-12-23 13:25:13,951 - ERROR - Entrada inválida. Inténtalo de nuevo.
+2024-12-23 13:25:13,952 - ERROR - Entrada inválida. Inténtalo de nuevo.
+2024-12-23 13:25:13,952 - ERROR - Entrada inválida. Inténtalo de nuevo.
+2024-12-23 13:25:13,952 - DEBUG - test_validate_input_invalid passed
+2024-12-23 13:25:13,953 - DEBUG - TestUtilidades setUp ejecutado
+2024-12-23 13:25:13,953 - DEBUG - test_validate_input_stop_iteration passed
+2024-12-23 13:25:13,953 - DEBUG - TestUtilidades setUp ejecutado
+2024-12-23 13:25:13,953 - DEBUG - Opción validada: opcion1
+2024-12-23 13:25:13,954 - DEBUG - test_validate_option passed
+2024-12-23 13:25:13,954 - DEBUG - TestVerificarSistema setUpClass executed
+2024-12-23 13:25:13,955 - DEBUG - Archivo de estado creado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,956 - DEBUG - test_create_state_file passed
+2024-12-23 13:25:13,957 - DEBUG - Archivo de estado creado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,959 - DEBUG - Archivo de estado E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json eliminado.
+2024-12-23 13:25:13,959 - DEBUG - test_delete_state_file passed
+2024-12-23 13:25:13,960 - DEBUG - Archivo de estado creado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,961 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,961 - DEBUG - test_load_state_file passed
+2024-12-23 13:25:13,962 - DEBUG - Archivo de estado creado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,964 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,964 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,964 - DEBUG - Estado restablecido en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,965 - DEBUG - test_reset_state_file passed
+2024-12-23 13:25:13,966 - DEBUG - Archivo de estado creado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,968 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:13,972 - DEBUG - test_save_state_file passed
+2024-12-23 13:25:13,973 - DEBUG - TestVerificarSistema tearDownClass executed
+2024-12-23 13:25:19,838 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:19,839 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:19,839 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:19,839 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:19,840 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:19,840 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:19,840 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:19,840 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:19,840 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:19,841 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:19,841 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:19,841 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:19,841 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:25:19,841 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:22,649 - DEBUG - Entrada validada: 1
+2024-12-23 13:25:23,217 - DEBUG - Entrada validada: 1
+2024-12-23 13:25:24,309 - DEBUG - Entrada validada: 1
+2024-12-23 13:25:24,859 - DEBUG - Entrada validada: a
+2024-12-23 13:25:24,859 - DEBUG - Asiento 1A agregado.
+2024-12-23 13:25:24,861 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:24,861 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:24,864 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:24,864 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:26,142 - DEBUG - Entrada validada: 2
+2024-12-23 13:25:26,658 - DEBUG - Entrada validada: 1
+2024-12-23 13:25:27,254 - DEBUG - Entrada validada: 1
+2024-12-23 13:25:27,823 - DEBUG - Entrada validada: a
+2024-12-23 13:25:29,467 - DEBUG - Entrada validada: 66
+2024-12-23 13:25:29,467 - DEBUG - Calculado descuento de 0.3 para edad 66 y día lunes.
+2024-12-23 13:25:29,467 - DEBUG - Asiento 1 en fila A reservado con descuento 0.3.
+2024-12-23 13:25:29,469 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:29,469 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:29,470 - DEBUG - Calculado descuento de 0.3 para edad 66 y día lunes.
+2024-12-23 13:25:29,470 - DEBUG - Calculado descuento de 0.3 para edad 66 y día lunes.
+2024-12-23 13:25:29,470 - DEBUG - Precio final calculado: 7.0 para precio base 10.0, edad 66, día lunes.
+2024-12-23 13:25:29,473 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:29,473 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:30,747 - DEBUG - Entrada validada: 1
+2024-12-23 13:25:31,618 - DEBUG - Entrada validada: 1
+2024-12-23 13:25:32,158 - DEBUG - Entrada validada: 2
+2024-12-23 13:25:33,009 - DEBUG - Entrada validada: a
+2024-12-23 13:25:33,009 - DEBUG - Asiento 2A agregado.
+2024-12-23 13:25:33,011 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:33,011 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:33,014 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:33,014 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:34,436 - DEBUG - Entrada validada: 2
+2024-12-23 13:25:35,305 - DEBUG - Entrada validada: 1
+2024-12-23 13:25:36,601 - DEBUG - Entrada validada: 2
+2024-12-23 13:25:37,796 - DEBUG - Entrada validada: a
+2024-12-23 13:25:39,243 - DEBUG - Entrada validada: 18
+2024-12-23 13:25:39,243 - DEBUG - Calculado descuento de 0.0 para edad 18 y día lunes.
+2024-12-23 13:25:39,243 - DEBUG - Asiento 2 en fila A reservado con descuento 0.0.
+2024-12-23 13:25:39,245 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:39,245 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:39,246 - DEBUG - Calculado descuento de 0.0 para edad 18 y día lunes.
+2024-12-23 13:25:39,246 - DEBUG - Calculado descuento de 0.0 para edad 18 y día lunes.
+2024-12-23 13:25:39,246 - DEBUG - Precio final calculado: 10.0 para precio base 10.0, edad 18, día lunes.
+2024-12-23 13:25:39,248 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:39,248 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:43,332 - DEBUG - Entrada validada: 4
+2024-12-23 13:25:49,518 - DEBUG - Entrada validada: 3
+2024-12-23 13:25:50,709 - DEBUG - Entrada validada: 1
+2024-12-23 13:25:51,412 - DEBUG - Entrada validada: 1
+2024-12-23 13:25:53,510 - DEBUG - Entrada validada: a
+2024-12-23 13:25:53,511 - DEBUG - Reserva del asiento 1 en fila A cancelada.
+2024-12-23 13:25:53,513 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:53,513 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:53,515 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:53,515 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:25:57,928 - DEBUG - Entrada validada: 4
+2024-12-23 13:26:26,225 - DEBUG - Entrada validada: 5
+2024-12-23 13:26:27,701 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,701 - DEBUG - Estado restablecido en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,702 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,702 - DEBUG - Estado restablecido en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,703 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,703 - DEBUG - Estado restablecido en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,704 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,704 - DEBUG - Estado restablecido en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,705 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,705 - DEBUG - Estado restablecido en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,706 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,706 - DEBUG - Estado restablecido en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,707 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,707 - DEBUG - Estado restablecido en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,708 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,708 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,708 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,708 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,709 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,709 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,709 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,709 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,710 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,710 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,711 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,711 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,711 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:27,711 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:31,343 - DEBUG - Entrada validada: 4
+2024-12-23 13:26:35,835 - DEBUG - Entrada validada: 1
+2024-12-23 13:26:38,499 - DEBUG - Entrada validada: 7
+2024-12-23 13:26:39,901 - DEBUG - Entrada validada: 1
+2024-12-23 13:26:40,671 - DEBUG - Entrada validada: a
+2024-12-23 13:26:40,671 - DEBUG - Asiento 1A agregado.
+2024-12-23 13:26:40,674 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:40,674 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:40,676 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:40,676 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:42,027 - DEBUG - Entrada validada: 2
+2024-12-23 13:26:43,283 - DEBUG - Entrada validada: 7
+2024-12-23 13:26:43,831 - DEBUG - Entrada validada: 1
+2024-12-23 13:26:44,316 - DEBUG - Entrada validada: a
+2024-12-23 13:26:46,934 - DEBUG - Entrada validada: 65
+2024-12-23 13:26:46,934 - DEBUG - Calculado descuento de 0.3 para edad 65 y día domingo.
+2024-12-23 13:26:46,934 - DEBUG - Asiento 1 en fila A reservado con descuento 0.3.
+2024-12-23 13:26:46,937 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:46,937 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:46,938 - DEBUG - Calculado descuento de 0.3 para edad 65 y día domingo.
+2024-12-23 13:26:46,938 - DEBUG - Calculado descuento de 0.3 para edad 65 y día domingo.
+2024-12-23 13:26:46,938 - DEBUG - Precio final calculado: 7.0 para precio base 10.0, edad 65, día domingo.
+2024-12-23 13:26:46,941 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:46,941 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:50,098 - DEBUG - Entrada validada: 1
+2024-12-23 13:26:50,979 - DEBUG - Entrada validada: 7
+2024-12-23 13:26:52,390 - DEBUG - Entrada validada: 2
+2024-12-23 13:26:53,083 - DEBUG - Entrada validada: a
+2024-12-23 13:26:53,083 - DEBUG - Asiento 2A agregado.
+2024-12-23 13:26:53,085 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:53,085 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:53,088 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:53,088 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:54,863 - DEBUG - Entrada validada: 2
+2024-12-23 13:26:56,148 - DEBUG - Entrada validada: 7
+2024-12-23 13:26:57,020 - DEBUG - Entrada validada: 2
+2024-12-23 13:26:57,893 - DEBUG - Entrada validada: a
+2024-12-23 13:26:59,317 - DEBUG - Entrada validada: 18
+2024-12-23 13:26:59,317 - DEBUG - Calculado descuento de 0.0 para edad 18 y día domingo.
+2024-12-23 13:26:59,317 - DEBUG - Asiento 2 en fila A reservado con descuento 0.0.
+2024-12-23 13:26:59,319 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:59,319 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:59,320 - DEBUG - Calculado descuento de 0.0 para edad 18 y día domingo.
+2024-12-23 13:26:59,320 - DEBUG - Calculado descuento de 0.0 para edad 18 y día domingo.
+2024-12-23 13:26:59,320 - DEBUG - Precio final calculado: 10.0 para precio base 10.0, edad 18, día domingo.
+2024-12-23 13:26:59,322 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:26:59,322 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:27:03,292 - DEBUG - Entrada validada: 4
+2024-12-23 13:27:10,180 - DEBUG - Entrada validada: 1
+2024-12-23 13:27:11,311 - DEBUG - Entrada validada: 2
+2024-12-23 13:27:12,194 - DEBUG - Entrada validada: 2
+2024-12-23 13:27:13,868 - DEBUG - Entrada validada: j
+2024-12-23 13:27:13,868 - DEBUG - Asiento 2J agregado.
+2024-12-23 13:27:13,870 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:27:13,870 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:27:13,873 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:27:13,873 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:27:17,381 - DEBUG - Entrada validada: 4
+2024-12-23 13:27:27,472 - DEBUG - Entrada validada: 6
+2024-12-23 13:27:30,047 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:27:30,047 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:27:30,048 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:27:30,048 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:27:30,048 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:27:30,048 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:27:30,049 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:27:30,049 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:27:30,049 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:27:30,050 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:27:30,050 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:27:30,050 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:27:30,051 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:27:30,051 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:27:31,700 - DEBUG - Entrada validada: 4
+2024-12-23 13:27:49,434 - DEBUG - Entrada validada: 6
+2024-12-23 13:29:31,134 - DEBUG - Asiento 1 en fila A reservado con descuento 0.
+2024-12-23 13:29:31,135 - DEBUG - Reserva del asiento 1 en fila A cancelada.
+2024-12-23 13:29:31,135 - DEBUG - Asiento 1 en fila A reservado con descuento 0.
+2024-12-23 13:29:31,136 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:29:31,137 - DEBUG - test_asiento_actualizado passed
+2024-12-23 13:29:31,137 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:29:31,137 - DEBUG - test_asiento_agregado passed
+2024-12-23 13:29:31,138 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:29:31,138 - DEBUG - test_asiento_eliminado passed
+2024-12-23 13:29:31,139 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:29:31,139 - DEBUG - test_asiento_no_encontrado passed
+2024-12-23 13:29:31,140 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:29:31,140 - DEBUG - test_asiento_reservado passed
+2024-12-23 13:29:31,141 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:29:31,141 - DEBUG - test_asiento_ya_existe passed
+2024-12-23 13:29:31,142 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:29:31,142 - DEBUG - test_asiento_ya_reservado passed
+2024-12-23 13:29:31,143 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:29:31,143 - DEBUG - test_bienvenida passed
+2024-12-23 13:29:31,144 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:29:31,144 - DEBUG - test_confirmar_guardado passed
+2024-12-23 13:29:31,145 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:29:31,145 - DEBUG - test_confirmar_reseteo passed
+2024-12-23 13:29:31,146 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:29:31,146 - DEBUG - test_dia_invalido passed
+2024-12-23 13:29:31,148 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:29:31,148 - DEBUG - test_estado_guardado passed
+2024-12-23 13:29:31,149 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:29:31,149 - DEBUG - test_estado_reseteado passed
+2024-12-23 13:29:31,150 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:29:31,150 - DEBUG - test_ingrese_dia passed
+2024-12-23 13:29:31,151 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:29:31,151 - DEBUG - test_ingrese_edad passed
+2024-12-23 13:29:31,152 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:29:31,152 - DEBUG - test_ingrese_fila passed
+2024-12-23 13:29:31,153 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:29:31,153 - DEBUG - test_ingrese_nueva_fila passed
+2024-12-23 13:29:31,154 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:29:31,154 - DEBUG - test_ingrese_nuevo_numero_asiento passed
+2024-12-23 13:29:31,155 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:29:31,155 - DEBUG - test_ingrese_numero_asiento passed
+2024-12-23 13:29:31,156 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:29:31,156 - DEBUG - test_max_intentos passed
+2024-12-23 13:29:31,157 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:29:31,157 - DEBUG - test_opcion_invalida passed
+2024-12-23 13:29:31,158 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:29:31,158 - DEBUG - test_reporte_disponibilidad passed
+2024-12-23 13:29:31,159 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:29:31,159 - DEBUG - test_reserva_cancelada passed
+2024-12-23 13:29:31,160 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:29:31,160 - DEBUG - test_reseteo_cancelado passed
+2024-12-23 13:29:31,161 - DEBUG - TestMensajes setUp executed
+2024-12-23 13:29:31,161 - DEBUG - test_saliendo_sistema passed
+2024-12-23 13:29:31,162 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,162 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,162 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,162 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,163 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,163 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,164 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,164 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,164 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,164 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,165 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,165 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,166 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,166 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,167 - DEBUG - TestSalaCine setUp ejecutado
+2024-12-23 13:29:31,167 - DEBUG - Asiento 1A agregado.
+2024-12-23 13:29:31,169 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,169 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,170 - DEBUG - test_add_seat passed
+2024-12-23 13:29:31,170 - DEBUG - TestSalaCine tearDown ejecutado
+2024-12-23 13:29:31,171 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,171 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,172 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,172 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,172 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,172 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,173 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,173 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,173 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,173 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,174 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,174 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,174 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,174 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,175 - DEBUG - TestSalaCine setUp ejecutado
+2024-12-23 13:29:31,175 - DEBUG - Asiento 1A agregado.
+2024-12-23 13:29:31,177 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,177 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,178 - DEBUG - Calculado descuento de 0.0 para edad 30 y día lunes.
+2024-12-23 13:29:31,178 - DEBUG - Asiento 1 en fila A reservado con descuento 0.0.
+2024-12-23 13:29:31,180 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,180 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,180 - DEBUG - Reserva del asiento 1 en fila A cancelada.
+2024-12-23 13:29:31,183 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,183 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,183 - DEBUG - test_cancel_reservation passed
+2024-12-23 13:29:31,184 - DEBUG - TestSalaCine tearDown ejecutado
+2024-12-23 13:29:31,185 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,185 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,185 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,186 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,186 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,186 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,186 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,187 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,187 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,187 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,187 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,188 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,188 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,188 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,189 - DEBUG - TestSalaCine setUp ejecutado
+2024-12-23 13:29:31,189 - DEBUG - Asiento 1A agregado.
+2024-12-23 13:29:31,191 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,191 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,192 - DEBUG - TestSalaCine tearDown ejecutado
+2024-12-23 13:29:31,193 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,193 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,193 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,193 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,194 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,194 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,194 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,194 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,195 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,195 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,195 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,195 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,196 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,196 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,197 - DEBUG - TestSalaCine setUp ejecutado
+2024-12-23 13:29:31,198 - DEBUG - TestSalaCine tearDown ejecutado
+2024-12-23 13:29:31,199 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,199 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,200 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,200 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,200 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,200 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,201 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,201 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,201 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,201 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,202 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,202 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,202 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:31,202 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,203 - DEBUG - TestSalaCine setUp ejecutado
+2024-12-23 13:29:31,203 - DEBUG - Asiento 1A agregado.
+2024-12-23 13:29:31,205 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,206 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,206 - DEBUG - Calculado descuento de 0.0 para edad 30 y día lunes.
+2024-12-23 13:29:31,206 - DEBUG - Asiento 1 en fila A reservado con descuento 0.0.
+2024-12-23 13:29:31,208 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,208 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,208 - DEBUG - test_reserve_seat passed
+2024-12-23 13:29:31,209 - DEBUG - TestSalaCine tearDown ejecutado
+2024-12-23 13:29:31,209 - DEBUG - TestUtilidades setUp ejecutado
+2024-12-23 13:29:31,209 - DEBUG - Calculado descuento de 0.0 para edad 25 y día lunes.
+2024-12-23 13:29:31,209 - DEBUG - Calculado descuento de 0.5 para edad 65 y día miércoles.
+2024-12-23 13:29:31,209 - DEBUG - Calculado descuento de 0.0 para edad 30 y día domingo.
+2024-12-23 13:29:31,210 - DEBUG - test_calculate_discount passed
+2024-12-23 13:29:31,210 - DEBUG - TestUtilidades setUp ejecutado
+2024-12-23 13:29:31,210 - DEBUG - Calculado descuento de 0.0 para edad 25 y día lunes.
+2024-12-23 13:29:31,210 - DEBUG - Precio final calculado: 100.0 para precio base 100, edad 25, día lunes.
+2024-12-23 13:29:31,210 - DEBUG - Calculado descuento de 0.5 para edad 65 y día miércoles.
+2024-12-23 13:29:31,210 - DEBUG - Precio final calculado: 50.0 para precio base 100, edad 65, día miércoles.
+2024-12-23 13:29:31,210 - DEBUG - Calculado descuento de 0.0 para edad 30 y día domingo.
+2024-12-23 13:29:31,210 - DEBUG - Precio final calculado: 100.0 para precio base 100, edad 30, día domingo.
+2024-12-23 13:29:31,210 - DEBUG - test_calculate_final_price passed
+2024-12-23 13:29:31,210 - DEBUG - TestUtilidades setUp ejecutado
+2024-12-23 13:29:31,211 - DEBUG - Entrada validada: 5
+2024-12-23 13:29:31,211 - DEBUG - test_validate_input passed
+2024-12-23 13:29:31,211 - DEBUG - TestUtilidades setUp ejecutado
+2024-12-23 13:29:31,212 - ERROR - Entrada inválida. Inténtalo de nuevo.
+2024-12-23 13:29:31,212 - ERROR - Entrada inválida. Inténtalo de nuevo.
+2024-12-23 13:29:31,213 - ERROR - Entrada inválida. Inténtalo de nuevo.
+2024-12-23 13:29:31,213 - DEBUG - test_validate_input_invalid passed
+2024-12-23 13:29:31,213 - DEBUG - TestUtilidades setUp ejecutado
+2024-12-23 13:29:31,214 - DEBUG - test_validate_input_stop_iteration passed
+2024-12-23 13:29:31,214 - DEBUG - TestUtilidades setUp ejecutado
+2024-12-23 13:29:31,215 - DEBUG - Opción validada: opcion1
+2024-12-23 13:29:31,215 - DEBUG - test_validate_option passed
+2024-12-23 13:29:31,215 - DEBUG - TestVerificarSistema setUpClass executed
+2024-12-23 13:29:31,216 - DEBUG - Archivo de estado creado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,217 - DEBUG - test_create_state_file passed
+2024-12-23 13:29:31,219 - DEBUG - Archivo de estado creado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,219 - DEBUG - Archivo de estado E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json eliminado.
+2024-12-23 13:29:31,220 - DEBUG - test_delete_state_file passed
+2024-12-23 13:29:31,221 - DEBUG - Archivo de estado creado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,221 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,222 - DEBUG - test_load_state_file passed
+2024-12-23 13:29:31,222 - DEBUG - Archivo de estado creado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,225 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,226 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,226 - DEBUG - Estado restablecido en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,227 - DEBUG - test_reset_state_file passed
+2024-12-23 13:29:31,228 - DEBUG - Archivo de estado creado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,230 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:31,236 - DEBUG - test_save_state_file passed
+2024-12-23 13:29:31,237 - DEBUG - TestVerificarSistema tearDownClass executed
+2024-12-23 13:29:34,886 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:34,886 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:34,887 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:34,887 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:34,887 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:34,887 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:34,888 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:34,888 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:34,888 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:34,888 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:34,889 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:34,889 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:34,889 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:34,889 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:34,890 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:34,890 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:34,890 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:34,890 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:34,890 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:34,891 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:34,891 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:34,891 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:34,891 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:34,892 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:34,892 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:34,892 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:34,892 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:34,893 - ERROR - Archivo E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json no encontrado.
+2024-12-23 13:29:34,893 - DEBUG - Estado cargado desde E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:36,104 - DEBUG - Entrada validada: 1
+2024-12-23 13:29:36,573 - DEBUG - Entrada validada: 1
+2024-12-23 13:29:37,047 - DEBUG - Entrada validada: 1
+2024-12-23 13:29:37,721 - DEBUG - Entrada validada: a
+2024-12-23 13:29:37,721 - DEBUG - Asiento 1A agregado.
+2024-12-23 13:29:37,724 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:37,724 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:37,726 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:37,726 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:39,053 - DEBUG - Entrada validada: 2
+2024-12-23 13:29:39,689 - DEBUG - Entrada validada: 1
+2024-12-23 13:29:40,181 - DEBUG - Entrada validada: 1
+2024-12-23 13:29:41,059 - DEBUG - Entrada validada: a
+2024-12-23 13:29:42,368 - DEBUG - Entrada validada: 66
+2024-12-23 13:29:42,368 - DEBUG - Calculado descuento de 0.3 para edad 66 y día lunes.
+2024-12-23 13:29:42,368 - DEBUG - Asiento 1 en fila A reservado con descuento 0.3.
+2024-12-23 13:29:42,370 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:42,370 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:42,371 - DEBUG - Calculado descuento de 0.3 para edad 66 y día lunes.
+2024-12-23 13:29:42,371 - DEBUG - Calculado descuento de 0.3 para edad 66 y día lunes.
+2024-12-23 13:29:42,371 - DEBUG - Precio final calculado: 7.0 para precio base 10.0, edad 66, día lunes.
+2024-12-23 13:29:42,373 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:42,374 - DEBUG - Estado guardado en E:\Users\jimbl\Desktop\Python\Project\Projects\Projects\proyecto\estado_cine.json.
+2024-12-23 13:29:43,564 - DEBUG - Entrada validada: 4
+2024-12-23 13:29:49,859 - DEBUG - Entrada validada: 6
